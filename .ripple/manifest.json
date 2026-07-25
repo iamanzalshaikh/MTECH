@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "artifacts": [
+    {
+      "id": "art_d7a4cbab",
+      "kind": "report",
+      "path": "C:\\Users\\ANZAL\\Desktop\\CAD TECH\\.ripple\\reports\\security-review-2026-07-18-230831.md",
+      "schemaId": "security-review",
+      "contentType": "text/markdown",
+      "createdAt": "2026-07-18T17:38:31.160Z",
+      "presentation": "none",
+      "workflowId": "wf_mrqnho4s_pyum3n"
+    }
+  ]
+}
