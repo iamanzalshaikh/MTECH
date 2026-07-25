@@ -1,35 +1,101 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { motion, Variants } from 'framer-motion';
-import { use } from 'react';
 import gsap from 'gsap';
+
+// 5 Hero Slides – one per major course domain
+const heroSlides = [
+  {
+    id: 1,
+    label: 'Mechanical CAD',
+    image: 'https://caddeskindia.com/wp-content/uploads/2026/04/Mechanical.jpg',
+    heading: 'Mechanical CAD & CAM',
+    sub: 'AutoCAD Mechanical · SolidWorks · CATIA · CNC Programming',
+    link: '/courses?category=Mechanical/Automobile',
+    color: '#f97316',
+  },
+  {
+    id: 2,
+    label: 'Civil / Architecture CAD',
+    image: 'https://caddeskindia.com/wp-content/uploads/2026/04/Civil-arch.jpg',
+    heading: 'Civil & Architecture CAD',
+    sub: 'AutoCAD Civil · Revit · STAAD Pro · SketchUp · BIM',
+    link: '/courses?category=Civil/Architecture',
+    color: '#0ea5e9',
+  },
+  {
+    id: 3,
+    label: 'Electrical CAD',
+    image: 'https://caddeskindia.com/wp-content/uploads/2026/04/ELECTRICAL.jpg',
+    heading: 'Electrical CAD',
+    sub: 'AutoCAD Electrical · EPLAN · PLC · SCADA · MATLAB',
+    link: '/courses?category=Electrical/Electronics',
+    color: '#eab308',
+  },
+  {
+    id: 4,
+    label: 'Project Planning & Management',
+    image: 'https://caddeskindia.com/wp-content/uploads/2021/02/Primavera.jpg',
+    heading: 'Project Planning & Management',
+    sub: 'Primavera P6 · MS Project · Project Scheduling · Resource Management',
+    link: '/courses?category=Project Planning',
+    color: '#10b981',
+  },
+  {
+    id: 5,
+    label: 'IT Programming',
+    image: 'https://mtechcomputers.in/wp-content/uploads/2019/05/courses03.jpg',
+    heading: 'IT & Programming Courses',
+    sub: 'Web Dev · Python · Java · React · Node.js · Data Analytic Course · Data Science · AI/ML',
+    link: '/courses?category=Information Technology',
+    color: '#8b5cf6',
+  },
+];
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
   const gearRef = useRef<SVGSVGElement>(null);
-  const card1Ref = useRef<HTMLDivElement>(null);
   const card2Ref = useRef<HTMLDivElement>(null);
 
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  // Auto-advance slider
   useEffect(() => {
-    // GSAP floating animations for side cards and vector gear rotation
+    const interval = setInterval(() => {
+      goToNext();
+    }, 4500);
+    return () => clearInterval(interval);
+  }, [activeSlide]);
+
+  const goToSlide = (idx: number) => {
+    if (isTransitioning || idx === activeSlide) return;
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setActiveSlide(idx);
+      setIsTransitioning(false);
+    }, 300);
+  };
+
+  const goToNext = () => {
+    const next = (activeSlide + 1) % heroSlides.length;
+    goToSlide(next);
+  };
+
+  const goToPrev = () => {
+    const prev = (activeSlide - 1 + heroSlides.length) % heroSlides.length;
+    goToSlide(prev);
+  };
+
+  useEffect(() => {
     if (gearRef.current) {
       gsap.to(gearRef.current, {
         rotation: 360,
         duration: 25,
         repeat: -1,
         ease: 'linear'
-      });
-    }
-
-    if (card1Ref.current) {
-      gsap.to(card1Ref.current, {
-        y: -15,
-        duration: 3,
-        repeat: -1,
-        yoyo: true,
-        ease: 'power1.inOut'
       });
     }
 
@@ -71,6 +137,8 @@ export default function Hero() {
     }
   };
 
+  const slide = heroSlides[activeSlide];
+
   return (
     <section className="new-hero-section" ref={containerRef} id="new-hero">
       {/* Blueprint Grid Overlay */}
@@ -92,7 +160,7 @@ export default function Hero() {
             {/* Tag Badge */}
             <motion.div className="hero-tag-badge" variants={itemVariants}>
               <span className="tag-pulse" />
-              India's No. 1 IT Training Network
+              India's No. 1 CAD, CAM &amp; IT Training Network
             </motion.div>
 
             {/* Main Animated Title */}
@@ -100,7 +168,6 @@ export default function Hero() {
               Shape Your Skills <br />
               <span>To Build The Future</span>
             </motion.h1>
-
 
             {/* CTA Buttons */}
             <motion.div className="hero-cta-group" variants={itemVariants}>
@@ -120,11 +187,11 @@ export default function Hero() {
             {/* Stats Summary row */}
             <motion.div className="hero-stats-row" variants={itemVariants}>
               <div className="hero-stat-box">
-                <h4>3+</h4>
+                <h4>32+</h4>
                 <p>Learning Centers</p>
               </div>
               <div className="hero-stat-box">
-                <h4>3L+</h4>
+                <h4>3K+</h4>
                 <p>Trained Students</p>
               </div>
               <div className="hero-stat-box">
@@ -134,7 +201,7 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Right Column: Layered Interactive Visuals */}
+          {/* Right Column: Course Image Slider */}
           <div className="hero-right-visuals">
             <div className="visuals-wrapper">
               
@@ -153,37 +220,71 @@ export default function Hero() {
                 <circle cx="50" cy="50" r="6" fill="rgba(249, 115, 22, 0.1)" stroke="rgba(249, 115, 22, 0.2)" strokeWidth="1.5" />
               </svg>
 
-              {/* Main Student Collage Wrapper with Glow */}
+              {/* Course Image Slider Card */}
               <motion.div 
-                className="main-collage-card"
+                className="main-collage-card hero-slider-card"
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.8, type: 'spring', bounce: 0.3 }}
               >
                 <div className="card-glass-glow" />
-                <img 
-                  src="https://caddeskindia.com/wp-content/uploads/2021/07/web-image-1.png" 
-                  alt="M-Tech Computers Success Students" 
-                  className="collage-image"
-                />
+
+                {/* Slide Image */}
+                <div
+                  className="hero-slide-img-wrap"
+                  style={{ opacity: isTransitioning ? 0 : 1, transition: 'opacity 0.3s ease' }}
+                >
+                  <img
+                    src={slide.image}
+                    alt={slide.label}
+                    className="collage-image hero-slide-img"
+                  />
+                  {/* Gradient Overlay with text */}
+                  <div className="hero-slide-overlay" style={{ background: `linear-gradient(to top, ${slide.color}ee 0%, transparent 60%)` }}>
+                    <Link href={slide.link} className="hero-slide-content">
+                      <span className="hero-slide-label">{slide.label}</span>
+                      <p className="hero-slide-sub">{slide.sub}</p>
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Prev / Next arrows */}
+                <button
+                  className="hero-slider-arrow hero-slider-prev"
+                  onClick={goToPrev}
+                  aria-label="Previous slide"
+                >
+                  ❮
+                </button>
+                <button
+                  className="hero-slider-arrow hero-slider-next"
+                  onClick={goToNext}
+                  aria-label="Next slide"
+                >
+                  ❯
+                </button>
+
+                {/* Dot indicators */}
+                <div className="hero-slider-dots">
+                  {heroSlides.map((_, i) => (
+                    <button
+                      key={i}
+                      className={`hero-slider-dot ${i === activeSlide ? 'active' : ''}`}
+                      onClick={() => goToSlide(i)}
+                      aria-label={`Go to slide ${i + 1}`}
+                      style={{ backgroundColor: i === activeSlide ? slide.color : 'rgba(255,255,255,0.4)' }}
+                    />
+                  ))}
+                </div>
               </motion.div>
 
-              {/* Floating Badge 1 (Autodesk Certified) */}
-              <div ref={card1Ref} className="floating-badge-card badge-left">
-                <span className="badge-icon">🎖</span>
-                <div>
-                  <h5>Autodesk Partner</h5>
-                  <p>Official Curriculum</p>
-                </div>
-              </div>
-
-              {/* Floating Badge 2 (Placement Record) */}
-              <div ref={card2Ref} className="floating-badge-card badge-right">
-                <span className="badge-icon">💼</span>
-                <div>
-                  <h5>100% Placements</h5>
-                  <p>Via Career Desk Portal</p>
-                </div>
+              {/* Floating Placement Badge */}
+              <div ref={card2Ref} className="floating-badge-card badge-right hero-placement-badge-wrap">
+                <img
+                  src="/placement-badge.png"
+                  alt="100% Placement Assistance"
+                  className="hero-placement-badge-img"
+                />
               </div>
 
             </div>

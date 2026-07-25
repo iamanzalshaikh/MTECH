@@ -126,7 +126,7 @@ export default function CourseRecommender({ onOpenEnquiry }: CourseRecommenderPr
         <div className="fade-in-up">
           <span className="section-eyebrow">Advisor</span>
           <h3 className="section-title text-orange" style={{ color: '#fff', fontSize: '38px', marginBottom: '20px' }}>
-            Not Sure Which CAD Software to Learn?
+            Not sure which CAD, CAM, IT software to learn?
           </h3>
           <p className="section-subtitle" style={{ color: '#cbd5e1', marginBottom: '30px', fontSize: '16px', lineHeight: '1.7' }}>
             Select your engineering branch and immediate career goal. Our interactive recommender system will suggest the most beneficial design software for your profile.

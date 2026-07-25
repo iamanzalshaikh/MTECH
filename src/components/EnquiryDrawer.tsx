@@ -30,12 +30,19 @@ const categoryToCourses: Record<string, string[]> = {
     'NX CAD / NX CAM',
     'CNC Programming'
   ],
+  'Piping Course': [
+    'AutoCAD 2D Piping Design',
+    'SmartPlant 3D (SP3D)',
+    'Everything 3D (E-3D)'
+  ],
   'CS/IT': [
     'Core Python Programming',
     'Java Programming',
     'Web Development (HTML/CSS/JS/React)',
+    'MERN Stack Web Development',
     'C / C++ Programming',
-    'Data Science & ML'
+    'Data Science & ML',
+    'Data Analytic Course'
   ],
   'Internship': [
     'Summer Internship Program',
@@ -44,51 +51,12 @@ const categoryToCourses: Record<string, string[]> = {
   ]
 };
 
-const stateToCenters: Record<string, string[]> = {
-  'Rajasthan': [
-    'Jaipur (Lalkothi - Head Office)',
-    'Jaipur (Sitabari - Tonk Rd)',
-    'Jodhpur Center',
-    'Kota Center',
-    'Udaipur Center',
-    'Ajmer Center',
-    'Alwar Center'
-  ],
-  'Maharashtra': [
-    'Pune (Chinchwad)',
-    'Pune (Deccan)',
-    'Nagpur Center',
-    'Mumbai Center'
-  ],
-  'Delhi (NCR)': [
-    'Delhi (Okhla)',
-    'Noida Sector 62',
-    'Gurugram (IFFCO Chowk)'
-  ],
-  'Gujarat': [
-    'Ahmedabad (C.G. Road)',
-    'Vadodara Center',
-    'Surat Center'
-  ],
-  'Telangana': [
-    'Hyderabad (Ameerpet)',
-    'Hyderabad (Dilsukhnagar)'
-  ],
-  'Karnataka': [
-    'Bengaluru (Jayanagar)'
-  ],
-  'Uttar Pradesh': [
-    'Lucknow (Hazratganj)',
-    'Ghaziabad Center'
-  ],
-  'Bihar': [
-    'Patna Center'
-  ],
-  'Madhya Pradesh': [
-    'Bhopal Center',
-    'Indore Center'
-  ]
-};
+const locationOptions = [
+  'Kalyan',
+  'Dombivli',
+  'Thane',
+  'Other'
+];
 
 interface EnquiryDrawerProps {
   isOpen: boolean;
@@ -98,26 +66,20 @@ interface EnquiryDrawerProps {
 export default function EnquiryDrawer({ isOpen, onClose }: EnquiryDrawerProps) {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
+  const [location, setLocation] = useState('');
   const [category, setCategory] = useState('');
   const [course, setCourse] = useState('');
-  const [state, setState] = useState('');
-  const [center, setCenter] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Reset course when category changes
   useEffect(() => {
     setCourse('');
   }, [category]);
 
-  // Reset center when state changes
-  useEffect(() => {
-    setCenter('');
-  }, [state]);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name || !phone || !category || !course) {
+    if (!name || !phone || !location || !category || !course) {
       setError('Please fill in all fields.');
       return;
     }
@@ -126,9 +88,17 @@ export default function EnquiryDrawer({ isOpen, onClose }: EnquiryDrawerProps) {
       return;
     }
 
-    const lead = { name, phone, category, course, date: new Date().toISOString() };
-    
+    const lead = {
+      name,
+      phone,
+      location,
+      category,
+      course,
+      date: new Date().toISOString()
+    };
+
     try {
+      setIsSubmitting(true);
       const response = await fetch('/api/enquiry', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -140,19 +110,21 @@ export default function EnquiryDrawer({ isOpen, onClose }: EnquiryDrawerProps) {
       } else {
         setError('Failed to submit enquiry. Please try again.');
       }
-    } catch (err) {
+    } catch {
       setError('An error occurred. Please try again.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   const handleReset = () => {
     setName('');
     setPhone('');
+    setLocation('');
     setCategory('');
     setCourse('');
-    setState('');
-    setCenter('');
     setIsSubmitted(false);
+    setError('');
   };
 
   return (
@@ -209,6 +181,21 @@ export default function EnquiryDrawer({ isOpen, onClose }: EnquiryDrawerProps) {
               </div>
 
               <div className="form-group">
+                <label className="form-label">Your Location *</label>
+                <select 
+                  className="form-select" 
+                  value={location}
+                  onChange={(e) => setLocation(e.target.value)}
+                  required
+                >
+                  <option value="">Select Location</option>
+                  {locationOptions.map((loc) => (
+                    <option key={loc} value={loc}>{loc}</option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="form-group">
                 <label className="form-label">Course Category *</label>
                 <select 
                   className="form-select" 
@@ -239,9 +226,14 @@ export default function EnquiryDrawer({ isOpen, onClose }: EnquiryDrawerProps) {
                 </select>
               </div>
 
-
-              <button type="submit" className="btn btn-primary" style={{ marginTop: '10px' }} id="enquiry-submit-btn">
-                Submit Enquiry
+              <button
+                type="submit"
+                className="btn btn-primary"
+                style={{ marginTop: '10px' }}
+                id="enquiry-submit-btn"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? 'Submitting...' : 'Submit Enquiry'}
               </button>
             </form>
           </>

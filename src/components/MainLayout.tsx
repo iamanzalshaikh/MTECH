@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import Header from './Header';
 import Footer from './Footer';
 import EnquiryDrawer from './EnquiryDrawer';
+import { FaWhatsapp } from 'react-icons/fa';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -65,6 +66,18 @@ export default function MainLayout({ children }: MainLayoutProps) {
       >
         Enquiry Now
       </button>
+
+      {/* Floating WhatsApp Button */}
+      <a
+        href="https://wa.me/918976178976?text=Hello%20M-Tech%20Computers,%20I%20want%20to%20enquire%20about%20your%20courses."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="whatsapp-floating-btn"
+        aria-label="Chat on WhatsApp"
+        id="floating-whatsapp-trigger"
+      >
+        <FaWhatsapp size={32} />
+      </a>
 
       {/* Enquiry Drawer */}
       <EnquiryDrawer isOpen={isEnquiryOpen} onClose={closeEnquiry} />

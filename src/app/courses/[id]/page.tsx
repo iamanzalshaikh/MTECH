@@ -48,12 +48,47 @@ const detailedSyllabusMapping: Record<string, { title: string; points: string[] 
     { title: 'Chapter 3: Toolpath Generation & Feeds', points: ['Configuring Spindle Speed (S) and Feed Rate (F)', 'Selecting appropriate cutting tools (End mill, Ball nose)', 'Machining allowances and cutting depth parameters', 'Roughing vs Finishing toolpaths'] },
     { title: 'Chapter 4: Lathe & Turning Configurations', points: ['G-codes for turning operations (G71, G72 cycles)', 'Threading cycles (G76) and grooving cycles', 'Setting up tools in turrets', 'Workpiece zero setting on lathes'] },
     { title: 'Chapter 5: NX CAM Verification & Simulation', points: ['Setting up MCS (Machine Coordinate System) in NX', 'Creating Operations: Floor/Wall milling, Cavity Milling', 'Simulating toolpaths and verifying material removal', 'Post-processing G-codes for Fanuc, Siemens, and Haas controllers'] }
+  ],
+  'plc-scada': [
+    { title: 'Chapter 1: Programmable Logic Controllers (PLC) Architecture', points: ['Overview of PLC hardware, wiring, and power supply', 'Input/Output modules (digital, analog, RTD)', 'Processor/CPU scan cycle operation', 'Hardware troubleshooting and electrical diagram auditing'] },
+    { title: 'Chapter 2: PLC Programming & Industrial Logic', points: ['Ladder Logic (LD) fundamentals and standard rules', 'Logic gate simulations (AND, OR, NOT, XOR)', 'Configuring memory registers and binary logic flags', 'Using Timer (TON, TOF) and Counter (CTU, CTD) parameters'] },
+    { title: 'Chapter 3: Advanced PLC Operations', points: ['Math instructions, comparison, and data move operations', 'Analog scaling and signal conditioning (4-20mA, 0-10V)', 'PID loop tuning configurations for flow/temp systems', 'Simulation setups with Siemens TIA Portal or LogixPro'] },
+    { title: 'Chapter 4: SCADA & HMI Dashboard Design', points: ['SCADA architecture and tag database creation', 'HMI screen layouts drafting and navigation menus', 'Creating visual animations (colors, sliders, fill levels)', 'Configuring alarm systems, logging levels, and safety messages'] },
+    { title: 'Chapter 5: Industrial Communication & Data Logging', points: ['Modbus, Profibus, and Ethernet/IP configurations', 'Creating real-time and historical data trend graphs', 'Database linking, SQL parameters, and report generation', 'Final integration project: automated sorting conveyor system'] }
+  ],
+  'mern-stack-web-development': [
+    { title: 'Chapter 1: MongoDB & Database Design', points: ['Document model, collections, and database connections', 'Schema design with Mongoose models', 'CRUD operations, validation, and advanced queries', 'Database indexing, aggregation framework, and Atlas deployment'] },
+    { title: 'Chapter 2: Express.js REST APIs', points: ['Routing and HTTP request/response methods', 'Building RESTful web services and API endpoints', 'Creating custom middleware and request validation', 'Global error handling and backend security practices'] },
+    { title: 'Chapter 3: React.js Frontend Development', points: ['Functional components, JSX structure, and styling', 'Component state management, props, and standard Hooks (useState, useEffect)', 'React Router for multi-page layouts and SPA routing', 'Global state management (Context API or Redux Toolkit)'] },
+    { title: 'Chapter 4: Node.js Core Backend', points: ['Event Loop, asynchronous programming, and callbacks', 'File system operations and streams', 'Building web servers using core HTTP modules', 'Package management (NPM) and environmental variables config'] },
+    { title: 'Chapter 5: Full Stack Integration & Deployment', points: ['Connecting React frontend with Express backend', 'JWT user authentication and route protection', 'Uploading files and managing assets on cloud storage', 'Deploying to cloud platforms (Vercel/Render) and Git workflows'] }
+  ],
+  'autocad-2d-piping-design': [
+    { title: 'Chapter 1: Piping Design Theory & ASME B31.3 Standards', points: ['Introduction to industrial piping systems and Oil & Gas projects', 'ASME B31.3 process piping code regulations and safety calculations', 'Plot plan development, equipment layout principles, and line specifications', 'Material selection standards, pipe schedules, and component classifications'] },
+    { title: 'Chapter 2: AutoCAD Interface & Workspace Setup', points: ['Familiarize with the AutoCAD workspace, tools, and coordinate systems', 'Setting units, drawing limits, and custom drafting templates', 'Line, polyline, circle, and basic geometric drawing tools', 'Layers management and color coding standards for piping'] },
+    { title: 'Chapter 3: Piping Symbols & P&ID Schematics', points: ['Using industry-standard piping symbols (valves, fittings, instruments)', 'Drafting process and instrumentation diagrams (P&ID) from schematics', 'Creating reusable symbol blocks for standard components', 'Handling text annotations, leader lines, and drafting scales'] },
+    { title: 'Chapter 4: Creating 2D Piping Layouts & Isometric Drawings', points: ['Drafting accurate 2D piping plans and elevations', 'Routing pipelines with correct fittings, inline valves, and supports', 'Setting up isometric grids and switching planes (Isoplanes)', 'Drafting 2D isometric piping drawings (spools and general layouts)'] },
+    { title: 'Chapter 5: BOM Preparation & Plotting', points: ['Compiling a Bill of Materials (BOM) from piping drafts', 'Creating layout sheets, title blocks, and scaling views', 'Plotting, printing configurations, and exporting PDF project packages', 'Final project: complete shop piping isometric drawing and BOM'] }
+  ],
+  'smartplant-3d-sp3d': [
+    { title: 'Chapter 1: Introduction to SP3D & Plant Modeling', points: ['Overview of SmartPlant 3D (SP3D) architecture and database systems', 'SP3D interface navigation, views, and workspace setup', 'Defining coordinate systems, grids, and reference planes', 'Multi-discipline project environment setup and privileges'] },
+    { title: 'Chapter 2: 3D Equipment Modeling', points: ['Creating standard and custom equipment models (pumps, vessels, exchangers)', 'Placing and orienting equipment in coordinate space', 'Adding nozzles, configuring sizing, and setting coordinate positions', 'Modifying equipment primitives and parameter structures'] },
+    { title: 'Chapter 3: 3D Piping Design & Routing', points: ['Routing pipelines in 3D using specification-driven catalogs', 'Placing inline components: valves, flanges, gaskets, instruments', 'Creating slope piping (gravity drain) and headers routing', 'Managing piping specs, branching rules, and insulation options'] },
+    { title: 'Chapter 4: Clash Detection & Design Automation', points: ['Running real-time clash detection audits on the 3D model', 'Identifying and resolving soft and hard interferences', 'Automating repetitive design tasks via rule settings', 'Inspecting piping connectivity, data sanity, and integrity checks'] },
+    { title: 'Chapter 5: Reports & Isometric Extraction', points: ['Setting up multi-discipline collaboration filters', 'Extracting piping isometric drawings using ISOGEN configurations', 'Generating bill of materials (BOM), line lists, and equipment lists', 'Exporting and publishing model files for review and construction'] }
+  ],
+  'everything-3d-e3d': [
+    { title: 'Chapter 1: E3D Introduction & Project Setup', points: ['Everything 3D (E3D) system structure and project hierarchy', 'Creating sites, zones, and equipment folders', 'Navigating the 3D graphic view, Explorer, and property panels', 'Advanced copy, paste, delete, measurement, and rotation tools'] },
+    { title: 'Chapter 2: Equipment Module Modeling', points: ['Starting equipment application and managing hierarchies', 'Creating equipment using primitives (cylinders, boxes, cones)', 'Positioning nozzles, selecting sizes, and setting alignments', 'Importing equipment shapes and modifying templates'] },
+    { title: 'Chapter 3: Pipework Application & Routing', points: ['Creating piping specifications, heads, and tails in E3D', 'Routing pipelines manually and using auto-route tools', 'Placing valves, elbows, tees, and inline instruments', 'Running piping clash checks and extracting piping isometrics'] },
+    { title: 'Chapter 4: Supports & Structures', points: ['Introduction to E3D structural steel module', 'Modeling columns, beams, framework, and plates grids', 'Creation of standard pipe supports, ancillary supports, and anchors', 'Modeling trunnions, shoes, and custom support configurations'] },
+    { title: 'Chapter 5: Draw & Drafting Module', points: ['Introduction to E3D Draw module for drawing production', 'Creating department/registry structures and custom sheets', 'Creating view layouts, limits, and projection representations', 'Adding dimensions, labels, symbols, and exporting draft files to DXF'] }
   ]
 };
 
 // Course FAQ list
 const faqList = [
-  { q: 'What is the duration of this training course?', a: 'The course duration ranges from 4 to 6 weeks depending on batch schedules (regular daily batches vs. fast-track weekend batches).' },
+  { q: 'What is the duration of this training course?', a: 'CAD courses typically run for 2 months, single IT courses for 3 months, and Data Science / Web Development programs for 6 months, depending on batch schedules.' },
   { q: 'Is the certification internationally valid?', a: 'Yes, M-Tech Computers certifications are ISO 9001:2015 certified and recognized globally across major engineering and design companies.' },
   { q: 'Will I receive placement assistance after completing the course?', a: 'Yes, we provide 100% placement support, mock interviews, and share weekly job alerts through our dedicated portal, Career Desk.' },
   { q: 'Are study materials provided during training?', a: 'Yes, we provide free textbooks, workbooks, practice sheets, and lifetime access to our online digital student panel.' },
@@ -610,7 +645,7 @@ export default function CourseDetailPage({ params }: { params: React.Usable<{ id
         .course-overview-block h2,
         .course-contents-block h2 {
           font-size: 24px;
-          color: #07294d;
+          color: var(--clr-primary);
           margin-bottom: 20px;
           font-weight: 800;
           border-bottom: 2px solid #eeeeee;
@@ -654,13 +689,13 @@ export default function CourseDetailPage({ params }: { params: React.Usable<{ id
           text-align: left;
           font-weight: 700;
           font-size: 15px;
-          color: #07294d;
+          color: var(--clr-primary);
           cursor: pointer;
           transition: all 0.2s ease;
         }
 
         .accordion-item.active .accordion-header-btn {
-          background-color: rgba(249, 115, 22, 0.05);
+          background-color: rgba(6, 182, 212, 0.05);
           color: var(--clr-accent);
         }
 
@@ -703,7 +738,7 @@ export default function CourseDetailPage({ params }: { params: React.Usable<{ id
 
         .sidebar-highlights-card h3 {
           font-size: 18px;
-          color: #07294d;
+          color: var(--clr-primary);
           margin-bottom: 18px;
           font-weight: 700;
         }
@@ -739,7 +774,7 @@ export default function CourseDetailPage({ params }: { params: React.Usable<{ id
 
         .sidebar-form-card h3 {
           font-size: 18px;
-          color: #07294d;
+          color: var(--clr-primary);
           margin-bottom: 8px;
           font-weight: 700;
         }
@@ -764,7 +799,7 @@ export default function CourseDetailPage({ params }: { params: React.Usable<{ id
 
         /* Certificate showcase */
         .certificate-showcase-section {
-          background-color: #07294d;
+          background-color: var(--clr-primary);
           color: white;
         }
 
@@ -823,7 +858,7 @@ export default function CourseDetailPage({ params }: { params: React.Usable<{ id
 
         .instructors-text h2 {
           font-size: 28px;
-          color: #07294d;
+          color: var(--clr-primary);
           margin-bottom: 20px;
           font-weight: 800;
         }

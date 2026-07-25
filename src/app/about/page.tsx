@@ -3,22 +3,70 @@ import Link from 'next/link';
 
 export default function AboutPage() {
   const stats = [
-    { value: '3+', label: 'FRANCHISE HUBS' },
-    { value: '3L+', label: 'ALUMNI PLACED' },
-    { value: '27+', label: 'YEARS HERITAGE' },
+    { value: '3K+', label: 'ALUMNI PLACED' },
+    { value: '11+', label: 'YEARS HERITAGE' },
+    { value: '100%', label: 'PLACEMENT' },
     { value: '100%', label: 'PRACTICAL LABS' }
   ];
 
+  const whyChoosePoints = [
+    {
+      title: '20+ Years of Experience in CAD/CAM/CNC Training',
+      desc: 'Decades of hands-on training expertise across design, manufacturing, and IT domains.'
+    },
+    {
+      title: 'Authorized Training Partner for Siemens and Autodesk',
+      desc: 'Learn on industry-standard software with authorized curriculum and certifications.'
+    },
+    {
+      title: 'Industry-Oriented Curriculum',
+      desc: 'Designed for manufacturing professionals and engineering students seeking job-ready skills.'
+    },
+    {
+      title: 'Training by Experienced Industry Experts',
+      desc: 'Learn from mentors who bring real project experience into every classroom session.'
+    },
+    {
+      title: 'Practical Hands-On Learning',
+      desc: 'Practice with real industrial components, live workflows, and workshop-style labs.'
+    },
+    {
+      title: 'Well-Equipped Training Center',
+      desc: 'Train on the latest software versions in modern, fully equipped computer labs.'
+    },
+    {
+      title: 'Project-Based Learning',
+      desc: 'Build portfolio-ready projects that mirror actual industry design and development tasks.'
+    },
+    {
+      title: 'Placement Assistance for Eligible Candidates',
+      desc: 'Get resume support, interview prep, and placement alerts through our career desk.'
+    },
+    {
+      title: 'Flexible Batch Timings',
+      desc: 'Convenient schedules for students and working professionals across weekday and weekend batches.'
+    },
+    {
+      title: 'Individual Attention & Doubt-Solving',
+      desc: 'Small-batch mentoring with dedicated doubt-clearing sessions for every learner.'
+    },
+    {
+      title: 'Job Readiness & Career Growth',
+      desc: 'Training focused on employability, workplace skills, and long-term career progression.'
+    },
+    {
+      title: 'Trusted by Students & Companies',
+      desc: 'Preferred by students, professionals, and manufacturing companies across the region.'
+    }
+  ];
+
   const milestones = [
-    { year: '1999', icon: '🏢', text: 'Started CAD Training at Mansarovar, Jaipur.' },
-    { year: '2003', icon: '📍', text: 'Opened 2nd branch at Lal Kothi, Jaipur & registered Franchise Model.' },
-    { year: '2007', icon: '🚀', text: 'First Franchise Center opened outside Rajasthan.' },
-    { year: '2011', icon: '🤝', text: 'Staad Pro Bentley tie-up registered.' },
-    { year: '2013', icon: '🌍', text: 'Started Franchise model in other states.' },
-    { year: '2016', icon: '💻', text: 'Online training portal launched.' },
-    { year: '2021', icon: '✈️', text: 'Expanded training operations overseas.' },
-    { year: '2023', icon: '📜', text: 'Renewed software vendor partnerships.' },
-    { year: '2026', icon: '🎉', text: 'Celebrating 27 Years of technical education.' }
+    { year: '2015', icon: '🏢', text: 'M-Tech Computers founded with a focus on CAD, CAM & IT training.' },
+    { year: '2016', icon: '💻', text: 'Expanded classroom programs and practical lab infrastructure.' },
+    { year: '2018', icon: '🤝', text: 'Strengthened software vendor partnerships and industry tie-ups.' },
+    { year: '2021', icon: '📍', text: 'Grew regional presence with Kalyan & Dombivli training centers.' },
+    { year: '2023', icon: '📜', text: 'Renewed authorized training partnerships and certification programs.' },
+    { year: '2026', icon: '🎉', text: 'Celebrating 11+ years of technical education excellence.' }
   ];
 
   return (
@@ -52,12 +100,12 @@ export default function AboutPage() {
               We Create <span className="about-text-gradient">Designs for the Future</span>
             </h2>
             <p style={{ fontSize: '16px', color: '#4b5563', lineHeight: '1.8', margin: 0 }}>
-              M-Tech Computers is a registered brand of corporate group M-Tech Computers INDIA. Founded in the year 2007, we offer high-quality professional software training courses across Civil, Architecture, Mechanical, Automobile, Electrical, Electronics, and IT domains. M-Tech Computers has become India's leading training center network, registering 3+ franchise centers across the country and training more than 3 Lakh students.
+              M-Tech Computers is a registered brand of corporate group M-Tech Computers INDIA. Founded in the year 2015, we offer high-quality professional software training courses across Civil, Architecture, Mechanical, Automobile, Electrical, Electronics, IT, and Data Analytic Course domains — with 3K+ students trained and placed.
             </p>
           </div>
 
           {/* Stats Dashboard Grid */}
-          <div className="about-stats-grid">
+          <div className="about-stats-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
             {stats.map((stat, idx) => (
               <div key={idx} className="about-stat-box-p">
                 <h3>{stat.value}</h3>
@@ -66,61 +114,6 @@ export default function AboutPage() {
             ))}
           </div>
 
-        </div>
-      </section>
-
-      {/* Leadership Board Section */}
-      <section className="section-padding bg-alt" style={{ borderTop: '1px solid #f1f5f9', borderBottom: '1px solid #f1f5f9' }}>
-        <div className="container">
-          
-          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-            <span className="section-eyebrow" style={{ color: 'var(--clr-accent)', fontWeight: 'bold' }}>GOVERNANCE</span>
-            <h2 style={{ fontSize: '32px', fontWeight: '800', color: '#07294d' }}>Our Executive Board</h2>
-          </div>
-
-          <div className="about-profiles-grid">
-            
-            {/* Technical Director */}
-            <div className="leader-card-premium">
-              <div className="leader-img-container">
-                <img 
-                  src="https://caddeskindia.com/wp-content/uploads/2021/03/Lalit-sir.png" 
-                  alt="Lalit Pr. Technical Director" 
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-              </div>
-              <div style={{ marginLeft: '24px' }}>
-                <h3 style={{ fontSize: '20px', fontWeight: '800', color: '#07294d', margin: '0 0 4px 0' }}>Lalit Pr.</h3>
-                <div style={{ fontSize: '13px', fontWeight: 'bold', color: 'var(--clr-accent)', letterSpacing: '0.5px', textTransform: 'uppercase', marginBottom: '12px' }}>
-                  Technical Director & Founder
-                </div>
-                <p style={{ fontSize: '13.5px', lineHeight: '1.6', color: '#4b5563', margin: 0 }}>
-                  Lalit Pr. leads the academic board and curriculum development at M-Tech Computers. With 18+ years of engineering design experience, his vision is to democratize high-end design training by providing students with hands-on labs, authorized software certifications, and real-time project exposures.
-                </p>
-              </div>
-            </div>
-
-            {/* Managing Director */}
-            <div className="leader-card-premium">
-              <div className="leader-img-container">
-                <img 
-                  src="https://caddeskindia.com/wp-content/uploads/2021/03/Rekha-mam.png" 
-                  alt="Ms. Rekha Agarwal" 
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-              </div>
-              <div style={{ marginLeft: '24px' }}>
-                <h3 style={{ fontSize: '20px', fontWeight: '800', color: '#07294d', margin: '0 0 4px 0' }}>Ms. Rekha Agarwal</h3>
-                <div style={{ fontSize: '13px', fontWeight: 'bold', color: 'var(--clr-accent)', letterSpacing: '0.5px', textTransform: 'uppercase', marginBottom: '12px' }}>
-                  Managing Director
-                </div>
-                <p style={{ fontSize: '13.5px', lineHeight: '1.6', color: '#4b5563', margin: 0 }}>
-                  Ms. Rekha Agarwal guides the strategic expansions and business operations at M-Tech Computers. She oversees the franchise relations, student placement tie-ups, and corporate marketing initiatives that have helped M-Tech Computers expand its footprints into 28 states.
-                </p>
-              </div>
-            </div>
-
-          </div>
         </div>
       </section>
 
@@ -146,38 +139,40 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Why Choose Us Cards */}
+      {/* Why Choose Us — flyer points */}
       <section className="section-padding bg-alt" style={{ borderTop: '1px solid #f1f5f9', borderBottom: '1px solid #f1f5f9' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '50px' }}>
             <span className="section-eyebrow" style={{ color: 'var(--clr-accent)', fontWeight: 'bold' }}>ADVANTAGE</span>
-            <h2 style={{ fontSize: '32px', fontWeight: '800', color: '#07294d' }}>Why Choose M-Tech Computers</h2>
+            <h2 style={{ fontSize: '32px', fontWeight: '800', color: '#07294d' }}>Why Choose MTech Computers</h2>
           </div>
 
-          <div className="why-choose-grid">
-            <div className="about-glow-card" style={{ padding: '35px 30px', textAlign: 'center' }}>
-              <div style={{ fontSize: '30px', marginBottom: '16px' }}>📚</div>
-              <h4 style={{ fontSize: '18px', fontWeight: 700, color: '#07294d', marginBottom: '12px' }}>Learning with CAD Curriculum</h4>
-              <p style={{ fontSize: '13.5px', color: '#4b5563', lineHeight: '1.6', margin: 0 }}>
-                Our course manuals and structural tutorials are fully aligned with the official guidelines of software makers, ensuring quality design workflows.
-              </p>
-            </div>
-
-            <div className="about-glow-card" style={{ padding: '35px 30px', textAlign: 'center' }}>
-              <div style={{ fontSize: '30px', marginBottom: '16px' }}>⭐</div>
-              <h4 style={{ fontSize: '18px', fontWeight: 700, color: '#07294d', marginBottom: '12px' }}>Celebrating 27+ Years</h4>
-              <p style={{ fontSize: '13.5px', color: '#4b5563', lineHeight: '1.6', margin: 0 }}>
-                Over 27 years of corporate group heritage in professional engineering training and software counseling.
-              </p>
-            </div>
-
-            <div className="about-glow-card" style={{ padding: '35px 30px', textAlign: 'center' }}>
-              <div style={{ fontSize: '30px', marginBottom: '16px' }}>🎓</div>
-              <h4 style={{ fontSize: '18px', fontWeight: 700, color: '#07294d', marginBottom: '12px' }}>3 Lakhs+ Alumni</h4>
-              <p style={{ fontSize: '13.5px', color: '#4b5563', lineHeight: '1.6', margin: 0 }}>
-                A proud alumni network of 300,000+ students working in top construction companies, MNCs, and manufacturing units.
-              </p>
-            </div>
+          <div className="why-choose-grid" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
+            {whyChoosePoints.map((point, idx) => (
+              <div key={idx} className="about-glow-card" style={{ padding: '28px 24px', textAlign: 'left' }}>
+                <div style={{
+                  width: '36px',
+                  height: '36px',
+                  borderRadius: '50%',
+                  background: '#07294d',
+                  color: '#f6b500',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontWeight: 800,
+                  fontSize: '13px',
+                  marginBottom: '14px'
+                }}>
+                  {String(idx + 1).padStart(2, '0')}
+                </div>
+                <h4 style={{ fontSize: '16px', fontWeight: 700, color: '#c41230', marginBottom: '10px', lineHeight: 1.35 }}>
+                  {point.title}
+                </h4>
+                <p style={{ fontSize: '13.5px', color: '#4b5563', lineHeight: '1.6', margin: 0 }}>
+                  {point.desc}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

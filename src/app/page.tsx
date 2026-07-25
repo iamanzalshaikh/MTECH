@@ -3,6 +3,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { useInView } from 'framer-motion';
+import CourseRecommender from '@/components/CourseRecommender';
+import Hero from '@/components/Hero';
 
 function CountUpNumber({ value, duration = 1.5 }: { value: number; duration?: number }) {
   const [count, setCount] = useState(0);
@@ -15,10 +17,8 @@ function CountUpNumber({ value, duration = 1.5 }: { value: number; duration?: nu
     const end = value;
     if (start === end) return;
 
-    let totalMiliseconds = duration * 1000;
-    // For larger numbers, step faster to finish within duration
-    let step = Math.ceil(end / 60); 
-    let incrementTime = 25; 
+    let step = Math.ceil(end / 60);
+    let incrementTime = 25;
     
     let timer = setInterval(() => {
       start += step;
@@ -35,9 +35,6 @@ function CountUpNumber({ value, duration = 1.5 }: { value: number; duration?: nu
 
   return <span ref={ref}>{count}</span>;
 }
-import CourseRecommender from '@/components/CourseRecommender';
-import Hero from '@/components/Hero';
-
 // Mock Testimonials
 const testimonials = [
   {
@@ -55,7 +52,28 @@ const testimonials = [
   {
     name: "M S Narendran",
     text: "The facilities at M-Tech Computers are top-notch. The computer labs are equipped with the latest software and hardware, creating an ideal learning environment. Additionally, the staff members are friendly and always ready to assist students..."
+  },
+  {
+    name: "Vaishnavi Gaikar",
+    text: "The practical labs and placement guidance helped me land my role as MIS Executive. Highly recommend M-Tech Computers for career-focused training."
+  },
+  {
+    name: "Harsh Dabhi",
+    text: "React training at M-Tech was clear, project-based, and industry-ready. I got placed as a React Developer soon after completing the course."
   }
+];
+
+const branchCities = [
+  'Kalyan',
+  'Dombivli'
+];
+
+const placedCandidates = [
+  { name: 'Vaishnavi Gaikar', role: 'MIS Executive', company: 'Axis Bank' },
+  { name: 'Harsh Dabhi', role: 'React Developer', company: 'Zencommerce' },
+  { name: 'Nidhi Shukla', role: 'MIS Sales Co-Ordinator', company: 'MARS Lifestyle PVT LTD' },
+  { name: 'Prathamesh Gaikwad', role: 'MIS Executive Analyst', company: 'Brocus IT Solutions Pvt. Ltd' },
+  { name: 'Preeti Benvanshi', role: 'Jr Software Developer', company: 'Techno Purple' }
 ];
 
 // Collaboration Logos
@@ -72,28 +90,10 @@ const brandLogos = [
 ];
 
 export default function HomePage() {
-  const [activeTestimonial, setActiveTestimonial] = useState(0);
-
-  // Auto-scroll testimonials
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 6000);
-    return () => clearInterval(timer);
-  }, []);
-
   const openEnquiry = () => {
     if (typeof window !== 'undefined') {
       window.dispatchEvent(new Event('open-enquiry'));
     }
-  };
-
-  const nextTestimonial = () => {
-    setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setActiveTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
   return (
@@ -122,8 +122,8 @@ export default function HomePage() {
                   <img src="https://caddeskindia.com/wp-content/themes/caddesk_official_new/assets/images/all-icon/feat-5.png" alt="Students Icon" />
                 </div>
                 <div className="features-content">
-                  <h3 className="title">3L+ Student</h3>
-                  <p>Certified learners placed globally</p>
+                  <h3 className="title">3K+ Students</h3>
+                  <p>Certified learners placed successfully</p>
                 </div>
               </div>
               {/* Feature 3 */}
@@ -150,99 +150,148 @@ export default function HomePage() {
           
           <div className="category-wrap-03">
             <div className="row">
-              {/* Category 1 */}
+              {/* Category 1 - Information Technology */}
+              <div className="single-course">
+                <div className="thum">
+                  <div className="image">
+                    <Link href="/courses?category=Information Technology">
+                      <img src="https://caddeskindia.com/wp-content/uploads/2026/04/CS.jpg" alt="Information Technology" />
+                    </Link>
+                  </div>
+                </div>
+                <div className="content">
+                  <Link href="/courses?category=Information Technology">
+                    <h4 className="title">Information Technology</h4>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Category 2 - Civil/Architecture */}
               <div className="single-course">
                 <div className="thum">
                   <div className="image">
                     <Link href="/courses?category=Civil/Architecture">
-                      <img src="https://caddeskindia.com/wp-content/uploads/2026/04/Civil-arch.jpg" alt="Civil/Architecture" />
+                      <img src="https://caddeskindia.com/wp-content/uploads/2026/04/Civil-arch.jpg" alt="Civil & Architecture" />
                     </Link>
                   </div>
                 </div>
                 <div className="content">
                   <Link href="/courses?category=Civil/Architecture">
-                    <h4 className="title">Civil/Architecture</h4>
+                    <h4 className="title">Civil &amp; Architecture</h4>
                   </Link>
                 </div>
               </div>
 
-              {/* Category 2 */}
+              {/* Category 3 - Electrical */}
               <div className="single-course">
                 <div className="thum">
                   <div className="image">
                     <Link href="/courses?category=Electrical/Electronics">
-                      <img src="https://caddeskindia.com/wp-content/uploads/2026/04/ELECTRICAL.jpg" alt="Electrical/Electronics" />
+                      <img src="https://caddeskindia.com/wp-content/uploads/2026/04/ELECTRICAL.jpg" alt="Electrical" />
                     </Link>
                   </div>
                 </div>
                 <div className="content">
                   <Link href="/courses?category=Electrical/Electronics">
-                    <h4 className="title">Electrical/Electronics</h4>
+                    <h4 className="title">Electrical</h4>
                   </Link>
                 </div>
               </div>
 
-              {/* Category 3 */}
+              {/* Category 4 - Mechanical */}
               <div className="single-course">
                 <div className="thum">
                   <div className="image">
                     <Link href="/courses?category=Mechanical/Automobile">
-                      <img src="https://caddeskindia.com/wp-content/uploads/2026/04/Mechanical.jpg" alt="Mechanical/Automobile" />
+                      <img src="https://caddeskindia.com/wp-content/uploads/2026/04/Mechanical.jpg" alt="Mechanical" />
                     </Link>
                   </div>
                 </div>
                 <div className="content">
                   <Link href="/courses?category=Mechanical/Automobile">
-                    <h4 className="title">Mechanical/Automobile</h4>
+                    <h4 className="title">Mechanical</h4>
                   </Link>
                 </div>
               </div>
 
-              {/* Category 4 */}
+              {/* Category 5 - Project Planning */}
               <div className="single-course">
                 <div className="thum">
                   <div className="image">
-                    <Link href="/courses?category=Internship">
-                      <img src="https://caddeskindia.com/wp-content/uploads/2021/03/Internship.jpg" alt="Internships" />
+                    <Link href="/courses?category=Project Planning">
+                      <img src="https://caddeskindia.com/wp-content/uploads/2021/02/Primavera.jpg" alt="Project Planning & Management" />
                     </Link>
                   </div>
                 </div>
                 <div className="content">
-                  <Link href="/courses?category=Internship">
-                    <h4 className="title">Internships</h4>
+                  <Link href="/courses?category=Project Planning">
+                    <h4 className="title">Project Planning &amp; Management</h4>
                   </Link>
                 </div>
               </div>
 
-              {/* Category 5 */}
+              {/* Category 6 - Interior Design */}
               <div className="single-course">
                 <div className="thum">
                   <div className="image">
-                    <Link href="/courses?category=CS/IT">
-                      <img src="https://caddeskindia.com/wp-content/uploads/2026/04/CS.jpg" alt="CS/IT" />
+                    <Link href="/courses?category=Interior Design">
+                      <img src="https://caddeskindia.com/wp-content/uploads/2021/02/3ds-1.jpg" alt="Interior Design" />
                     </Link>
                   </div>
                 </div>
                 <div className="content">
-                  <Link href="/courses?category=CS/IT">
-                    <h4 className="title">CS/IT</h4>
+                  <Link href="/courses?category=Interior Design">
+                    <h4 className="title">Interior Designer</h4>
                   </Link>
                 </div>
               </div>
 
-              {/* Category 6 */}
+              {/* Category 7 - Jewellery Design */}
               <div className="single-course">
                 <div className="thum">
                   <div className="image">
-                    <a href="https://caddeskindia.com/online-training/" target="_blank" rel="noopener noreferrer">
-                      <img src="https://caddeskindia.com/wp-content/themes/caddesk_official_new/assets/images/online-training-1.png" alt="Online programs" />
-                    </a>
+                    <Link href="/courses?category=Jewellery Design">
+                      <img src="https://mtechcomputers.in/wp-content/uploads/2019/05/courses01.jpg" alt="Jewellery Design" />
+                    </Link>
                   </div>
                 </div>
                 <div className="content">
-                  <a href="https://caddeskindia.com/online-training/" target="_blank" rel="noopener noreferrer">
-                    <h4 className="title">Online Programs</h4>
-                  </a>
+                  <Link href="/courses?category=Jewellery Design">
+                    <h4 className="title">Jewellery Design</h4>
+                  </Link>
+                </div>
+              </div>
+
+
+              {/* Category 9 - Piping */}
+              <div className="single-course">
+                <div className="thum">
+                  <div className="image">
+                    <Link href="/courses?category=Piping">
+                      <img src="https://caddeskindia.com/wp-content/uploads/2021/02/ACAD-ME-1.jpg" alt="Piping" />
+                    </Link>
+                  </div>
+                </div>
+                <div className="content">
+                  <Link href="/courses?category=Piping">
+                    <h4 className="title">Piping</h4>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Category 10 - Accounting & Computer */}
+              <div className="single-course">
+                <div className="thum">
+                  <div className="image">
+                    <Link href="/courses?category=Accounting">
+                      <img src="https://caddeskindia.com/wp-content/uploads/2021/03/Tally.jpg" alt="Accounting & Computer" />
+                    </Link>
+                  </div>
+                </div>
+                <div className="content">
+                  <Link href="/courses?category=Accounting">
+                    <h4 className="title">Accounting &amp; Computer</h4>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -266,13 +315,13 @@ export default function HomePage() {
               <div className="single-course">
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
-                    <Link href="/courses/autocad-mechanical">
+                    <Link href="/courses?category=Mechanical">
                       <img src="https://caddeskindia.com/wp-content/uploads/2021/02/ACAD-ME-1.jpg" alt="AutoCAD Mechanical" />
                     </Link>
                   </div>
                 </div>
                 <div className="content" style={{ textAlign: 'left' }}>
-                  <Link href="/courses/autocad-mechanical">
+                  <Link href="/courses?category=Mechanical">
                     <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>AutoCAD Mechanical</h4>
                   </Link>
                   <p style={{ fontSize: '13px', lineHeight: '1.5', color: '#666', marginBottom: '16px' }}>
@@ -284,7 +333,7 @@ export default function HomePage() {
                     <span>⚙️ Mechanical/Automobile</span>
                   </div>
                   <div className="view-details">
-                    <Link href="/courses/autocad-mechanical" id="trending-det-acad-mech">View Details</Link>
+                    <Link href="/courses?category=Mechanical" id="trending-det-acad-mech">View Details</Link>
                   </div>
                 </div>
               </div>
@@ -293,13 +342,13 @@ export default function HomePage() {
               <div className="single-course">
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
-                    <Link href="/courses/autocad-civil-arch">
+                    <Link href="/courses?category=Civil/Architecture">
                       <img src="https://caddeskindia.com/wp-content/uploads/2021/02/ACAD-CE-1.jpg" alt="AutoCAD Civil/Arch." />
                     </Link>
                   </div>
                 </div>
                 <div className="content" style={{ textAlign: 'left' }}>
-                  <Link href="/courses/autocad-civil-arch">
+                  <Link href="/courses?category=Civil/Architecture">
                     <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>AutoCAD Civil/Arch.</h4>
                   </Link>
                   <p style={{ fontSize: '13px', lineHeight: '1.5', color: '#666', marginBottom: '16px' }}>
@@ -311,7 +360,7 @@ export default function HomePage() {
                     <span>🏢 Civil/Architecture</span>
                   </div>
                   <div className="view-details">
-                    <Link href="/courses/autocad-civil-arch" id="trending-det-acad-civil">View Details</Link>
+                    <Link href="/courses?category=Civil/Architecture" id="trending-det-acad-civil">View Details</Link>
                   </div>
                 </div>
               </div>
@@ -320,13 +369,13 @@ export default function HomePage() {
               <div className="single-course">
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
-                    <Link href="/courses/autocad-electrical">
+                    <Link href="/courses?category=Electrical">
                       <img src="https://caddeskindia.com/wp-content/uploads/2021/02/ACAD-EE-1.jpg" alt="AutoCAD Electrical" />
                     </Link>
                   </div>
                 </div>
                 <div className="content" style={{ textAlign: 'left' }}>
-                  <Link href="/courses/autocad-electrical">
+                  <Link href="/courses?category=Electrical">
                     <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>AutoCAD Electrical</h4>
                   </Link>
                   <p style={{ fontSize: '13px', lineHeight: '1.5', color: '#666', marginBottom: '16px' }}>
@@ -338,7 +387,7 @@ export default function HomePage() {
                     <span>⚡ Electrical/Electronics</span>
                   </div>
                   <div className="view-details">
-                    <Link href="/courses/autocad-electrical" id="trending-det-acad-elec">View Details</Link>
+                    <Link href="/courses?category=Electrical" id="trending-det-acad-elec">View Details</Link>
                   </div>
                 </div>
               </div>
@@ -347,13 +396,13 @@ export default function HomePage() {
               <div className="single-course">
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
-                    <Link href="/courses/solidworks">
+                    <Link href="/courses?category=Mechanical">
                       <img src="https://caddeskindia.com/wp-content/uploads/2021/02/Solidworks.jpg" alt="Solidworks" />
                     </Link>
                   </div>
                 </div>
                 <div className="content" style={{ textAlign: 'left' }}>
-                  <Link href="/courses/solidworks">
+                  <Link href="/courses?category=Mechanical">
                     <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>SolidWorks</h4>
                   </Link>
                   <p style={{ fontSize: '13px', lineHeight: '1.5', color: '#666', marginBottom: '16px' }}>
@@ -365,7 +414,7 @@ export default function HomePage() {
                     <span>⚙️ Mechanical/Automobile</span>
                   </div>
                   <div className="view-details">
-                    <Link href="/courses/solidworks" id="trending-det-solidworks">View Details</Link>
+                    <Link href="/courses?category=Mechanical" id="trending-det-solidworks">View Details</Link>
                   </div>
                 </div>
               </div>
@@ -374,13 +423,13 @@ export default function HomePage() {
               <div className="single-course">
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
-                    <Link href="/courses/nx-cad">
+                    <Link href="/courses?category=Mechanical">
                       <img src="https://caddeskindia.com/wp-content/uploads/2021/02/CNC.jpg" alt="CNC Programming" />
                     </Link>
                   </div>
                 </div>
                 <div className="content" style={{ textAlign: 'left' }}>
-                  <Link href="/courses/nx-cad">
+                  <Link href="/courses?category=Mechanical">
                     <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>CNC Programming</h4>
                   </Link>
                   <p style={{ fontSize: '13px', lineHeight: '1.5', color: '#666', marginBottom: '16px' }}>
@@ -392,7 +441,7 @@ export default function HomePage() {
                     <span>⚙️ Mechanical/Automobile</span>
                   </div>
                   <div className="view-details">
-                    <Link href="/courses/nx-cad" id="trending-det-cnc">View Details</Link>
+                    <Link href="/courses?category=Mechanical" id="trending-det-cnc">View Details</Link>
                   </div>
                 </div>
               </div>
@@ -401,13 +450,13 @@ export default function HomePage() {
               <div className="single-course">
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
-                    <Link href="/courses/catia">
+                    <Link href="/courses?category=Mechanical">
                       <img src="https://caddeskindia.com/wp-content/uploads/2021/02/CATIA.jpg" alt="CATIA" />
                     </Link>
                   </div>
                 </div>
                 <div className="content" style={{ textAlign: 'left' }}>
-                  <Link href="/courses/catia">
+                  <Link href="/courses?category=Mechanical">
                     <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>CATIA</h4>
                   </Link>
                   <p style={{ fontSize: '13px', lineHeight: '1.5', color: '#666', marginBottom: '16px' }}>
@@ -419,7 +468,7 @@ export default function HomePage() {
                     <span>⚙️ Mechanical/Automobile</span>
                   </div>
                   <div className="view-details">
-                    <Link href="/courses/catia" id="trending-det-catia">View Details</Link>
+                    <Link href="/courses?category=Mechanical" id="trending-det-catia">View Details</Link>
                   </div>
                 </div>
               </div>
@@ -444,13 +493,13 @@ export default function HomePage() {
               <div className="single-course">
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
-                    <Link href="/courses/solidworks">
+                    <Link href="/courses?category=Mechanical">
                       <img src="https://caddeskindia.com/wp-content/uploads/2021/02/Solidworks.jpg" alt="Solidworks" />
                     </Link>
                   </div>
                 </div>
                 <div className="content" style={{ textAlign: 'left' }}>
-                  <Link href="/courses/solidworks">
+                  <Link href="/courses?category=Mechanical">
                     <h4 className="title" style={{ fontSize: '18px', marginBottom: '8px' }}>Solidworks</h4>
                   </Link>
                   <p style={{ fontSize: '13px', lineHeight: '1.5', color: '#666', marginBottom: '16px' }}>
@@ -460,7 +509,7 @@ export default function HomePage() {
                 <div className="course-teacher">
                   <span style={{ color: 'var(--clr-accent)', fontWeight: 600 }}>Mechanical/Automobile</span>
                   <div className="view-details">
-                    <Link href="/courses/solidworks" style={{ color: 'var(--clr-crimson)' }} id="modular-det-solidworks">View Details</Link>
+                    <Link href="/courses?category=Mechanical" style={{ color: 'var(--clr-crimson)' }} id="modular-det-solidworks">View Details</Link>
                   </div>
                 </div>
               </div>
@@ -469,13 +518,13 @@ export default function HomePage() {
               <div className="single-course">
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
-                    <Link href="/courses/nx-cad">
+                    <Link href="/courses?category=Mechanical">
                       <img src="https://caddeskindia.com/wp-content/uploads/2021/02/CNC.jpg" alt="CNC Programming" />
                     </Link>
                   </div>
                 </div>
                 <div className="content" style={{ textAlign: 'left' }}>
-                  <Link href="/courses/nx-cad">
+                  <Link href="/courses?category=Mechanical">
                     <h4 className="title" style={{ fontSize: '18px', marginBottom: '8px' }}>CNC Programming</h4>
                   </Link>
                   <p style={{ fontSize: '13px', lineHeight: '1.5', color: '#666', marginBottom: '16px' }}>
@@ -485,7 +534,7 @@ export default function HomePage() {
                 <div className="course-teacher">
                   <span style={{ color: 'var(--clr-accent)', fontWeight: 600 }}>Mechanical/Automobile</span>
                   <div className="view-details">
-                    <Link href="/courses/nx-cad" style={{ color: 'var(--clr-crimson)' }} id="modular-det-cnc">View Details</Link>
+                    <Link href="/courses?category=Mechanical" style={{ color: 'var(--clr-crimson)' }} id="modular-det-cnc">View Details</Link>
                   </div>
                 </div>
               </div>
@@ -494,13 +543,13 @@ export default function HomePage() {
               <div className="single-course">
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
-                    <Link href="/courses/catia">
+                    <Link href="/courses?category=Mechanical">
                       <img src="https://caddeskindia.com/wp-content/uploads/2021/02/CATIA.jpg" alt="CATIA" />
                     </Link>
                   </div>
                 </div>
                 <div className="content" style={{ textAlign: 'left' }}>
-                  <Link href="/courses/catia">
+                  <Link href="/courses?category=Mechanical">
                     <h4 className="title" style={{ fontSize: '18px', marginBottom: '8px' }}>CATIA</h4>
                   </Link>
                   <p style={{ fontSize: '13px', lineHeight: '1.5', color: '#666', marginBottom: '16px' }}>
@@ -510,7 +559,7 @@ export default function HomePage() {
                 <div className="course-teacher">
                   <span style={{ color: 'var(--clr-accent)', fontWeight: 600 }}>Mechanical/Automobile</span>
                   <div className="view-details">
-                    <Link href="/courses/catia" style={{ color: 'var(--clr-crimson)' }} id="modular-det-catia">View Details</Link>
+                    <Link href="/courses?category=Mechanical" style={{ color: 'var(--clr-crimson)' }} id="modular-det-catia">View Details</Link>
                   </div>
                 </div>
               </div>
@@ -533,21 +582,21 @@ export default function HomePage() {
                     <div className="icon">
                       <img src="https://caddeskindia.com/wp-content/themes/caddesk_official_new/assets/images/all-icon/counter-1.png" alt="Icon" />
                     </div>
-                    <span><span className="counter"><CountUpNumber value={2} /></span>L+</span>
+                    <span><span className="counter"><CountUpNumber value={3} /></span>K+</span>
                     <p>Learners Enrolled</p>
                   </div>
                   <div className="single-counter-03">
                     <div className="icon">
                       <img src="https://caddeskindia.com/wp-content/themes/caddesk_official_new/assets/images/all-icon/counter-2.png" alt="Icon" />
                     </div>
-                    <span><span className="counter"><CountUpNumber value={1000} /></span>+</span>
+                    <span><span className="counter"><CountUpNumber value={50} /></span>+</span>
                     <p>College/ Corporate Training</p>
                   </div>
                   <div className="single-counter-03">
                     <div className="icon">
                       <img src="https://caddeskindia.com/wp-content/themes/caddesk_official_new/assets/images/all-icon/counter-1.png" alt="Icon" />
                     </div>
-                    <span><span className="counter"><CountUpNumber value={3} /></span>+</span>
+                    <span><span className="counter"><CountUpNumber value={32} /></span>+</span>
                     <p>Training Centres</p>
                   </div>
                 </div>
@@ -558,131 +607,92 @@ export default function HomePage() {
       </div>
 
 
-      {/* 8. Student Testimonial Section */}
-      <section className="edubin-testimonial-section-03">
-        <div 
-          className="testimonial-title-wrap" 
-          style={{ backgroundImage: 'url(https://caddeskindia.com/wp-content/themes/caddesk_official_new/assets/images/testi-bg3.png)' }}
-        >
-          <div className="container">
-            <div className="section-header">
-              <h2 className="section-title">Student <span>Testimonial</span></h2>
-            </div>
-          </div>
-        </div>
-        
+      {/* 8. Advisor Form Section */}
+      <CourseRecommender onOpenEnquiry={openEnquiry} />
+
+      {/* 9. Our Branches */}
+      <section className="section-padding" style={{ background: '#f8fafc' }}>
         <div className="container">
-          <div className="testimonial-slider-wrap">
-            <div className="row align-items-center">
-              <div className="col-lg-6 testimonial-img">
-                <img 
-                  src="https://caddeskindia.com/wp-content/themes/caddesk_official_new/assets/images/testi-img.png" 
-                  alt="Student Circular Collage" 
-                />
+          <div className="section-header" style={{ marginBottom: '40px' }}>
+            <h2 className="section-title" style={{ color: '#07294d' }}>Our Branches</h2>
+          </div>
+          <div className="home-branches-grid">
+            {branchCities.map((city, idx) => (
+              <div key={city} className="home-branch-card">
+                <span className="home-branch-num">{String(idx + 1).padStart(2, '0')}</span>
+                <div className="home-branch-pin" aria-hidden="true">📍</div>
+                <h3>{city}</h3>
               </div>
-              <div className="col-lg-6">
-                <div className="single-testimonial-02">
-                  <div className="testimonial-cont">
-                    <p>{testimonials[activeTestimonial].text}</p>
-                    <h6 className="name">{testimonials[activeTestimonial].name}</h6>
-                  </div>
-                  
-                  <div style={{ display: 'flex', gap: '10px', marginTop: '20px' }}>
-                    <button onClick={prevTestimonial} className="testimonial-nav-btn" aria-label="Previous testimonial" id="testi-nav-prev-btn">
-                      ❮
-                    </button>
-                    <button onClick={nextTestimonial} className="testimonial-nav-btn" aria-label="Next testimonial" id="testi-nav-next-btn">
-                      ❯
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 9. Advisor Form Section */}
-      <CourseRecommender onOpenEnquiry={openEnquiry} />
-
-      {/* 10. Our Placements Section */}
-      <section className="faq-section-02 section-padding">
+      {/* 10. Recently Placed Candidates */}
+      <section className="section-padding" style={{ background: '#ffffff' }}>
         <div className="container">
-          <div className="faq-wrapper">
-            <div className="section-header" style={{ textAlign: 'left', margin: '0 0 35px 0' }}>
-              <h2 className="section-title" style={{ display: 'block' }}>Our Placements</h2>
-            </div>
-            
-            <div className="faq-accordion">
-              <div className="faq-accordion-wrapper">
-                <div className="faq-col">
-                  <p style={{ fontWeight: 'bold', fontSize: '18px', color: '#07294d' }}>
-                    “Network has grown to more than 150+ cities in 22 states of India.”
-                  </p>
-                  <p>
-                    M-Tech Computers is a leading IT training network of India. Since our inception, M-Tech Computers has developed as a leading franchise network and our network has grown to more than 150+ cities in 22 states of India. We have started operations in the overseas market as well.
-                  </p>
-                  <p>
-                    M-Tech Computers focuses on student and works on development of his/her knowledge and skills. Various facilities are provided to them i.e. student kit, student panel, books and course material, Live projects, industrial visits, certification & Placement alerts. Certification process is initiated only after receiving feedback and project submission at all level.
-                  </p>
-                  <a href="https://career-desk.com/" className="btn btn-yellow" target="_blank" rel="noopener noreferrer" id="placement-career-btn">
-                    Career with us
-                  </a>
+          <div className="section-header" style={{ marginBottom: '40px' }}>
+            <h2 className="section-title" style={{ color: '#07294d' }}>Recently Placed Candidates</h2>
+            <p className="section-subtitle">
+              Our students are building careers across banking, IT, and product companies.
+            </p>
+          </div>
+          <div className="placed-candidates-grid">
+            {placedCandidates.map((student) => (
+              <div key={student.name} className="placed-candidate-card">
+                <div className="placed-candidate-avatar">
+                  {student.name.split(' ').map((n) => n[0]).join('').slice(0, 2)}
                 </div>
-                
-                <div className="faq-col">
-                  <div className="sidebar-details-wrap">
-                    <div className="sidebar-details-video-description">
-                      <div className="sidebar-description">
-                        <a href="https://career-desk.com/" target="_blank" rel="noopener noreferrer">
-                          <img 
-                            src="https://caddeskindia.com/wp-content/themes/caddesk_official_new/assets/images/placement.png" 
-                            alt="Placement Collage Banner" 
-                          />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <h3>{student.name}</h3>
+                <p className="placed-candidate-role">{student.role}</p>
+                <div className="placed-candidate-company">{student.company}</div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Association Banner */}
-      <section style={{ backgroundColor: '#07294d', padding: '20px 0', borderTop: '4px solid #f6b500', marginBottom: '40px' }}>
+      <section style={{ backgroundColor: '#07294d', padding: '20px 0', borderTop: '4px solid #f6b500' }}>
         <div className="container" style={{ display: 'flex', alignItems: 'center', gap: '30px', flexWrap: 'wrap' }}>
           <h3 style={{ color: 'white', margin: 0, fontSize: '20px', fontWeight: 600 }}>In association with:</h3>
-          <div style={{ display: 'flex', gap: '20px', alignItems: 'center', flexWrap: 'wrap' }}>
-            <div style={{ backgroundColor: 'white', padding: '10px 25px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '80px' }}>
-              <img src="/skill-india.png" alt="Skill India" style={{ maxHeight: '60px' }} />
+          <div style={{ display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap' }}>
+            <div style={{ backgroundColor: 'white', padding: '10px 20px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '80px' }}>
+              <img src="/digital-india.png" alt="Digital India" style={{ maxHeight: '60px' }} />
             </div>
-            <div style={{ backgroundColor: 'white', padding: '10px 25px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '80px' }}>
+            <div style={{ backgroundColor: 'white', padding: '10px 20px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '80px' }}>
               <img src="https://caddeskindia.com/wp-content/uploads/2021/03/caddesklogo-1024x267-min.png" alt="CAD Desk" style={{ maxHeight: '60px' }} />
             </div>
-            <div style={{ backgroundColor: 'white', padding: '10px 25px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '80px' }}>
-              <img src="/digital-india.png" alt="Digital India" style={{ maxHeight: '60px' }} />
+            <div style={{ backgroundColor: 'white', padding: '10px 20px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '80px' }}>
+              <img src="/skill-india.png" alt="Skill India" style={{ maxHeight: '60px' }} />
+            </div>
+            <div style={{ backgroundColor: 'white', padding: '10px 20px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '80px' }}>
+              <img src="/msme.png" alt="MSME Ministry of MSME, Govt. of India" style={{ maxHeight: '60px' }} />
+            </div>
+            <div style={{ backgroundColor: 'white', padding: '10px 20px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '80px' }}>
+              <img src="/make-in-india.png" alt="Make in India" style={{ maxHeight: '60px' }} />
             </div>
           </div>
         </div>
       </section>
 
-      {/* 11. Collaborations / Logos Slider Row */}
-      <section className="edubin-brand-section-02 section-padding">
-        <div className="container">
-          <div className="brand-wrapper text-center">
-            <h3 className="brand-title">Collaborations</h3>
-            <div className="brand-2-active-row">
-              {brandLogos.map((logoUrl, index) => (
-                <img 
-                  key={index} 
-                  src={logoUrl} 
-                  alt="M-Tech Computers Collaborations Brand Logo" 
-                  id={`brand-logo-${index + 1}`}
-                />
-              ))}
-            </div>
+      {/* Collaborations section removed as per client feedback */}
+
+      {/* Running Testimonials (end of page) */}
+      <section className="running-testimonials-section">
+        <div className="container" style={{ marginBottom: '28px' }}>
+          <div className="section-header" style={{ marginBottom: 0 }}>
+            <h2 className="section-title" style={{ color: '#07294d' }}>Student Testimonials</h2>
+          </div>
+        </div>
+        <div className="running-testimonials-track" aria-label="Scrolling student testimonials">
+          <div className="running-testimonials-row">
+            {[...testimonials, ...testimonials].map((item, idx) => (
+              <article key={`${item.name}-${idx}`} className="running-testimonial-card">
+                <p>&ldquo;{item.text}&rdquo;</p>
+                <h4>— {item.name}</h4>
+              </article>
+            ))}
           </div>
         </div>
       </section>

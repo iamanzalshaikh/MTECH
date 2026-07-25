@@ -35,10 +35,11 @@ export async function POST(request: Request) {
   try {
     const newLead = await request.json();
     
-    if (!newLead.name || !newLead.phone || !newLead.category || !newLead.course) {
+    if (!newLead.name || !newLead.phone || !newLead.location || !newLead.category || !newLead.course) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
     }
 
+    newLead.location = String(newLead.location).trim();
     newLead.date = new Date().toISOString();
     newLead.id = Math.random().toString(36).substr(2, 9);
 

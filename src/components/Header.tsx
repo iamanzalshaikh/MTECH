@@ -50,10 +50,10 @@ export default function Header({ onOpenEnquiry }: HeaderProps) {
         <div className="container header-top-wrap">
           <div className="header-contact-list">
             <span className="header-contact-item" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-              <FaPhoneAlt size={12} /> (456) 789 10 12
+              <FaPhoneAlt size={12} /> 9049344991 / 8976178976
             </span>
             <span className="header-contact-item" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-              <FaEnvelope size={12} /> admin@jkfindia.com
+              <FaPhoneAlt size={12} /> 7770048032 (Dombivli)
             </span>
           </div>
           <div className="header-top-right">
@@ -61,7 +61,7 @@ export default function Header({ onOpenEnquiry }: HeaderProps) {
               <a href="https://www.facebook.com/caddeskindia/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center' }}><FaFacebookF size={14} /></a>
               <a href="https://www.instagram.com/caddeskindia" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center' }}><FaInstagram size={14} /></a>
               <a href="https://www.linkedin.com/in/caddeskindia" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center' }}><FaLinkedinIn size={14} /></a>
-              <a href="https://www.youtube.com/watch?v=sWdotKkA9lo" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center' }}><FaYoutube size={14} /></a>
+              <a href="https://www.youtube.com/@mtechcomputers" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center' }}><FaYoutube size={14} /></a>
             </div>
           </div>
         </div>
@@ -117,29 +117,49 @@ export default function Header({ onOpenEnquiry }: HeaderProps) {
                 <span className={`nav-chevron ${openSection === 'courses' ? 'is-open' : ''}`}>▾</span>
               </button>
               <ul className={`nav-dropdown ${openSection === 'courses' ? 'open' : ''}`}>
-                <li>
-                  <Link href="/courses?category=Civil/Architecture" className="dropdown-link" onClick={closeMobileMenu}>
-                    Civil & Architecture
+                 <li>
+                  <Link href="/courses?category=IT Course" className="dropdown-link" onClick={closeMobileMenu}>
+                    IT Course
                   </Link>
                 </li>
                 <li>
-                  <Link href="/courses?category=Electrical/Electronics" className="dropdown-link" onClick={closeMobileMenu}>
-                    Electrical & Electronics
+                  <Link href="/courses?category=Civil &amp; Arch" className="dropdown-link" onClick={closeMobileMenu}>
+                    Civil &amp; Arch
                   </Link>
                 </li>
                 <li>
-                  <Link href="/courses?category=Mechanical/Automobile" className="dropdown-link" onClick={closeMobileMenu}>
-                    Mechanical & Automobile
+                  <Link href="/courses?category=Mechanical" className="dropdown-link" onClick={closeMobileMenu}>
+                    Mechanical
                   </Link>
                 </li>
                 <li>
-                  <Link href="/courses?category=CS/IT" className="dropdown-link" onClick={closeMobileMenu}>
-                    CS & IT Designing
+                  <Link href="/courses?category=Piping Course" className="dropdown-link" onClick={closeMobileMenu}>
+                    Piping Course
                   </Link>
                 </li>
                 <li>
-                  <Link href="/courses?category=Internship" className="dropdown-link" onClick={closeMobileMenu}>
-                    Internship Programs
+                  <Link href="/courses?category=Electrical" className="dropdown-link" onClick={closeMobileMenu}>
+                    Electrical
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/courses?category=Project Planning &amp; Management" className="dropdown-link" onClick={closeMobileMenu}>
+                    Project Planning &amp; Management
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/courses?category=Accounting &amp; Computer" className="dropdown-link" onClick={closeMobileMenu}>
+                    Accounting &amp; Computer
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/courses?category=Jewellery Design" className="dropdown-link" onClick={closeMobileMenu}>
+                    Jewellery Design
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/courses?category=Digital Marketing" className="dropdown-link" onClick={closeMobileMenu}>
+                    Digital Marketing
                   </Link>
                 </li>
               </ul>
@@ -160,7 +180,7 @@ export default function Header({ onOpenEnquiry }: HeaderProps) {
                   <Link href="/our-training-methodology" className="dropdown-link" onClick={closeMobileMenu}>Our Training Methodology</Link>
                 </li>
                 <li>
-                  <Link href="/terms-conditions" className="dropdown-link" onClick={closeMobileMenu}>Terms & Conditions</Link>
+                  <Link href="/terms-conditions" className="dropdown-link" onClick={closeMobileMenu}>Terms &amp; Conditions</Link>
                 </li>
                 <li>
                   <Link href="/refund-policy" className="dropdown-link" onClick={closeMobileMenu}>Refund Policy</Link>
@@ -172,10 +192,6 @@ export default function Header({ onOpenEnquiry }: HeaderProps) {
                   <Link href="/privacy-policy" className="dropdown-link" onClick={closeMobileMenu}>Privacy Policy</Link>
                 </li>
               </ul>
-            </li>
-
-            <li className="nav-item">
-              <Link href="/franchise" className="nav-link" onClick={closeMobileMenu}>Franchise</Link>
             </li>
 
             <li className="nav-item">

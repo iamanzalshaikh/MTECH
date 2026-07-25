@@ -20,7 +20,7 @@ export default function TrainingMethodologyPage() {
         <div className="container" style={{ maxWidth: '900px', margin: '0 auto' }}>
           <div style={{ lineHeight: '1.8', fontSize: '15px', color: '#374151' }}>
             <p style={{ marginBottom: '24px' }}>
-              Welcome to M-Tech Computers, your premier source for CAD CAM software training! At M-Tech Computers, we take great pride in our innovative training methodology, which sets us apart as a prominent institute in the fields of Computer-Aided Design (CAD) and Computer-Aided Manufacturing (CAM). Our commitment to excellence and dedication to equipping our students with cutting-edge skills has made us the institution of choice for aspiring engineers and designers all over the globe.
+              Welcome to M-Tech Computers, your premier source for CAD, CAM &amp; IT software training! At M-Tech Computers, we take great pride in our innovative training methodology, which sets us apart as a prominent institute in the fields of Computer-Aided Design (CAD), Computer-Aided Manufacturing (CAM), and Information Technology (IT). Our commitment to excellence and dedication to equipping our students with cutting-edge skills has made us the institution of choice for aspiring engineers and designers all over the globe.
             </p>
 
             <h3 style={{ fontSize: '20px', color: '#07294d', fontWeight: 700, marginTop: '30px', marginBottom: '12px' }}>Hands-On Learning Experience</h3>
@@ -30,17 +30,17 @@ export default function TrainingMethodologyPage() {
 
             <h3 style={{ fontSize: '20px', color: '#07294d', fontWeight: 700, marginTop: '30px', marginBottom: '12px' }}>Expert Faculty</h3>
             <p style={{ marginBottom: '24px' }}>
-              Our team of instructors is comprised of skilled and certified experts who bring a multitude of experience and knowledge to the table. They have an in-depth comprehension of the most recent developments and trends in CAD CAM software, ensuring that our students receive the most relevant and up-to-date knowledge. Our faculty is not only committed to teaching, but also to cultivating students' individual talents and guiding them to success.
+              Our team of instructors is comprised of skilled and certified experts who bring a multitude of experience and knowledge to the table. They have an in-depth comprehension of the most recent developments and trends in CAD, CAM &amp; IT software, ensuring that our students receive the most relevant and up-to-date knowledge. Our faculty is not only committed to teaching, but also to cultivating students' individual talents and guiding them to success.
             </p>
 
             <h3 style={{ fontSize: '20px', color: '#07294d', fontWeight: 700, marginTop: '30px', marginBottom: '12px' }}>Comprehensive Course Curriculum</h3>
             <p style={{ marginBottom: '24px' }}>
-              At M-Tech Computers, we believe in comprehensive skill development, so our course curriculum is exhaustive. From fundamentals to advanced techniques, our curriculum encompasses a broad spectrum of topics. We offer specialized courses in a variety of CAD CAM software applications, designed to meet the requirements of students from diverse engineering disciplines and industries. We offer courses for mechanical engineers, architects, and industrial designers.
+              At M-Tech Computers, we believe in comprehensive skill development, so our course curriculum is exhaustive. From fundamentals to advanced techniques, our curriculum encompasses a broad spectrum of topics. We offer specialized courses in a variety of CAD, CAM &amp; IT applications — from mechanical engineers and architects to digital marketers and IT professionals.
             </p>
 
             <h3 style={{ fontSize: '20px', color: '#07294d', fontWeight: 700, marginTop: '30px', marginBottom: '12px' }}>Training Personalised to the Learner</h3>
             <p style={{ marginBottom: '24px' }}>
-              We recognize that every student is unique and that their educational needs may vary. Because of this, we offer customized training options that enable students to concentrate on specific aspects of CAD CAM software that correspond to their professional objectives. Whether you seek proficiency in a particular software or want to delve deeply into a specialized field, our adaptable training approach meets your requirements.
+              We recognize that every student is unique and that their educational needs may vary. Because of this, we offer customized training options that enable students to concentrate on specific aspects of CAD, CAM &amp; IT that correspond to their professional objectives. Whether you seek proficiency in a particular software or want to delve deeply into a specialized field, our adaptable training approach meets your requirements.
             </p>
 
             <h3 style={{ fontSize: '20px', color: '#07294d', fontWeight: 700, marginTop: '30px', marginBottom: '12px' }}>State-of-the-Art Infrastructure</h3>
@@ -50,7 +50,7 @@ export default function TrainingMethodologyPage() {
 
             <h3 style={{ fontSize: '20px', color: '#07294d', fontWeight: 700, marginTop: '30px', marginBottom: '12px' }}>Industry Collaborations</h3>
             <p style={{ marginBottom: '24px' }}>
-              To bridge the divide between academia and industry, we collaborate with industry leaders in the CAD CAM field. These partnerships afford our students opportunities for internships, live initiatives, and exposure to real-world difficulties. Additionally, it ensures that our training remains pertinent and in step with the most recent developments by keeping us abreast of industry demands.
+              To bridge the divide between academia and industry, we collaborate with industry leaders in the CAD, CAM &amp; IT field. These partnerships afford our students opportunities for internships, live initiatives, and exposure to real-world challenges. Additionally, it ensures that our training remains pertinent and in step with the most recent developments by keeping us abreast of industry demands.
             </p>
 
             <h3 style={{ fontSize: '20px', color: '#07294d', fontWeight: 700, marginTop: '30px', marginBottom: '12px' }}>Job Placement Assistance</h3>
@@ -60,7 +60,7 @@ export default function TrainingMethodologyPage() {
 
             <div style={{ textAlign: 'center', marginTop: '40px', padding: '30px', background: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
               <p style={{ fontWeight: 'bold', color: '#07294d', fontSize: '16px', marginBottom: '16px' }}>
-                Join M-Tech Computers and realize your full potential as a CAD CAM expert.
+                Join M-Tech Computers and realize your full potential as a CAD, CAM &amp; IT expert.
               </p>
               <EnquiryTrigger className="btn btn-primary">
                 Enquire Now

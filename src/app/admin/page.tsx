@@ -7,6 +7,7 @@ interface Lead {
   id: string;
   name: string;
   phone: string;
+  location?: string;
   category: string;
   course: string;
   date: string;
@@ -216,6 +217,7 @@ export default function AdminPanel() {
                     <th style={{ padding: '16px 24px', color: '#64748b', fontWeight: 600, fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Date Submitted</th>
                     <th style={{ padding: '16px 24px', color: '#64748b', fontWeight: 600, fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Applicant</th>
                     <th style={{ padding: '16px 24px', color: '#64748b', fontWeight: 600, fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Contact</th>
+                    <th style={{ padding: '16px 24px', color: '#64748b', fontWeight: 600, fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Location</th>
                     <th style={{ padding: '16px 24px', color: '#64748b', fontWeight: 600, fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Course Details</th>
                   </tr>
                 </thead>
@@ -233,6 +235,18 @@ export default function AdminPanel() {
                         <a href={`tel:${lead.phone}`} style={{ color: '#3b82f6', textDecoration: 'none', fontWeight: 500, fontSize: '14px' }}>
                           {lead.phone}
                         </a>
+                      </td>
+                      <td style={{ padding: '16px 24px' }}>
+                        <span style={{
+                          backgroundColor: '#ecfdf5',
+                          color: '#047857',
+                          padding: '4px 10px',
+                          borderRadius: '100px',
+                          fontSize: '12px',
+                          fontWeight: 600
+                        }}>
+                          {lead.location || '—'}
+                        </span>
                       </td>
                       <td style={{ padding: '16px 24px' }}>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', alignItems: 'flex-start' }}>
