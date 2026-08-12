@@ -4,6 +4,9 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { coursesData } from '../page';
+import Plant3DSyllabusGrid, { plant3dSyllabusSections } from '@/components/Plant3DSyllabusGrid';
+import { courseDetails } from '@/data/courseDetails';
+import { courseDetailsOriginal } from '@/data/courseDetailsOriginal';
 
 // Detailed syllabus mapping for accordions
 const detailedSyllabusMapping: Record<string, { title: string; points: string[] }[]> = {
@@ -83,8 +86,18 @@ const detailedSyllabusMapping: Record<string, { title: string; points: string[] 
     { title: 'Chapter 3: Pipework Application & Routing', points: ['Creating piping specifications, heads, and tails in E3D', 'Routing pipelines manually and using auto-route tools', 'Placing valves, elbows, tees, and inline instruments', 'Running piping clash checks and extracting piping isometrics'] },
     { title: 'Chapter 4: Supports & Structures', points: ['Introduction to E3D structural steel module', 'Modeling columns, beams, framework, and plates grids', 'Creation of standard pipe supports, ancillary supports, and anchors', 'Modeling trunnions, shoes, and custom support configurations'] },
     { title: 'Chapter 5: Draw & Drafting Module', points: ['Introduction to E3D Draw module for drawing production', 'Creating department/registry structures and custom sheets', 'Creating view layouts, limits, and projection representations', 'Adding dimensions, labels, symbols, and exporting draft files to DXF'] }
-  ]
+  ],
+  'autocad-plant-3d': plant3dSyllabusSections.map((section) => ({
+    title: section.title,
+    points: section.topics,
+  })),
 };
+
+// Duplicate-topic courses (same underlying software, listed twice under
+// different site categories) reuse the one hand-authored syllabus rather
+// than maintaining two copies.
+detailedSyllabusMapping['sp3d-piping'] = detailedSyllabusMapping['smartplant-3d-sp3d'];
+detailedSyllabusMapping['e3d-plant'] = detailedSyllabusMapping['everything-3d-e3d'];
 
 // Course FAQ list
 const faqList = [
@@ -109,10 +122,13 @@ export default function CourseDetailPage({ params }: { params: React.Usable<{ id
     notFound();
   }
 
-  const courseImg = course.image || 'https://caddeskindia.com/wp-content/uploads/2021/02/ACAD-CE-1.jpg';
+  const courseImg = course.image || '/images/caddeskindia_com_wp-content_uploads_2021_02_ACAD-CE-1.jpg';
 
-  // Get syllabus chapters or load default
-  const syllabus = detailedSyllabusMapping[id] || [
+  // Priority: real caddeskindia.com scrape, then original hand-authored content
+  // (for courses caddesk doesn't offer), then the legacy generic mapping/default.
+  const realDetails = courseDetails[id] || courseDetailsOriginal[id];
+
+  const syllabus = (realDetails && realDetails.syllabus.length > 0 ? realDetails.syllabus : null) || detailedSyllabusMapping[id] || [
     { title: 'Chapter 1: Introduction & Workspace Setup', points: ['User interface & navigation controls', 'System requirements and basic configurations', 'Unit settings and coordinate layouts'] },
     { title: 'Chapter 2: Core Drawing Commands', points: ['Creating basic geometry shape profiles', 'Precision tools, snapping parameters, grids', 'Constructive draw features'] },
     { title: 'Chapter 3: Editing and Modify Features', points: ['Modifying existing elements (move, copy, rotate, scale)', 'Layer controls, color layouts, and line formats', 'Dimensioning configurations'] },
@@ -146,7 +162,7 @@ export default function CourseDetailPage({ params }: { params: React.Usable<{ id
             <span className="course-header-category">{course.category}</span>
             <h1 className="course-header-title">{course.title}</h1>
             <p className="course-header-subtitle">
-              Master professional software skills with M-Tech Computers. 100% Practical training, certified syllabus, and guaranteed placement assistance.
+              Learn professional software skills with M-Tech Computers. 100% Practical training, certified syllabus, and guaranteed placement assistance.
             </p>
             <div className="course-header-breadcrumbs">
               <Link href="/">Home</Link> / <Link href="/courses">Courses</Link> / <span>{course.title}</span>
@@ -240,38 +256,50 @@ export default function CourseDetailPage({ params }: { params: React.Usable<{ id
             {/* Course Overview */}
             <div className="course-overview-block">
               <h2>Course Overview</h2>
-              <p>{course.description}</p>
-              <p>
-                Our structural and design training focuses strictly on hands-on practice. Students will configure industrial templates, learn shortcut commands, create precise blueprints, and design structural components from scratch. In addition, our classes include regular tests and project reviews to verify skill sets before certification.
-              </p>
+              {realDetails?.overview ? (
+                realDetails.overview.split('\n\n').map((para, idx) => (
+                  <p key={idx}>{para}</p>
+                ))
+              ) : (
+                <>
+                  <p>{course.description}</p>
+                  <p>
+                    Our structural and design training focuses strictly on hands-on practice. Students will configure industrial templates, learn shortcut commands, create precise blueprints, and design structural components from scratch. In addition, our classes include regular tests and project reviews to verify skill sets before certification.
+                  </p>
+                </>
+              )}
             </div>
 
-            {/* Course Contents Accordion */}
+            {/* Course Contents */}
             <div className="course-contents-block">
-              <h2>Course Contents</h2>
-              <div className="syllabus-accordion-container">
-                {syllabus.map((chapter, index) => (
-                  <div key={index} className={`accordion-item ${activeAccordion === index ? 'active' : ''}`}>
-                    <button 
-                      onClick={() => setActiveAccordion(activeAccordion === index ? null : index)}
-                      className="accordion-header-btn"
-                    >
-                      <span>{chapter.title}</span>
-                      <span className="accordion-arrow">{activeAccordion === index ? '▲' : '▼'}</span>
-                    </button>
-                    
-                    {activeAccordion === index && (
-                      <div className="accordion-body-content">
-                        <ul className="syllabus-bullet-list">
-                          {chapter.points.map((point, idx) => (
-                            <li key={idx}>{point}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
+              <h2>{id === 'autocad-plant-3d' ? 'AutoCAD Plant 3D Training Syllabus Details' : 'Course Contents'}</h2>
+              {id === 'autocad-plant-3d' ? (
+                <Plant3DSyllabusGrid />
+              ) : (
+                <div className="syllabus-accordion-container">
+                  {syllabus.map((chapter, index) => (
+                    <div key={index} className={`accordion-item ${activeAccordion === index ? 'active' : ''}`}>
+                      <button 
+                        onClick={() => setActiveAccordion(activeAccordion === index ? null : index)}
+                        className="accordion-header-btn"
+                      >
+                        <span>{chapter.title}</span>
+                        <span className="accordion-arrow">{activeAccordion === index ? '▲' : '▼'}</span>
+                      </button>
+                      
+                      {activeAccordion === index && (
+                        <div className="accordion-body-content">
+                          <ul className="syllabus-bullet-list">
+                            {chapter.points.map((point, idx) => (
+                              <li key={idx}>{point}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
 
@@ -281,11 +309,19 @@ export default function CourseDetailPage({ params }: { params: React.Usable<{ id
             <div className="sidebar-highlights-card">
               <h3>Course Highlights</h3>
               <ul className="highlights-list">
-                <li><span>✓</span> Learn from Certified Experts</li>
-                <li><span>✓</span> 100% Practical Laboratory classes</li>
-                <li><span>✓</span> Access to Dedicated Placement Portal</li>
-                <li><span>✓</span> Free Study Material & Textbooks</li>
-                <li><span>✓</span> Internationally recognized certificate</li>
+                {realDetails?.highlights && realDetails.highlights.length > 0 ? (
+                  realDetails.highlights.map((h, idx) => (
+                    <li key={idx}><span>✓</span> {h}</li>
+                  ))
+                ) : (
+                  <>
+                    <li><span>✓</span> Learn from Certified Experts</li>
+                    <li><span>✓</span> 100% Practical Laboratory classes</li>
+                    <li><span>✓</span> Access to Dedicated Placement Portal</li>
+                    <li><span>✓</span> Free Study Material & Textbooks</li>
+                    <li><span>✓</span> Internationally recognized certificate</li>
+                  </>
+                )}
               </ul>
             </div>
 
@@ -360,7 +396,7 @@ export default function CourseDetailPage({ params }: { params: React.Usable<{ id
             </div>
             <div className="instructors-img-wrap">
               <img 
-                src="https://caddeskindia.com/wp-content/themes/caddesk_official_new/assets/images/testi-img.png" 
+                src="/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_testi-img.png" 
                 alt="M-Tech Computers Certified Instructors" 
                 className="instructors-banner-img"
               />
@@ -414,13 +450,7 @@ export default function CourseDetailPage({ params }: { params: React.Usable<{ id
                       <div className="image">
                         <Link href={`/courses/${c.id}`}>
                           <img 
-                            src={
-                              c.id === 'autocad-civil-arch' ? 'https://caddeskindia.com/wp-content/uploads/2021/02/ACAD-CE-1.jpg' :
-                              c.id === 'revit-architecture' ? 'https://caddeskindia.com/wp-content/uploads/2021/02/Solidworks.jpg' : // placeholder
-                              c.id === 'staad-pro' ? 'https://caddeskindia.com/wp-content/uploads/2021/02/ACAD-CE-1.jpg' : // placeholder
-                              c.id === '3ds-max' ? 'https://caddeskindia.com/wp-content/uploads/2021/02/Solidworks.jpg' : // placeholder
-                              'https://caddeskindia.com/wp-content/uploads/2021/02/ACAD-CE-1.jpg'
-                            } 
+                            src={c.image || '/images/caddeskindia_com_wp-content_uploads_2021_02_ACAD-CE-1.jpg'} 
                             alt={c.title} 
                           />
                         </Link>

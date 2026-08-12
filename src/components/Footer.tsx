@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { SOCIAL_LINKS } from '@/config/site';
 
 export default function Footer() {
   return (
@@ -117,9 +118,9 @@ export default function Footer() {
               Follow Us
             </p>
             <div style={{ display: 'flex', gap: '12px' }}>
-              <a href="https://www.facebook.com/caddeskindia/" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>Facebook</a>
-              <a href="https://www.instagram.com/caddeskindia" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>Instagram</a>
-              <a href="https://www.linkedin.com/in/caddeskindia" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>LinkedIn</a>
+              <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>Facebook</a>
+              <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>Instagram</a>
+              <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>LinkedIn</a>
             </div>
           </div>
         </div>

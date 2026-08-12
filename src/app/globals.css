@@ -3116,7 +3116,7 @@ body.mobile-nav-open .navbar-section {
    FRANCHISE PAGE STYLES
    ========================================================================== */
 .franchise-hero-wrap {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.55)), url('https://caddeskindia.com/wp-content/uploads/2026/01/ANS07782-scaled.jpg') no-repeat center center !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.55)), url('/images/caddeskindia_com_wp-content_uploads_2026_01_ANS07782-scaled.jpg') no-repeat center center !important;
   background-size: cover !important;
   background-position: center 22% !important;
   padding: 80px 0 !important;
@@ -3200,22 +3200,22 @@ body.mobile-nav-open .navbar-section {
 }
 
 .franchise-inner-card.bg-ctg-1 {
-  background: url('https://caddeskindia.com/wp-content/themes/caddesk_official_new/assets/images/category/ctg-1.jpg') no-repeat center center !important;
+  background: url('/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_category_ctg-1.jpg') no-repeat center center !important;
   background-size: cover !important;
 }
 
 .franchise-inner-card.bg-ctg-2 {
-  background: url('https://caddeskindia.com/wp-content/themes/caddesk_official_new/assets/images/category/ctg-2.jpg') no-repeat center center !important;
+  background: url('/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_category_ctg-2.jpg') no-repeat center center !important;
   background-size: cover !important;
 }
 
 .franchise-inner-card.bg-ctg-3 {
-  background: url('https://caddeskindia.com/wp-content/themes/caddesk_official_new/assets/images/category/ctg-3.jpg') no-repeat center center !important;
+  background: url('/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_category_ctg-3.jpg') no-repeat center center !important;
   background-size: cover !important;
 }
 
 .franchise-inner-card.bg-ctg-4 {
-  background: url('https://caddeskindia.com/wp-content/themes/caddesk_official_new/assets/images/category/ctg-4.jpg') no-repeat center center !important;
+  background: url('/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_category_ctg-4.jpg') no-repeat center center !important;
   background-size: cover !important;
 }
 
@@ -3276,7 +3276,7 @@ body.mobile-nav-open .navbar-section {
 
 /* Testimonial slider layout styling */
 .franchise-partner-section {
-  background: linear-gradient(rgba(7, 41, 77, 0.82), rgba(7, 41, 77, 0.85)), url('https://caddeskindia.com/wp-content/themes/caddesk_official_new/assets/images/bg-2.jpg') no-repeat center center !important;
+  background: linear-gradient(rgba(7, 41, 77, 0.82), rgba(7, 41, 77, 0.85)), url('/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_bg-2.jpg') no-repeat center center !important;
   background-size: cover !important;
   padding: 80px 0 !important;
   color: #ffffff !important;
@@ -3400,7 +3400,7 @@ body.mobile-nav-open .navbar-section {
 
 /* Books background CTA strip */
 .franchise-cta-strip {
-  background: linear-gradient(rgba(185, 28, 28, 0.9), rgba(185, 28, 28, 0.92)), url('https://caddeskindia.com/wp-content/themes/caddesk_official_new/assets/images/cta-bg3.jpg') no-repeat center center !important;
+  background: linear-gradient(rgba(185, 28, 28, 0.9), rgba(185, 28, 28, 0.92)), url('/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_cta-bg3.jpg') no-repeat center center !important;
   background-size: cover !important;
   padding: 60px 0 !important;
   text-align: center !important;
@@ -3648,6 +3648,13 @@ body.mobile-nav-open .navbar-section {
   font-weight: 800;
   font-size: 20px;
   margin-bottom: 14px;
+  overflow: hidden;
+}
+
+.placed-candidate-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .placed-candidate-card h3 {
@@ -3753,6 +3760,118 @@ body.mobile-nav-open .navbar-section {
   }
   .why-choose-grid {
     grid-template-columns: 1fr !important;
+  }
+}
+
+/* Floating Google Reviews Tab (left side) — large Milestone-style */
+.google-review-tab {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 998;
+  text-decoration: none;
+  display: block;
+}
+
+.google-review-tab-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #dbe3ef;
+  border-left: none;
+  border-radius: 0 14px 14px 0;
+  padding: 22px 14px 16px;
+  min-width: 52px;
+  box-shadow: 6px 0 24px rgba(0, 0, 0, 0.16);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.google-review-tab:hover .google-review-tab-inner {
+  transform: translateX(6px);
+  box-shadow: 8px 0 28px rgba(0, 0, 0, 0.2);
+}
+
+.google-review-tab-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  line-height: 1.15;
+}
+
+.google-review-label {
+  color: #0f172a;
+  font-size: 17px;
+}
+
+.g-blue { color: #4285f4; }
+.g-red { color: #ea4335; }
+.g-yellow { color: #fbbc05; }
+.g-green { color: #34a853; }
+
+.google-review-arrow {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #334155;
+  transform: rotate(180deg);
+}
+
+/* AutoCAD Plant 3D syllabus grid */
+.plant3d-syllabus-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.plant3d-syllabus-card {
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+
+.plant3d-syllabus-card h3 {
+  margin: 0 0 12px;
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.plant3d-syllabus-card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.plant3d-syllabus-card li {
+  font-size: 13.5px;
+  color: #475569;
+  line-height: 1.55;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+  .plant3d-syllabus-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .google-review-tab-inner {
+    padding: 16px 10px 12px;
+    min-width: 42px;
+  }
+
+  .google-review-tab-text {
+    font-size: 14px;
+  }
+
+  .google-review-label {
+    font-size: 13px;
   }
 }
 

@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { useInView } from 'framer-motion';
 import CourseRecommender from '@/components/CourseRecommender';
 import Hero from '@/components/Hero';
+import { placedStudentsByYear } from '@/data/placedStudents';
+import { GMB_LOCATIONS } from '@/config/site';
 
 function CountUpNumber({ value, duration = 1.5 }: { value: number; duration?: number }) {
   const [count, setCount] = useState(0);
@@ -63,30 +65,34 @@ const testimonials = [
   }
 ];
 
-const branchCities = [
-  'Kalyan',
-  'Dombivli'
+const homeBranches = [
+  {
+    city: 'Kalyan',
+    label: 'Kalyan W — Head Office',
+    mapsUrl: GMB_LOCATIONS.kalyan,
+  },
+  {
+    city: 'Dombivli',
+    label: 'Dombivli East',
+    mapsUrl: GMB_LOCATIONS.dombivli,
+  },
 ];
 
-const placedCandidates = [
-  { name: 'Vaishnavi Gaikar', role: 'MIS Executive', company: 'Axis Bank' },
-  { name: 'Harsh Dabhi', role: 'React Developer', company: 'Zencommerce' },
-  { name: 'Nidhi Shukla', role: 'MIS Sales Co-Ordinator', company: 'MARS Lifestyle PVT LTD' },
-  { name: 'Prathamesh Gaikwad', role: 'MIS Executive Analyst', company: 'Brocus IT Solutions Pvt. Ltd' },
-  { name: 'Preeti Benvanshi', role: 'Jr Software Developer', company: 'Techno Purple' }
-];
+const placedCandidates = placedStudentsByYear['2025-2026']
+  .filter((s) => s.photo)
+  .slice(0, 8);
 
 // Collaboration Logos
 const brandLogos = [
-  'https://caddeskindia.com/wp-content/uploads/2023/09/8.png',
-  'https://caddeskindia.com/wp-content/uploads/2023/09/7.png',
-  'https://caddeskindia.com/wp-content/uploads/2023/09/6.png',
-  'https://caddeskindia.com/wp-content/uploads/2023/09/5.png',
-  'https://caddeskindia.com/wp-content/uploads/2023/09/4.png',
-  'https://caddeskindia.com/wp-content/uploads/2023/09/3.png',
-  'https://caddeskindia.com/wp-content/uploads/2023/09/2.png',
-  'https://caddeskindia.com/wp-content/uploads/2023/09/1.png',
-  'https://caddeskindia.com/wp-content/uploads/2025/02/header_logo.webp'
+  '/images/caddeskindia_com_wp-content_uploads_2023_09_8.png',
+  '/images/caddeskindia_com_wp-content_uploads_2023_09_7.png',
+  '/images/caddeskindia_com_wp-content_uploads_2023_09_6.png',
+  '/images/caddeskindia_com_wp-content_uploads_2023_09_5.png',
+  '/images/caddeskindia_com_wp-content_uploads_2023_09_4.png',
+  '/images/caddeskindia_com_wp-content_uploads_2023_09_3.png',
+  '/images/caddeskindia_com_wp-content_uploads_2023_09_2.png',
+  '/images/caddeskindia_com_wp-content_uploads_2023_09_1.png',
+  '/images/caddeskindia_com_wp-content_uploads_2025_02_header_logo.webp'
 ];
 
 export default function HomePage() {
@@ -109,7 +115,7 @@ export default function HomePage() {
               {/* Feature 1 */}
               <div className="features-item-02">
                 <div className="features-img">
-                  <img src="https://caddeskindia.com/wp-content/themes/caddesk_official_new/assets/images/all-icon/feat-4.png" alt="Franchise Icon" />
+                  <img src="/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_all-icon_feat-4.png" alt="Franchise Icon" />
                 </div>
                 <div className="features-content">
                   <h3 className="title">Advanced Curriculum</h3>
@@ -119,17 +125,17 @@ export default function HomePage() {
               {/* Feature 2 */}
               <div className="features-item-02">
                 <div className="features-img">
-                  <img src="https://caddeskindia.com/wp-content/themes/caddesk_official_new/assets/images/all-icon/feat-5.png" alt="Students Icon" />
+                  <img src="/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_all-icon_feat-5.png" alt="Students Icon" />
                 </div>
                 <div className="features-content">
-                  <h3 className="title">3K+ Students</h3>
+                  <h3 className="title">5000+ Students Trained</h3>
                   <p>Certified learners placed successfully</p>
                 </div>
               </div>
               {/* Feature 3 */}
               <div className="features-item-02">
                 <div className="features-img">
-                  <img src="https://caddeskindia.com/wp-content/themes/caddesk_official_new/assets/images/all-icon/feat-6.png" alt="Instructors Icon" />
+                  <img src="/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_all-icon_feat-6.png" alt="Instructors Icon" />
                 </div>
                 <div className="features-content">
                   <h3 className="title">Expert Faculty</h3>
@@ -155,7 +161,7 @@ export default function HomePage() {
                 <div className="thum">
                   <div className="image">
                     <Link href="/courses?category=Information Technology">
-                      <img src="https://caddeskindia.com/wp-content/uploads/2026/04/CS.jpg" alt="Information Technology" />
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2026_04_CS.jpg" alt="Information Technology" />
                     </Link>
                   </div>
                 </div>
@@ -171,7 +177,7 @@ export default function HomePage() {
                 <div className="thum">
                   <div className="image">
                     <Link href="/courses?category=Civil/Architecture">
-                      <img src="https://caddeskindia.com/wp-content/uploads/2026/04/Civil-arch.jpg" alt="Civil & Architecture" />
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2026_04_Civil-arch.jpg" alt="Civil & Architecture" />
                     </Link>
                   </div>
                 </div>
@@ -187,7 +193,7 @@ export default function HomePage() {
                 <div className="thum">
                   <div className="image">
                     <Link href="/courses?category=Electrical/Electronics">
-                      <img src="https://caddeskindia.com/wp-content/uploads/2026/04/ELECTRICAL.jpg" alt="Electrical" />
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2026_04_ELECTRICAL.jpg" alt="Electrical" />
                     </Link>
                   </div>
                 </div>
@@ -203,7 +209,7 @@ export default function HomePage() {
                 <div className="thum">
                   <div className="image">
                     <Link href="/courses?category=Mechanical/Automobile">
-                      <img src="https://caddeskindia.com/wp-content/uploads/2026/04/Mechanical.jpg" alt="Mechanical" />
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2026_04_Mechanical.jpg" alt="Mechanical" />
                     </Link>
                   </div>
                 </div>
@@ -219,7 +225,7 @@ export default function HomePage() {
                 <div className="thum">
                   <div className="image">
                     <Link href="/courses?category=Project Planning">
-                      <img src="https://caddeskindia.com/wp-content/uploads/2021/02/Primavera.jpg" alt="Project Planning & Management" />
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_02_Primavera.jpg" alt="Project Planning & Management" />
                     </Link>
                   </div>
                 </div>
@@ -235,7 +241,7 @@ export default function HomePage() {
                 <div className="thum">
                   <div className="image">
                     <Link href="/courses?category=Interior Design">
-                      <img src="https://caddeskindia.com/wp-content/uploads/2021/02/3ds-1.jpg" alt="Interior Design" />
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_02_Sketch-up.jpg" alt="Interior Design" />
                     </Link>
                   </div>
                 </div>
@@ -251,7 +257,7 @@ export default function HomePage() {
                 <div className="thum">
                   <div className="image">
                     <Link href="/courses?category=Jewellery Design">
-                      <img src="https://mtechcomputers.in/wp-content/uploads/2019/05/courses01.jpg" alt="Jewellery Design" />
+                      <img src="/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_category_ctg-3.jpg" alt="Jewellery Design" />
                     </Link>
                   </div>
                 </div>
@@ -268,7 +274,7 @@ export default function HomePage() {
                 <div className="thum">
                   <div className="image">
                     <Link href="/courses?category=Piping">
-                      <img src="https://caddeskindia.com/wp-content/uploads/2021/02/ACAD-ME-1.jpg" alt="Piping" />
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_03_civil-3d.jpg" alt="Piping" />
                     </Link>
                   </div>
                 </div>
@@ -284,13 +290,29 @@ export default function HomePage() {
                 <div className="thum">
                   <div className="image">
                     <Link href="/courses?category=Accounting">
-                      <img src="https://caddeskindia.com/wp-content/uploads/2021/03/Tally.jpg" alt="Accounting & Computer" />
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_03_Tally.jpg" alt="Accounting & Computer" />
                     </Link>
                   </div>
                 </div>
                 <div className="content">
                   <Link href="/courses?category=Accounting">
                     <h4 className="title">Accounting &amp; Computer</h4>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Category 11 - Digital Marketing */}
+              <div className="single-course">
+                <div className="thum">
+                  <div className="image">
+                    <Link href="/courses?category=Digital Marketing">
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_03_Digital_Marketting.jpg" alt="Digital Marketing" />
+                    </Link>
+                  </div>
+                </div>
+                <div className="content">
+                  <Link href="/courses?category=Digital Marketing">
+                    <h4 className="title">Digital Marketing</h4>
                   </Link>
                 </div>
               </div>
@@ -316,7 +338,7 @@ export default function HomePage() {
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
                     <Link href="/courses?category=Mechanical">
-                      <img src="https://caddeskindia.com/wp-content/uploads/2021/02/ACAD-ME-1.jpg" alt="AutoCAD Mechanical" />
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_02_ACAD-ME-1.jpg" alt="AutoCAD Mechanical" />
                     </Link>
                   </div>
                 </div>
@@ -343,7 +365,7 @@ export default function HomePage() {
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
                     <Link href="/courses?category=Civil/Architecture">
-                      <img src="https://caddeskindia.com/wp-content/uploads/2021/02/ACAD-CE-1.jpg" alt="AutoCAD Civil/Arch." />
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_02_ACAD-CE-1.jpg" alt="AutoCAD Civil/Arch." />
                     </Link>
                   </div>
                 </div>
@@ -370,7 +392,7 @@ export default function HomePage() {
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
                     <Link href="/courses?category=Electrical">
-                      <img src="https://caddeskindia.com/wp-content/uploads/2021/02/ACAD-EE-1.jpg" alt="AutoCAD Electrical" />
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_02_ACAD-EE-1.jpg" alt="AutoCAD Electrical" />
                     </Link>
                   </div>
                 </div>
@@ -397,7 +419,7 @@ export default function HomePage() {
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
                     <Link href="/courses?category=Mechanical">
-                      <img src="https://caddeskindia.com/wp-content/uploads/2021/02/Solidworks.jpg" alt="Solidworks" />
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_02_Solidworks.jpg" alt="Solidworks" />
                     </Link>
                   </div>
                 </div>
@@ -424,7 +446,7 @@ export default function HomePage() {
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
                     <Link href="/courses?category=Mechanical">
-                      <img src="https://caddeskindia.com/wp-content/uploads/2021/02/CNC.jpg" alt="CNC Programming" />
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_02_CNC.jpg" alt="CNC Programming" />
                     </Link>
                   </div>
                 </div>
@@ -451,7 +473,7 @@ export default function HomePage() {
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
                     <Link href="/courses?category=Mechanical">
-                      <img src="https://caddeskindia.com/wp-content/uploads/2021/02/CATIA.jpg" alt="CATIA" />
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_02_CATIA.jpg" alt="CATIA" />
                     </Link>
                   </div>
                 </div>
@@ -494,7 +516,7 @@ export default function HomePage() {
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
                     <Link href="/courses?category=Mechanical">
-                      <img src="https://caddeskindia.com/wp-content/uploads/2021/02/Solidworks.jpg" alt="Solidworks" />
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_02_Solidworks.jpg" alt="Solidworks" />
                     </Link>
                   </div>
                 </div>
@@ -519,7 +541,7 @@ export default function HomePage() {
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
                     <Link href="/courses?category=Mechanical">
-                      <img src="https://caddeskindia.com/wp-content/uploads/2021/02/CNC.jpg" alt="CNC Programming" />
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_02_CNC.jpg" alt="CNC Programming" />
                     </Link>
                   </div>
                 </div>
@@ -544,7 +566,7 @@ export default function HomePage() {
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
                     <Link href="/courses?category=Mechanical">
-                      <img src="https://caddeskindia.com/wp-content/uploads/2021/02/CATIA.jpg" alt="CATIA" />
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_02_CATIA.jpg" alt="CATIA" />
                     </Link>
                   </div>
                 </div>
@@ -580,21 +602,21 @@ export default function HomePage() {
                 <div className="row">
                   <div className="single-counter-03">
                     <div className="icon">
-                      <img src="https://caddeskindia.com/wp-content/themes/caddesk_official_new/assets/images/all-icon/counter-1.png" alt="Icon" />
+                      <img src="/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_all-icon_counter-1.png" alt="Icon" />
                     </div>
-                    <span><span className="counter"><CountUpNumber value={3} /></span>K+</span>
-                    <p>Learners Enrolled</p>
+                    <span><span className="counter"><CountUpNumber value={5000} /></span>+</span>
+                    <p>Students Trained</p>
                   </div>
                   <div className="single-counter-03">
                     <div className="icon">
-                      <img src="https://caddeskindia.com/wp-content/themes/caddesk_official_new/assets/images/all-icon/counter-2.png" alt="Icon" />
+                      <img src="/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_all-icon_counter-2.png" alt="Icon" />
                     </div>
                     <span><span className="counter"><CountUpNumber value={50} /></span>+</span>
                     <p>College/ Corporate Training</p>
                   </div>
                   <div className="single-counter-03">
                     <div className="icon">
-                      <img src="https://caddeskindia.com/wp-content/themes/caddesk_official_new/assets/images/all-icon/counter-1.png" alt="Icon" />
+                      <img src="/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_all-icon_counter-1.png" alt="Icon" />
                     </div>
                     <span><span className="counter"><CountUpNumber value={32} /></span>+</span>
                     <p>Training Centres</p>
@@ -617,12 +639,23 @@ export default function HomePage() {
             <h2 className="section-title" style={{ color: '#07294d' }}>Our Branches</h2>
           </div>
           <div className="home-branches-grid">
-            {branchCities.map((city, idx) => (
-              <div key={city} className="home-branch-card">
+            {homeBranches.map((branch, idx) => (
+              <a
+                key={branch.city}
+                href={branch.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="home-branch-card"
+                style={{ textDecoration: 'none', color: 'inherit' }}
+              >
                 <span className="home-branch-num">{String(idx + 1).padStart(2, '0')}</span>
                 <div className="home-branch-pin" aria-hidden="true">📍</div>
-                <h3>{city}</h3>
-              </div>
+                <h3>{branch.city}</h3>
+                <p style={{ margin: '6px 0 0', fontSize: '13px', color: '#64748b' }}>{branch.label}</p>
+                <span style={{ display: 'inline-block', marginTop: '12px', fontSize: '13px', fontWeight: 700, color: '#0ea5e9' }}>
+                  Live Location →
+                </span>
+              </a>
             ))}
           </div>
         </div>
@@ -634,14 +667,21 @@ export default function HomePage() {
           <div className="section-header" style={{ marginBottom: '40px' }}>
             <h2 className="section-title" style={{ color: '#07294d' }}>Recently Placed Candidates</h2>
             <p className="section-subtitle">
-              Our students are building careers across banking, IT, and product companies.
+              Our students are building careers across banking, IT, and product companies.{' '}
+              <Link href="/placed-students" style={{ color: 'var(--clr-accent)', fontWeight: 600 }}>
+                View all placements →
+              </Link>
             </p>
           </div>
           <div className="placed-candidates-grid">
             {placedCandidates.map((student) => (
               <div key={student.name} className="placed-candidate-card">
                 <div className="placed-candidate-avatar">
-                  {student.name.split(' ').map((n) => n[0]).join('').slice(0, 2)}
+                  {student.photo ? (
+                    <img src={student.photo} alt={student.name} className="placed-candidate-photo" />
+                  ) : (
+                    student.name.split(' ').map((n) => n[0]).join('').slice(0, 2)
+                  )}
                 </div>
                 <h3>{student.name}</h3>
                 <p className="placed-candidate-role">{student.role}</p>
@@ -661,7 +701,7 @@ export default function HomePage() {
               <img src="/digital-india.png" alt="Digital India" style={{ maxHeight: '60px' }} />
             </div>
             <div style={{ backgroundColor: 'white', padding: '10px 20px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '80px' }}>
-              <img src="https://caddeskindia.com/wp-content/uploads/2021/03/caddesklogo-1024x267-min.png" alt="CAD Desk" style={{ maxHeight: '60px' }} />
+              <img src="/images/caddeskindia_com_wp-content_uploads_2021_03_caddesklogo-1024x267-min.png" alt="CAD Desk" style={{ maxHeight: '60px' }} />
             </div>
             <div style={{ backgroundColor: 'white', padding: '10px 20px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '80px' }}>
               <img src="/skill-india.png" alt="Skill India" style={{ maxHeight: '60px' }} />

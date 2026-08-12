@@ -5,6 +5,8 @@ import { usePathname } from 'next/navigation';
 import Header from './Header';
 import Footer from './Footer';
 import EnquiryDrawer from './EnquiryDrawer';
+import GoogleReviewTab from './GoogleReviewTab';
+import { SOCIAL_LINKS } from '@/config/site';
 import { FaWhatsapp } from 'react-icons/fa';
 
 interface MainLayoutProps {
@@ -52,6 +54,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
   return (
     <div className="main-wrapper" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Header onOpenEnquiry={openEnquiry} />
+      <GoogleReviewTab />
       
       <main style={{ flexGrow: 1 }}>
         {children}
@@ -69,7 +72,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
 
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/918976178976?text=Hello%20M-Tech%20Computers,%20I%20want%20to%20enquire%20about%20your%20courses."
+        href={SOCIAL_LINKS.whatsapp}
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-floating-btn"

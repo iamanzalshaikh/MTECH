@@ -32,6 +32,7 @@ const categoryToCourses: Record<string, string[]> = {
   ],
   'Piping Course': [
     'AutoCAD 2D Piping Design',
+    'AutoCAD Plant 3D',
     'SmartPlant 3D (SP3D)',
     'Everything 3D (E-3D)'
   ],

@@ -1,0 +1,266 @@
+[
+  {
+    "name": "Ajiyank Dhavle",
+    "role": "Interior Designer",
+    "company": "Godrej Interior",
+    "branch": "Interior",
+    "photo": "/placed-students/ajiyank-dhavle.jpeg"
+  },
+  {
+    "name": "Ketan Shinde",
+    "role": "Design Engg",
+    "company": "Crystal Automation",
+    "branch": "Mechanical",
+    "photo": "/placed-students/ketan-shinde.jpeg"
+  },
+  {
+    "name": "Rajesh Bhoir",
+    "role": "Site Engg",
+    "company": "Cosmos consulting engineers",
+    "branch": "Civil",
+    "photo": "/placed-students/rajesh-bhoir.jpeg"
+  },
+  {
+    "name": "Mihir Patel",
+    "role": "Structural Engg",
+    "company": "Nayan Dholakia Chartered Eng.",
+    "branch": "Civil",
+    "photo": "/placed-students/mihir-patel.jpeg"
+  },
+  {
+    "name": "Asif Alam",
+    "role": "AutoCAD Engg",
+    "company": "Trinity infra roofing",
+    "branch": "Interior",
+    "photo": "/placed-students/asif-alam.jpeg"
+  },
+  {
+    "name": "Patal Pawar",
+    "role": "Design Engg",
+    "company": "Oriental containers LTD.",
+    "branch": "Mechanical",
+    "photo": "/placed-students/patal-pawar.jpeg"
+  },
+  {
+    "name": "Sayali Pardhi",
+    "role": "CAD Engg",
+    "company": "Geoinfo Mapping Solution",
+    "branch": "Civil",
+    "photo": "/placed-students/sayali-pardhi.jpeg"
+  },
+  {
+    "name": "Payal Hanuvt",
+    "role": "Design Engg",
+    "company": "Priya Enterprises",
+    "branch": "Civil",
+    "photo": "/placed-students/payal-hanuvt.jpeg"
+  },
+  {
+    "name": "Kirti Bhalerao",
+    "role": "Design Engg",
+    "company": "Precon Global",
+    "branch": "Civil",
+    "photo": "/placed-students/kirti-bhalerao.jpeg"
+  },
+  {
+    "name": "Mahesh Pawar",
+    "role": "AutoCAD Engg",
+    "company": "Trinity infra roofing",
+    "branch": "Interior",
+    "photo": "/placed-students/mahesh-pawar.jpeg"
+  },
+  {
+    "name": "Sagar Pawar",
+    "role": "Marketing Executive",
+    "company": "CADD Centre",
+    "branch": "Mechanical",
+    "photo": "/placed-students/sagar-pawar.jpeg"
+  },
+  {
+    "name": "Vishal Badgujar",
+    "role": "CAD Engg",
+    "company": "Technotorc pvt. ltd",
+    "branch": "Mechanical",
+    "photo": "/placed-students/vishal-badgujar.jpeg"
+  },
+  {
+    "name": "Jay Katke",
+    "role": "CAD Engg",
+    "company": "Technotorc pvt. ltd",
+    "branch": "Mechanical",
+    "photo": "/placed-students/jay-katke.jpeg"
+  },
+  {
+    "name": "Mayuresh Lahane",
+    "role": "CAD Designer",
+    "company": "Manoj Engineering",
+    "branch": "Mechanical",
+    "photo": "/placed-students/mayuresh-lahane.jpeg"
+  },
+  {
+    "name": "Vinita Zanke",
+    "role": "Electrical Engg",
+    "company": "Samsung C&T",
+    "branch": "Electrical",
+    "photo": "/placed-students/vinita-zanke.jpeg"
+  },
+  {
+    "name": "Mayur Boste",
+    "role": "Junior Engg",
+    "company": "Vishal Enterprises",
+    "branch": "Civil",
+    "photo": "/placed-students/mayur-boste.jpeg"
+  },
+  {
+    "name": "Laxman Desai",
+    "role": "Design Engg",
+    "company": "Liquee Seals Pvt.ltd",
+    "branch": "Mechanical",
+    "photo": "/placed-students/laxman-desai.jpeg"
+  },
+  {
+    "name": "Suyesh Bagde",
+    "role": "Junior Engg",
+    "company": "HM Associate",
+    "branch": "Civil",
+    "photo": "/placed-students/suyesh-bagde.jpeg"
+  },
+  {
+    "name": "Vaibhav Vishe",
+    "role": "Junior Engg",
+    "company": "Nilam Arch.",
+    "branch": "Civil",
+    "photo": "/placed-students/vaibhav-vishe.jpeg"
+  },
+  {
+    "name": "Jaydeep Shirose",
+    "role": "Design Engg",
+    "company": "Hightech Pvt. Ltd",
+    "branch": "Mechanical",
+    "photo": "/placed-students/jaydeep-shirose.jpeg"
+  },
+  {
+    "name": "Monali Gore",
+    "role": "Junior Engg",
+    "company": "Jijau Construction",
+    "branch": "Civil",
+    "photo": "/placed-students/monali-gore.jpeg"
+  },
+  {
+    "name": "Abhijeet Kamble",
+    "role": "Senior Engg",
+    "company": "Nirman Engg. Construction Company",
+    "branch": "Civil",
+    "photo": "/placed-students/abhijeet-kamble.jpeg"
+  },
+  {
+    "name": "Sunil Chavhan",
+    "role": "Site Engg",
+    "company": "Home Developers",
+    "branch": "Civil",
+    "photo": "/placed-students/sunil-chavhan.jpeg"
+  },
+  {
+    "name": "D Balaji",
+    "role": "Cad Engg",
+    "company": "Tosoh India Pvt Ltd",
+    "branch": "Mech",
+    "photo": "/placed-students/d-balaji.jpeg"
+  },
+  {
+    "name": "Lajri Badhe",
+    "role": "Design Engg",
+    "company": "Alstom Company",
+    "branch": "Electrical",
+    "photo": "/placed-students/lajri-badhe.jpeg"
+  },
+  {
+    "name": "Ashish Jogi",
+    "role": "Mechanical Engg",
+    "company": "Symetrix Elevators pvt. Ltd",
+    "branch": "Mechanical",
+    "photo": "/placed-students/ashish-jogi.jpeg"
+  },
+  {
+    "name": "Poooja Bagul",
+    "role": "AutoCAD operator",
+    "company": "S.K.N Enterprises",
+    "branch": "Interior",
+    "photo": "/placed-students/poooja-bagul.jpeg"
+  },
+  {
+    "name": "Sagar Patil",
+    "role": "AutoCAD Engg",
+    "company": "Sam Tec. Engineering Pvt. Ltd.",
+    "branch": "Electrical",
+    "photo": "/placed-students/sagar-patil.jpeg"
+  },
+  {
+    "name": "Shubhangi Chahnde",
+    "role": "Interior Designer",
+    "company": "Om Enterprises",
+    "branch": "Interior",
+    "photo": "/placed-students/shubhangi-chahnde.jpeg"
+  },
+  {
+    "name": "Jay Kokate",
+    "role": "Site Engineer",
+    "company": "Kohinoor Construction",
+    "branch": "Civil",
+    "photo": "/placed-students/jay-kokate.jpeg"
+  },
+  {
+    "name": "Nishant Barve",
+    "role": "Site Engineer",
+    "company": "Kohinoor Construction",
+    "branch": "Civil",
+    "photo": "/placed-students/nishant-barve.jpeg"
+  },
+  {
+    "name": "Sneha Sonawane",
+    "role": "Design Engg",
+    "company": "Precon Global",
+    "branch": "Civil",
+    "photo": "/placed-students/sneha-sonawane.jpeg"
+  },
+  {
+    "name": "Sunita Ahire",
+    "role": "Autocad Designer",
+    "company": "Worley",
+    "branch": "B.com",
+    "photo": "/placed-students/sunita-ahire.jpeg"
+  },
+  {
+    "name": "Nishant Pawar",
+    "role": "Civil Draughman",
+    "company": "Aerotide Infra.eng.Pvt ltd.",
+    "branch": "Civil",
+    "photo": "/placed-students/nishant-pawar.jpeg"
+  },
+  {
+    "name": "Kunal Joshi",
+    "role": "Design Engg",
+    "company": "Aerotide Infra.eng.Pvt ltd.",
+    "branch": "Civil"
+  },
+  {
+    "name": "Swamidarshan",
+    "role": "Civil Draughman",
+    "company": "Aerotide Infra.eng.Pvt ltd.",
+    "branch": "Civil",
+    "photo": "/placed-students/swamidarshan.jpeg"
+  },
+  {
+    "name": "Ashlesha Dongre",
+    "role": "Placed Candidate",
+    "company": "Royal Mech Engineering",
+    "branch": "Mechanical",
+    "photo": "/placed-students/ashlesha-dongre.jpg"
+  },
+  {
+    "name": "Pallavi Lokhande",
+    "role": "Design Eng",
+    "company": "Royal Mech Engineering",
+    "branch": "Mechanical"
+  }
+]

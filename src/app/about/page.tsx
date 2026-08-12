@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function AboutPage() {
   const stats = [
-    { value: '3K+', label: 'ALUMNI PLACED' },
+    { value: '5000+', label: 'STUDENTS TRAINED' },
     { value: '11+', label: 'YEARS HERITAGE' },
     { value: '100%', label: 'PLACEMENT' },
     { value: '100%', label: 'PRACTICAL LABS' }
@@ -75,7 +75,7 @@ export default function AboutPage() {
       <section 
         className="page-header" 
         style={{ 
-          backgroundImage: 'linear-gradient(to bottom, rgba(7, 41, 77, 0.85), rgba(15, 23, 42, 0.95)), url(https://caddeskindia.com/wp-content/uploads/2021/03/Civil.jpg)', 
+          backgroundImage: 'linear-gradient(to bottom, rgba(7, 41, 77, 0.85), rgba(15, 23, 42, 0.95)), url(/images/caddeskindia_com_wp-content_uploads_2021_03_Civil.jpg)', 
           backgroundSize: 'cover', 
           backgroundPosition: 'center',
           padding: '100px 0'
@@ -100,7 +100,7 @@ export default function AboutPage() {
               We Create <span className="about-text-gradient">Designs for the Future</span>
             </h2>
             <p style={{ fontSize: '16px', color: '#4b5563', lineHeight: '1.8', margin: 0 }}>
-              M-Tech Computers is a registered brand of corporate group M-Tech Computers INDIA. Founded in the year 2015, we offer high-quality professional software training courses across Civil, Architecture, Mechanical, Automobile, Electrical, Electronics, IT, and Data Analytic Course domains — with 3K+ students trained and placed.
+              M-Tech Computers is a registered brand of corporate group M-Tech Computers INDIA. Founded in the year 2015, we offer high-quality professional software training courses across Civil, Architecture, Mechanical, Automobile, Electrical, Electronics, IT, and Data Analytic Course domains — with 5000+ students trained and placed.
             </p>
           </div>
 

@@ -5,7 +5,7 @@ export default function DisclaimerPage() {
   return (
     <div>
       {/* Page Header */}
-      <section className="page-header" style={{ backgroundImage: 'url(https://caddeskindia.com/wp-content/uploads/2021/03/Civil.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <section className="page-header" style={{ backgroundImage: 'url(/images/caddeskindia_com_wp-content_uploads_2021_03_Civil.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="container">
           <h1 className="page-title">Disclaimer</h1>
           <p className="page-breadcrumbs">

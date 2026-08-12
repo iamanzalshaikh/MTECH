@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     url: "https://caddeskindia.com/",
     images: [
       {
-        url: "https://caddeskindia.com/wp-content/uploads/2023/12/WhatsApp-Image-2023-12-26-at-13.26.27.jpeg",
+        url: "/images/caddeskindia_com_wp-content_uploads_2023_12_WhatsApp-Image-2023-12-26-at-13.26.27.jpeg",
         width: 1280,
         height: 800,
         alt: "M-Tech Computers India Training",

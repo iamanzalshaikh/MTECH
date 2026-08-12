@@ -10,7 +10,7 @@ const heroSlides = [
   {
     id: 1,
     label: 'Mechanical CAD',
-    image: 'https://caddeskindia.com/wp-content/uploads/2026/04/Mechanical.jpg',
+    image: '/images/caddeskindia_com_wp-content_uploads_2026_04_Mechanical.jpg',
     heading: 'Mechanical CAD & CAM',
     sub: 'AutoCAD Mechanical · SolidWorks · CATIA · CNC Programming',
     link: '/courses?category=Mechanical/Automobile',
@@ -19,7 +19,7 @@ const heroSlides = [
   {
     id: 2,
     label: 'Civil / Architecture CAD',
-    image: 'https://caddeskindia.com/wp-content/uploads/2026/04/Civil-arch.jpg',
+    image: '/images/caddeskindia_com_wp-content_uploads_2026_04_Civil-arch.jpg',
     heading: 'Civil & Architecture CAD',
     sub: 'AutoCAD Civil · Revit · STAAD Pro · SketchUp · BIM',
     link: '/courses?category=Civil/Architecture',
@@ -28,7 +28,7 @@ const heroSlides = [
   {
     id: 3,
     label: 'Electrical CAD',
-    image: 'https://caddeskindia.com/wp-content/uploads/2026/04/ELECTRICAL.jpg',
+    image: '/images/caddeskindia_com_wp-content_uploads_2026_04_ELECTRICAL.jpg',
     heading: 'Electrical CAD',
     sub: 'AutoCAD Electrical · EPLAN · PLC · SCADA · MATLAB',
     link: '/courses?category=Electrical/Electronics',
@@ -37,7 +37,7 @@ const heroSlides = [
   {
     id: 4,
     label: 'Project Planning & Management',
-    image: 'https://caddeskindia.com/wp-content/uploads/2021/02/Primavera.jpg',
+    image: '/images/caddeskindia_com_wp-content_uploads_2021_02_Primavera.jpg',
     heading: 'Project Planning & Management',
     sub: 'Primavera P6 · MS Project · Project Scheduling · Resource Management',
     link: '/courses?category=Project Planning',
@@ -46,7 +46,7 @@ const heroSlides = [
   {
     id: 5,
     label: 'IT Programming',
-    image: 'https://mtechcomputers.in/wp-content/uploads/2019/05/courses03.jpg',
+    image: '/images/caddeskindia_com_wp-content_uploads_2026_04_CS.jpg',
     heading: 'IT & Programming Courses',
     sub: 'Web Dev · Python · Java · React · Node.js · Data Analytic Course · Data Science · AI/ML',
     link: '/courses?category=Information Technology',
@@ -191,8 +191,8 @@ export default function Hero() {
                 <p>Learning Centers</p>
               </div>
               <div className="hero-stat-box">
-                <h4>3K+</h4>
-                <p>Trained Students</p>
+                <h4>5000+</h4>
+                <p>Students Trained</p>
               </div>
               <div className="hero-stat-box">
                 <h4>100%</h4>
