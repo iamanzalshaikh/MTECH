@@ -48,7 +48,7 @@ const heroSlides = [
     label: 'IT Programming',
     image: '/images/caddeskindia_com_wp-content_uploads_2026_04_CS.jpg',
     heading: 'IT & Programming Courses',
-    sub: 'Web Dev · Python · Java · React · Node.js · Data Analytic Course · Data Science · AI/ML',
+    sub: 'Web Dev · Python · Java · React · Node.js · Data Analytics · AI/ML',
     link: '/courses?category=Information Technology',
     color: '#8b5cf6',
   },
@@ -237,7 +237,7 @@ export default function Hero() {
                   <img
                     src={slide.image}
                     alt={slide.label}
-                    className="collage-image hero-slide-img"
+                    className="hero-slide-img"
                   />
                   {/* Gradient Overlay with text */}
                   <div className="hero-slide-overlay" style={{ background: `linear-gradient(to top, ${slide.color}ee 0%, transparent 60%)` }}>
