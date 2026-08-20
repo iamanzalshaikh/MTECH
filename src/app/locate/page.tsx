@@ -7,7 +7,7 @@ import { GMB_LOCATIONS } from '@/config/site';
 const branches = [
   {
     name: 'M-Tech Computers (Kalyan W - Head Office)',
-    address: 'Chandulal J Joshi Plaza, Opp. Kalyan Platform No. 1, Near Jumboking, Kalyan W. (CAD Desk Kalyan)',
+    address: 'Chandulal J Joshi Plaza, Opp. Kalyan Platform No. 1, Near Jumboking, Kalyan W. (M-Tech Computers Kalyan HO)',
     phone: '9049344991 / 8976178976',
     email: 'info@mtechcomputers.in',
     contactPerson: 'Mahesh Sir',

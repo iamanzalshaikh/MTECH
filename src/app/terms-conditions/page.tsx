@@ -5,7 +5,7 @@ export default function TermsConditionsPage() {
   return (
     <div>
       {/* Page Header */}
-      <section className="page-header" style={{ backgroundImage: 'url(/images/caddeskindia_com_wp-content_uploads_2021_03_Civil.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <section className="page-header" style={{ backgroundImage: 'url(/images/M-Tech Computersindia_com_wp-content_uploads_2021_03_Civil.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="container">
           <h1 className="page-title">Terms & Conditions</h1>
           <p className="page-breadcrumbs">
@@ -24,22 +24,22 @@ export default function TermsConditionsPage() {
               <li>The user shall provide accurate information during the registration process and shall update as this information changes over time without any delay.</li>
               <li>The user should ensure that the User Data is not accessible by any third party.</li>
               <li>
-                CADDESK reserves the right to deny registration and is entitled to, any time, and without obligation to give reasons, to deny the users the right to access the password protected area by blocking its User Data, if the user, in particular:
+                M-Tech Computers reserves the right to deny registration and is entitled to, any time, and without obligation to give reasons, to deny the users the right to access the password protected area by blocking its User Data, if the user, in particular:
                 <ul style={{ listStyleType: 'circle', paddingLeft: '20px', marginTop: '8px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
                   <li>Uses false data or inaccurate information during registration.</li>
                   <li>Violates the Terms of Use or any applicable laws or neglects its duty of care with regard to User Data.</li>
                 </ul>
               </li>
-              <li>Registration of user shall not be replaces with any other product and services use through CADDESK.</li>
+              <li>Registration of user shall not be replaces with any other product and services use through M-Tech Computers.</li>
               <li>Students joining through any special activity or in a discount scheme or through any scheme classified as a 'special scheme' cannot avail the transfer facility.</li>
-              <li>CADDESK has reserve all the rights of misconduct of virtual property.</li>
+              <li>M-Tech Computers has reserve all the rights of misconduct of virtual property.</li>
               <li>The course and course combinations are expected to change time to time based on the industry requirements. In case you are taking a break during the course and the course you have registered and paid is not available at the time of rejoining, then you will have to join an alternative program available at that point of time or must upgrade the course by paying additional fee if required for the new combination.</li>
               <li>The student should strictly adhere to the batch / schedule timings specified by the center. All breaks must be pre-approved in writing.</li>
             </ul>
 
             <h3 style={{ fontSize: '20px', color: '#07294d', fontWeight: 700, marginTop: '35px', marginBottom: '12px' }}>Privacy Policies</h3>
             <p style={{ marginBottom: '16px' }}>
-              CADDESK considers the security and protection of your personal data and information important. Therefore, CADDESK operates its website in compliance with applicable laws on data privacy protection and data security. Below, we provide information on the types of data we collect through all CADDESK website, the purpose we use such data, and parties with which we share such data, where applicable.
+              M-Tech Computers considers the security and protection of your personal data and information important. Therefore, M-Tech Computers operates its website in compliance with applicable laws on data privacy protection and data security. Below, we provide information on the types of data we collect through all M-Tech Computers website, the purpose we use such data, and parties with which we share such data, where applicable.
             </p>
 
             <h4 style={{ fontSize: '17px', color: '#07294d', fontWeight: 700, marginTop: '20px', marginBottom: '10px' }}>Collected Data and Purpose of Processing</h4>
@@ -52,13 +52,13 @@ export default function TermsConditionsPage() {
 
             <h4 style={{ fontSize: '17px', color: '#07294d', fontWeight: 700, marginTop: '20px', marginBottom: '10px' }}>Data Sharing</h4>
             <p style={{ marginBottom: '16px' }}>
-              For the purpose indicated above, insofar, as you have provided your consent, or when we are legally entitled to do so, we will share your personal data with the subsidiaries of CADDESK, wherever required.
+              For the purpose indicated above, insofar, as you have provided your consent, or when we are legally entitled to do so, we will share your personal data with the subsidiaries of M-Tech Computers, wherever required.
             </p>
             <p style={{ marginBottom: '16px' }}>
-              In connection with the operation of this website and the services offered CADDESK works as a network of all its subdivisions such as CADDESK Online, ITDESK and Creative desk or its applications.
+              In connection with the operation of this website and the services offered M-Tech Computers works as a network of all its subdivisions such as M-Tech Computers Online, ITDESK and Creative desk or its applications.
             </p>
             <p style={{ marginBottom: '24px' }}>
-              These Strategic Business units are located in and outside India, possibly, all over the Asia, in this regard; the applicability of data secrecy and protection laws may vary. In such cases, CADDESK takes measures to ensure an appropriate level of data privacy and protection.
+              These Strategic Business units are located in and outside India, possibly, all over the Asia, in this regard; the applicability of data secrecy and protection laws may vary. In such cases, M-Tech Computers takes measures to ensure an appropriate level of data privacy and protection.
             </p>
             <p style={{ marginBottom: '24px' }}>
               Data is shared only in compliance with the applicable laws and regulations. We do not sell or otherwise market your personal data to third parties.
@@ -66,13 +66,13 @@ export default function TermsConditionsPage() {
 
             <h4 style={{ fontSize: '17px', color: '#07294d', fontWeight: 700, marginTop: '20px', marginBottom: '10px' }}>Questions, Comments and Amendments</h4>
             <p style={{ marginBottom: '16px' }}>
-              CADDESK will respond to all the legitimate requests for information, and wherever applicable to correct, amend or delete your personal data. If you wish to make such a request or if you have questions or comments about this Data Privacy Policy, please click on "Contact Us" and feel free to share.
+              M-Tech Computers will respond to all the legitimate requests for information, and wherever applicable to correct, amend or delete your personal data. If you wish to make such a request or if you have questions or comments about this Data Privacy Policy, please click on "Contact Us" and feel free to share.
             </p>
             <p style={{ marginBottom: '16px' }}>
               This Data Privacy policy is updated on a regular basis. You will find the date of the last update on this page.
             </p>
             <p style={{ marginBottom: '0px' }}>
-              Data of online training request may be further use with all the subsidiaries of CADDESK.
+              Data of online training request may be further use with all the subsidiaries of M-Tech Computers.
             </p>
           </div>
         </div>

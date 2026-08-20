@@ -5,7 +5,7 @@ export default function PrivacyPolicyPage() {
   return (
     <div>
       {/* Page Header */}
-      <section className="page-header" style={{ backgroundImage: 'url(/images/caddeskindia_com_wp-content_uploads_2021_03_Civil.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <section className="page-header" style={{ backgroundImage: 'url(/images/M-Tech Computersindia_com_wp-content_uploads_2021_03_Civil.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="container">
           <h1 className="page-title">Privacy Policy</h1>
           <p className="page-breadcrumbs">
@@ -19,10 +19,10 @@ export default function PrivacyPolicyPage() {
         <div className="container" style={{ maxWidth: '900px', margin: '0 auto' }}>
           <div style={{ lineHeight: '1.8', fontSize: '15px', color: '#374151' }}>
             <p style={{ marginBottom: '24px' }}>
-              CADDESK considers the security and protection of your personal data and information important. Therefore, CADDESK operates its website in compliance with applicable laws on data privacy protection and data security.
+              M-Tech Computers considers the security and protection of your personal data and information important. Therefore, M-Tech Computers operates its website in compliance with applicable laws on data privacy protection and data security.
             </p>
             <p style={{ marginBottom: '24px' }}>
-              Below, we provide information on the types of data we collect through all CADDESK website, the purpose we use such data, and parties with which we share such data, where applicable.
+              Below, we provide information on the types of data we collect through all M-Tech Computers website, the purpose we use such data, and parties with which we share such data, where applicable.
             </p>
 
             <h3 style={{ fontSize: '20px', color: '#07294d', fontWeight: 700, marginTop: '30px', marginBottom: '12px' }}>Collected Data and Purpose of Processing</h3>
@@ -35,13 +35,13 @@ export default function PrivacyPolicyPage() {
 
             <h3 style={{ fontSize: '20px', color: '#07294d', fontWeight: 700, marginTop: '30px', marginBottom: '12px' }}>Data Sharing</h3>
             <p style={{ marginBottom: '24px' }}>
-              For the purpose indicated above, insofar, as you have provided your consent, or when we are legally entitled to do so, we will share your personal data with the subsidiaries of CADDESK, wherever required.
+              For the purpose indicated above, insofar, as you have provided your consent, or when we are legally entitled to do so, we will share your personal data with the subsidiaries of M-Tech Computers, wherever required.
             </p>
             <p style={{ marginBottom: '24px' }}>
-              In connection with the operation of this website and the services offered CADDESK works as a network of all its subdivisions such as CADDESK Online, ITDESK and Creative desk or its applications.
+              In connection with the operation of this website and the services offered M-Tech Computers works as a network of all its subdivisions such as M-Tech Computers Online, ITDESK and Creative desk or its applications.
             </p>
             <p style={{ marginBottom: '24px' }}>
-              These Strategic Business units are located in and outside India, possibly, all over the Asia, in this regard; the applicability of data secrecy and protection laws may vary. In such cases, CADDESK takes measures to ensure an appropriate level of data privacy and protection.
+              These Strategic Business units are located in and outside India, possibly, all over the Asia, in this regard; the applicability of data secrecy and protection laws may vary. In such cases, M-Tech Computers takes measures to ensure an appropriate level of data privacy and protection.
             </p>
             <p style={{ marginBottom: '24px' }}>
               Data is shared only in compliance with the applicable laws and regulations. We do not sell or otherwise market your personal data to third parties.
@@ -49,13 +49,13 @@ export default function PrivacyPolicyPage() {
 
             <h3 style={{ fontSize: '20px', color: '#07294d', fontWeight: 700, marginTop: '30px', marginBottom: '12px' }}>Questions, Comments and Amendments</h3>
             <p style={{ marginBottom: '24px' }}>
-              CADDESK will respond to all the legitimate requests for information, and wherever applicable to correct, amend or delete your personal data. If you wish to make such a request or if you have questions or comments about this Data Privacy Policy, please click on "Contact Us" and feel free to share.
+              M-Tech Computers will respond to all the legitimate requests for information, and wherever applicable to correct, amend or delete your personal data. If you wish to make such a request or if you have questions or comments about this Data Privacy Policy, please click on "Contact Us" and feel free to share.
             </p>
             <p style={{ marginBottom: '24px' }}>
               This Data Privacy policy is updated on a regular basis. You will find the date of the last update on this page.
             </p>
             <p style={{ marginBottom: '0px' }}>
-              Data of online training request may be further use with all the subsidiaries of CADDESK.
+              Data of online training request may be further use with all the subsidiaries of M-Tech Computers.
             </p>
           </div>
         </div>

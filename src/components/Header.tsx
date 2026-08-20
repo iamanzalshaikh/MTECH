@@ -51,7 +51,7 @@ export default function Header({ onOpenEnquiry }: HeaderProps) {
         <div className="container header-top-wrap">
           <div className="header-contact-list">
             <span className="header-contact-item" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-              <FaPhoneAlt size={12} /> 9049344991 / 8976178976
+              <FaPhoneAlt size={12} /> <strong style={{ fontSize: 12 }}>Kalyan HO:</strong> 9049344991 / 8976178976
             </span>
             <span className="header-contact-item" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
               <FaPhoneAlt size={12} /> 7770048032 (Dombivli)

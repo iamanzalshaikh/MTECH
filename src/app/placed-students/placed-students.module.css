@@ -197,36 +197,6 @@
   font-size: 15px;
 }
 
-.yearTabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.yearTab {
-  padding: 10px 18px;
-  border: 1px solid #f6b500;
-  border-radius: 6px;
-  background: #fff;
-  color: #07294d;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  font-family: var(--font-body);
-}
-
-.yearTab:hover {
-  background: #fff8e6;
-}
-
-.yearTabActive {
-  background: #f6b500;
-  border-color: #f6b500;
-  color: #07294d;
-  box-shadow: 0 4px 12px rgba(246, 181, 0, 0.35);
-}
-
 .studentGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -744,10 +714,6 @@
     text-align: center;
   }
 
-  .yearTabs {
-    justify-content: center;
-  }
-
   .studentGrid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -778,11 +744,6 @@
 @media (max-width: 576px) {
   .studentGrid {
     grid-template-columns: 1fr;
-  }
-
-  .yearTab {
-    padding: 8px 14px;
-    font-size: 12px;
   }
 
   .enrollFormWrap {

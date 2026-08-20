@@ -187,7 +187,7 @@ export default function Hero() {
             {/* Stats Summary row */}
             <motion.div className="hero-stats-row" variants={itemVariants}>
               <div className="hero-stat-box">
-                <h4>32+</h4>
+                <h4>2+</h4>
                 <p>Learning Centers</p>
               </div>
               <div className="hero-stat-box">

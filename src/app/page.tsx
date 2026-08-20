@@ -701,7 +701,7 @@ export default function HomePage() {
               <img src="/digital-india.png" alt="Digital India" style={{ maxHeight: '60px' }} />
             </div>
             <div style={{ backgroundColor: 'white', padding: '10px 20px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '80px' }}>
-              <img src="/images/caddeskindia_com_wp-content_uploads_2021_03_caddesklogo-1024x267-min.png" alt="CAD Desk" style={{ maxHeight: '60px' }} />
+              <img src="/mtech-logo.png" alt="M-Tech Computers" style={{ maxHeight: '60px' }} />
             </div>
             <div style={{ backgroundColor: 'white', padding: '10px 20px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '80px' }}>
               <img src="/skill-india.png" alt="Skill India" style={{ maxHeight: '60px' }} />

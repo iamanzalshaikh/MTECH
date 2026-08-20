@@ -77,21 +77,21 @@ export const coursesData: Course[] = [
     url: 'https://mtechcomputers.in/courses/revit-structure/'
   },
   {
-    id: 'safe-safety',
-    title: 'SAFE: Workplace & Industrial Safety Certification Course',
+    id: 'csi-safe-essential-training',
+    title: 'CSI SAFE Essential Training - Slabs & Foundation Design',
     category: 'Civil & Arch',
-    image: '/images/caddeskindia_com_wp-content_uploads_2026_04_Civil-arch.jpg',
-    description: 'Comprehensive occupational safety training covering industrial regulations, safety standards, and workplace risk management.',
-    duration: '4 Weeks',
-    url: 'https://mtechcomputers.in/courses/new-course-3/'
+    image: '/images/csi-safe.png',
+    description: 'Learn CSI SAFE for concrete slab and foundation design — isolated footing, combined footing, raft/MAT, pile cap, drop panels, and full building slab analysis.',
+    duration: '6 Weeks',
+    url: 'https://www.multisoftsystems.com/cad-cam-piping/csi-safe-essential-training',
   },
   {
     id: 'rcdc-detailing',
-    title: 'Professional RCDC Course - Concrete Design & Detailing',
+    title: 'Reinforced Concrete Design & Detailing (RCDC)',
     category: 'Civil & Arch',
-    image: '/images/caddeskindia_com_wp-content_uploads_2021_03_STAAD-Pro.jpg',
-    description: 'Learn RCDC to generate detailed structural drawings, reinforcement layouts, and bills of materials for concrete structures.',
-    duration: '4 Weeks',
+    image: '/images/rcdc.png',
+    description: 'Learn RCDC for automated RCC design and 3D reinforcement detailing — beams, columns, slabs, footings, bar bending schedules, and construction-ready drawings.',
+    duration: '8 Weeks',
     url: 'https://mtechcomputers.in/courses/professional-rcdc/'
   },
   {
@@ -138,15 +138,6 @@ export const coursesData: Course[] = [
     description: 'Learn Autodesk Revit Architecture from scratch to model photorealistic buildings, draft layouts, and generate BIM plans.',
     duration: '8 Weeks',
     url: 'https://mtechcomputers.in/courses/revit-architecture/'
-  },
-  {
-    id: 'photoshop-graphics',
-    title: 'Professional Photoshop Course — Design Like a Pro',
-    category: 'Civil & Arch',
-    image: '/images/caddeskindia_com_wp-content_uploads_2023_09_1.png',
-    description: 'Learn photo-editing, architectural post-processing layouts, vector drawing overlays, and digital poster designs.',
-    duration: '6 Weeks',
-    url: 'https://mtechcomputers.in/courses/professional-photoshop-mastery-course-design-like-a-pro/'
   },
   {
     id: 'billing-bec',
@@ -295,7 +286,7 @@ export const coursesData: Course[] = [
     url: 'https://mtechcomputers.in/courses/cam-programming-course/'
   },
 
-  // ==================== IT COURSE (12 Courses) ====================
+  // ==================== IT COURSE ====================
   {
     id: 'cpp-programming',
     title: 'C++ Programming Course (Beginner to Advanced)',
@@ -318,7 +309,7 @@ export const coursesData: Course[] = [
     id: 'javascript',
     title: 'JavaScript from Basics to Advanced',
     category: 'IT Course',
-    image: '/images/caddeskindia_com_wp-content_uploads_2021_03_Web-Design.jpg',
+    image: '/images/it/js-programming.png',
     description: 'Go from beginner to advanced JavaScript developer by learning DOM manipulation, asynchronous programming, and modern JS syntax.',
     duration: '8 Weeks',
     url: 'https://mtechcomputers.in/courses/javascript/'
@@ -327,7 +318,7 @@ export const coursesData: Course[] = [
     id: 'full-stack-web',
     title: 'Full Stack Web Development',
     category: 'IT Course',
-    image: '/images/caddeskindia_com_wp-content_uploads_2021_03_web-design-Int.jpg',
+    image: '/images/it/fullstack.png',
     description: 'Comprehensive training in modern full stack development covering frontend, backend, database architecture, and deployment.',
     duration: '16 Weeks',
     url: 'https://mtechcomputers.in/courses/master-full-stack-web-development/'
@@ -336,7 +327,7 @@ export const coursesData: Course[] = [
     id: 'mastering-artificial-intelligence',
     title: 'Artificial Intelligence — From Basics to Real-World Applications',
     category: 'IT Course',
-    image: '/images/caddeskindia_com_wp-content_uploads_2021_03_DS-with-Python.jpg',
+    image: '/images/it/artificial-intelligence.png',
     description: 'Learn the principles, tools, and real-world applications of Artificial Intelligence from machine learning to neural networks.',
     duration: '12 Weeks',
     url: 'https://mtechcomputers.in/courses/mastering-artificial-intelligence-from-basics-to-real-world-applications/'
@@ -354,7 +345,7 @@ export const coursesData: Course[] = [
     id: 'data-analytic',
     title: 'Data Analytic Course - Learn with MTech Computers',
     category: 'IT Course',
-    image: '/images/caddeskindia_com_wp-content_uploads_2021_03_DS-with-Python.jpg',
+    image: '/images/it/data-analytics.png',
     description: 'Learn data analytics from scratch — Excel, SQL, Power BI, Python basics, dashboards, and business insight reporting for job-ready roles.',
     duration: '12 Weeks',
     url: 'https://mtechcomputers.in/courses/data-science-course-learn-with-mtech-computers/'
@@ -363,7 +354,7 @@ export const coursesData: Course[] = [
     id: 'react-dev-scratch',
     title: 'React Development from Scratch',
     category: 'IT Course',
-    image: '/images/caddeskindia_com_wp-content_uploads_2021_03_Web-Design.jpg',
+    image: '/images/it/react-dev.png',
     description: 'Build your career in frontend development by mastering React hooks, routing, state management, and API integrations.',
     duration: '6 Weeks',
     url: 'https://mtechcomputers.in/courses/master-react-development-from-scratch/'
@@ -381,7 +372,7 @@ export const coursesData: Course[] = [
     id: 'golang-programming',
     title: 'Golang Programming - Learn Go Language',
     category: 'IT Course',
-    image: '/images/caddeskindia_com_wp-content_uploads_2021_01_Python.jpg',
+    image: '/images/it/golang.png',
     description: 'Master Go programming language (Golang) designed by Google, focusing on concurrency, speed, and backend system development.',
     duration: '6 Weeks',
     url: 'https://mtechcomputers.in/courses/golang-programming/'
@@ -390,7 +381,7 @@ export const coursesData: Course[] = [
     id: 'master-node-js',
     title: 'Node.js Development Course',
     category: 'IT Course',
-    image: '/images/caddeskindia_com_wp-content_uploads_2021_03_PHP.jpg',
+    image: '/images/it/nodejs.png',
     description: 'Learn server-side development using Node.js, Express.js, and databases like MongoDB/SQL to build scalable backend systems.',
     duration: '8 Weeks',
     url: 'https://mtechcomputers.in/courses/master-node-js-development-course-in-india/'
@@ -399,7 +390,7 @@ export const coursesData: Course[] = [
     id: 'master-angular',
     title: 'Learn Angular from Basics to Deployment',
     category: 'IT Course',
-    image: '/images/caddeskindia_com_wp-content_uploads_2021_01_ASP.net_.jpg',
+    image: '/images/it/angular.png',
     description: 'A comprehensive guide to learning the Angular framework, components, routing, services, and deploying production-ready apps.',
     duration: '8 Weeks',
     url: 'https://mtechcomputers.in/courses/master-angular-from-basics-to-deployment/'
@@ -408,10 +399,46 @@ export const coursesData: Course[] = [
     id: 'master-react-js',
     title: 'React JS: Build Modern Web Apps',
     category: 'IT Course',
-    image: '/images/caddeskindia_com_wp-content_uploads_2021_03_Web-Design.jpg',
+    image: '/images/it/react-js.png',
     description: 'Master React JS to build fast, responsive, and dynamic user interfaces for modern single-page web applications.',
     duration: '6 Weeks',
     url: 'https://mtechcomputers.in/courses/master-react-js/'
+  },
+  {
+    id: 'cyber-security',
+    title: 'Cyber Security — Professional Cyber Security & Ethical Hacking',
+    category: 'IT Course',
+    image: '/images/caddeskindia_com_wp-content_uploads_2021_03_Cyber-Security.jpg',
+    description: 'Learn to protect networks, systems and data from modern cyber threats. Practical training in network security, ethical hacking, vulnerability assessment, penetration testing, SOC monitoring and incident response.',
+    duration: '12 Weeks',
+    url: 'https://mtechcomputers.in/courses/cyber-security/'
+  },
+  {
+    id: 'cloud-computing',
+    title: 'Cloud Computing — Professional Cloud Computing Training',
+    category: 'IT Course',
+    image: '/images/it/cloud-computing.png',
+    description: 'Learn to build, deploy and manage cloud-based applications and infrastructure. Covers AWS, Azure, Google Cloud, virtualization, Linux, cloud networking and cloud security fundamentals.',
+    duration: '12 Weeks',
+    url: 'https://mtechcomputers.in/courses/cloud-computing/'
+  },
+  {
+    id: 'aws-cloud-computing',
+    title: 'AWS Cloud Computing — Professional AWS Training',
+    category: 'IT Course',
+    image: '/images/it/aws-cloud.png',
+    description: 'Learn to build, deploy and manage applications on Amazon Web Services. Hands-on training in EC2, S3, VPC, IAM, RDS, cloud deployment, security and practical AWS projects.',
+    duration: '12 Weeks',
+    url: 'https://mtechcomputers.in/courses/aws-cloud-computing/'
+  },
+  {
+    id: 'generative-ai-agentic-ai',
+    title: 'Generative AI & Agentic AI — Professional AI Training',
+    category: 'IT Course',
+    image: '/images/it/gen-ai-agentic.png',
+    description: 'Learn to build AI-powered applications, intelligent assistants and autonomous AI agents. Covers LLMs, prompt engineering, RAG, AI APIs, agent workflows and practical AI projects.',
+    duration: '12 Weeks',
+    url: 'https://mtechcomputers.in/courses/generative-ai-agentic-ai/'
   },
 
   // ==================== ELECTRICAL (6 Courses) ====================
@@ -446,7 +473,7 @@ export const coursesData: Course[] = [
     id: 'etap-electrical',
     title: 'ETAP Electrical Engineering Course - Power System Design & Analysis',
     category: 'Electrical',
-    image: '/images/caddeskindia_com_wp-content_uploads_2021_02_MATLAB-1.jpg',
+    image: '/image.png',
     description: 'Master ETAP for power system single-line diagrams, load flow studies, short circuit analysis, and protective relay settings.',
     duration: '6 Weeks',
     url: 'https://mtechcomputers.in/courses/etap-electrical-engineering/'
@@ -573,15 +600,33 @@ export const coursesData: Course[] = [
     url: 'https://mtechcomputers.in/courses/sap-certification-course-erp-solutions-for-business-success/'
   },
 
-  // ==================== JEWELLERY DESIGN (1 Course) ====================
+  // ==================== JEWELLERY DESIGN (3 Courses) ====================
   {
-    id: 'rhino-matrix',
-    title: 'Rhino Matrix 3D: Advanced Modeling & Rendering Course',
+    id: 'rhino',
+    title: 'Rhino 3D CAD Course - NURBS Modeling & Design',
     category: 'Jewellery Design',
-    image: '/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_category_ctg-3.jpg',
-    description: 'Learn Rhino 3D & Matrix software to draft detailed gold/diamond ornaments, rings, and generate 3D rendering designs.',
+    image: '/images/rhino.png',
+    description: 'Learn Rhinoceros (Rhino CAD) for precise NURBS 3D modeling — jewelry, architecture, product design, freeform surfaces, and fabrication-ready models.',
     duration: '8 Weeks',
-    url: 'https://mtechcomputers.in/courses/rhino-matrix-3d/'
+    url: 'https://caddschool.in/rhino_training_center_in_chennai.aspx',
+  },
+  {
+    id: 'matrixgold',
+    title: 'Professional Jewelry CAD Design with MatrixGold',
+    category: 'Jewellery Design',
+    image: '/images/matrixgold.png',
+    description: 'Turn jewelry ideas into production-ready 3D designs with MatrixGold — ring design, gemstone setting, parametric workflows, rendering, and manufacturing prep.',
+    duration: '8 Weeks',
+    url: 'https://mtechcomputers.in/courses/rhino-matrix-3d/',
+  },
+  {
+    id: 'zbrush',
+    title: 'ZBrush Jewelry Design - Professional Jewelry Sculpting',
+    category: 'Jewellery Design',
+    image: '/images/zbrush.png',
+    description: 'Transform jewelry concepts into highly detailed 3D designs with ZBrush — custom rings, pendants, organic forms, intricate surfaces, and production preparation.',
+    duration: '8 Weeks',
+    url: 'https://mtechcomputers.in/courses/zbrush/',
   },
 
   // ==================== DIGITAL MARKETING (6 Courses) ====================
@@ -643,7 +688,7 @@ export const coursesData: Course[] = [
     id: 'mern-stack-web-development',
     title: 'MERN Stack Web Development Course - MongoDB, Express, React & Node',
     category: 'IT Course',
-    image: '/images/caddeskindia_com_wp-content_uploads_2021_03_web-design-Int.jpg',
+    image: '/images/it/mern-stack.png',
     description: 'Learn full-stack web development using MongoDB, Express.js, React, and Node.js. Build responsive databases, API gateways, and interactive web interfaces.',
     duration: '6 Months',
     url: 'https://mtechcomputers.in/courses/mern-stack-web-development/'
@@ -803,7 +848,7 @@ function CoursesListContent() {
                     <img 
                       src={imgErrors[course.id] ? '/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_category_ctg-1.jpg' : course.image} 
                       alt={course.title}
-                      style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 0.3s ease' }}
+                      style={{ width: '100%', height: '100%', objectFit: course.id === 'zbrush' ? 'contain' : 'cover', background: course.id === 'zbrush' ? '#ffffff' : undefined, display: 'block', transition: 'transform 0.3s ease' }}
                       id={`course-thumbnail-${course.id}`}
                       onError={() => setImgErrors(prev => ({ ...prev, [course.id]: true }))}
                     />

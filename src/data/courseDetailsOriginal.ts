@@ -69,58 +69,67 @@ export const courseDetailsOriginal: Record<string, Omit<CourseDetailEntry, 'syll
     ]
   },
   "rcdc-detailing": {
-    "overview": "RCDC (Reinforced Concrete Design & Detailing Center) is a specialized structural detailing software that automates the design and drawing generation of reinforced concrete elements — beams, columns, slabs, footings, and staircases — directly from analysis results imported from STAAD.Pro or ETABS. It significantly reduces the time spent manually detailing reinforcement as per IS 456 and other design codes.\n\nThe course covers importing structural models, defining design parameters and rebar detailing rules, generating GA (General Arrangement) and reinforcement drawings, and preparing bar bending schedules (BBS) and quantity estimates. M-Tech Computers' classroom training focuses on hands-on detailing of real building elements so students can produce production-ready concrete detailing drawings for consulting and construction firms.",
+    "overview": "RCDC (Reinforced Concrete Design & Detailing) is an advanced structural engineering software developed by CSI (Computers & Structures India) for the design, analysis, and detailing of reinforced concrete structures. It automates the process of creating structural drawings, design calculations, and 3D reinforcement models in compliance with international codes and standards.\n\nRCDC is widely used in civil and structural engineering industries for residential, commercial, and industrial building projects, enabling engineers to accelerate the design process, reduce errors, and produce construction-ready drawings. It integrates with BIM workflows and other design software, ensuring coordination between structural models, architectural plans, and MEP systems.\n\nWhy learn RCDC? It speeds up structural design and detailing workflows, ensures accuracy and compliance with design codes, reduces manual errors in reinforcement detailing, and prepares learners for careers in structural engineering, consultancy, and construction documentation. M-Tech Computers classroom training uses real RCC projects so students can produce shop drawings, bar bending schedules, and 3D reinforcement models ready for construction.",
     "highlights": [
-      "Automated RC Beam, Column, Slab & Footing Detailing",
-      "Import from STAAD.Pro & ETABS Analysis Results",
-      "IS 456 Compliant Reinforcement Detailing",
-      "Bar Bending Schedule (BBS) Generation",
-      "GA Drawing & Quantity Take-off Automation"
+      "Automated RCC Design for Beams, Columns, Slabs & Foundations",
+      "3D Reinforcement Modeling & Rebar Layouts",
+      "IS, ACI & Eurocode Compliant Design",
+      "Shop Drawings & Bar Bending Schedule (BBS)",
+      "BIM & CAD Integration (Revit, AutoCAD)"
     ],
     "syllabus": [
       {
         "title": "Introduction to RCDC",
         "points": [
-          "Overview of RCDC interface and workflow",
-          "Importing analysis results from STAAD.Pro/ETABS",
-          "Design code selection (IS 456, ACI, BS)",
-          "Project setup and grid definition"
+          "RCDC interface and workflow for RCC design and detailing",
+          "Project setup, grids, and design parameters",
+          "Why RCDC is used in civil and structural engineering",
+          "Overview of automated design vs manual detailing"
         ]
       },
       {
-        "title": "Beam & Column Detailing",
+        "title": "Design & Innovation Features",
         "points": [
-          "Design parameter configuration for beams",
-          "Column design and reinforcement detailing",
-          "Ductile detailing as per IS 13920",
-          "Reviewing and editing auto-generated designs"
+          "Automated reinforced concrete design for beams, columns, slabs, and foundations",
+          "3D reinforcement modeling and accurate rebar layouts",
+          "Code compliance with IS, ACI, Eurocode, and other international standards",
+          "Automatic shop drawings, bar bending schedules, and fabrication details"
         ]
       },
       {
-        "title": "Slab & Footing Design",
+        "title": "Structural Design & Analysis",
         "points": [
-          "Two-way and one-way slab detailing",
-          "Isolated and combined footing design",
-          "Raft foundation reinforcement layouts",
-          "Staircase detailing"
+          "Design beams, columns, slabs, foundations, and shear walls",
+          "Structural analysis and load calculations",
+          "Reviewing and editing auto-generated RCC designs",
+          "Optimizing reinforcement layouts and material usage"
         ]
       },
       {
-        "title": "Drawing Generation",
+        "title": "Reinforcement Detailing",
         "points": [
-          "Generating GA (General Arrangement) drawings",
-          "Reinforcement drawing customization",
-          "Bar Bending Schedule (BBS) preparation",
-          "Exporting drawings to AutoCAD/DXF"
+          "Generate 3D reinforcement models for visualization and fabrication",
+          "Beam detailing and column reinforcement",
+          "Slab and footing detailing",
+          "Create shop drawings, bar bending schedules, and construction-ready details"
         ]
       },
       {
-        "title": "Quantity Estimation & Reporting",
+        "title": "BIM, CAD Integration & Industry Applications",
         "points": [
-          "Concrete and steel quantity take-off",
-          "Cost estimation reports",
-          "Design summary and code-check reports",
-          "Project documentation and drawing sets"
+          "Integrate RCDC with Revit, AutoCAD, and other BIM tools",
+          "Coordinated structural modeling with architectural and MEP drawings",
+          "Residential, commercial, and industrial building applications",
+          "Construction documentation for structural consultancy and civil engineering firms"
+        ]
+      },
+      {
+        "title": "Learning Outcomes",
+        "points": [
+          "Perform automated design of beams, columns, slabs, and foundations as per relevant codes",
+          "Produce detailed shop drawings and bar bending schedules automatically",
+          "Ensure code compliance with IS, ACI, Eurocode, and other international standards",
+          "Prepare construction-ready documentation with professional skills for structural engineering careers"
         ]
       }
     ]
@@ -1526,59 +1535,250 @@ export const courseDetailsOriginal: Record<string, Omit<CourseDetailEntry, 'syll
       }
     ]
   },
-  "rhino-matrix": {
-    "overview": "Rhino 3D combined with the Matrix plugin is the industry-standard toolset for jewelry CAD design, used by jewelry manufacturers and designers to create precise 3D models of rings, pendants, earrings, and other ornaments ready for casting or 3D printing. Matrix adds jewelry-specific tools like ring sizing, gem setting, and prong placement on top of Rhino's powerful NURBS modeling.\n\nThe course covers Rhino's core 3D modeling and NURBS surfacing tools, jewelry-specific workflows in Matrix such as stone setting and band design, and rendering techniques for photorealistic jewelry visualization. M-Tech Computers' classroom training uses real jewelry design projects — rings, pendants, and bangles — so students can produce manufacture-ready 3D jewelry designs.",
+  "rhino": {
+    "overview": "Rhinoceros (Rhino CAD) is a powerful 3D computer-aided design (CAD) software used for modeling, designing, and prototyping in industries such as architecture, industrial design, jewelry design, automotive, marine, and product design. Rhino is renowned for its precision, flexibility, and ability to handle complex and freeform surfaces.\n\nUnlike traditional CAD software, Rhino specializes in NURBS-based modeling, which allows designers to create smooth, mathematically precise curves and surfaces. This makes it ideal for designing organic shapes, complex geometries, and detailed prototypes that are difficult to achieve with standard parametric CAD tools.\n\nRhino also supports extensive plug-ins and interoperability, enabling integration with software like AutoCAD, Revit, 3ds Max, Grasshopper, and various rendering tools. M-Tech Computers classroom training covers conceptual design, visualization, and fabrication workflows so students can build professional 3D models for jewelry, architecture, and product design.",
     "highlights": [
-      "Rhino 3D NURBS Modeling for Jewelry",
-      "Matrix Ring, Band & Stone-Setting Tools",
-      "Gem & Prong Placement Techniques",
-      "Photorealistic Jewelry Rendering",
-      "Manufacture-Ready 3D Jewelry Design"
+      "NURBS 3D Modeling for Jewelry, Architecture & Product Design",
+      "Freeform Curves, Surfaces, Solids & Meshes",
+      "Import/Export with AutoCAD, Revit, SketchUp & SolidWorks",
+      "Grasshopper Plug-ins for Parametric Design",
+      "Fabrication-Ready Models for CNC & 3D Printing"
     ],
     "syllabus": [
       {
-        "title": "Introduction to Rhino & Matrix",
+        "title": "Introduction to Rhino",
         "points": [
-          "Rhino 3D interface and navigation",
-          "NURBS modeling concepts",
-          "Matrix plugin overview for jewelry design",
-          "Setting up jewelry design templates"
+          "Rhino CAD interface and modeling tools for 2D drafting and 3D modeling",
+          "Units, workspace, snaps, and precision tools",
+          "Why Rhino is used in jewelry, architecture, industrial and product design",
+          "NURBS concepts vs traditional parametric CAD"
         ]
       },
       {
-        "title": "Jewelry Modeling Basics",
+        "title": "Design & Innovation Features",
         "points": [
-          "Ring and band design",
-          "Creating shanks and profiles",
-          "Basic curve and surface tools",
-          "Boolean operations for jewelry forms"
+          "Create precise curves, surfaces, solids, and meshes",
+          "Freeform design for complex shapes and organic geometries",
+          "Analysis, measurement, and construction-ready drawings",
+          "Plug-ins for parametric design, rendering, and fabrication"
         ]
       },
       {
-        "title": "Stone Setting & Details",
+        "title": "Applications — Architecture, Product & Jewelry",
         "points": [
-          "Gemstone library and sizing",
-          "Prong, bezel, and pave setting techniques",
-          "Stone placement and alignment",
-          "Filigree and detailing tools"
+          "Conceptual 3D models of buildings, interiors, and furniture",
+          "Model consumer products, automotive parts, jewelry, and machinery",
+          "Prepare prototypes and fabrication-ready models for manufacturing",
+          "3D assets for visualization, games, VR, and AR"
         ]
       },
       {
-        "title": "Advanced Jewelry Design",
+        "title": "Engineering, Fabrication & Interoperability",
         "points": [
-          "Pendant and earring design",
-          "Bangle and bracelet modeling",
-          "Engraving and texturing",
-          "Design variations and family design"
+          "Generate CAD drawings and 3D models for CNC machining and 3D printing",
+          "Import/export to AutoCAD, Revit, SolidWorks, SketchUp, and 3ds Max",
+          "Grasshopper for parametric and algorithmic design",
+          "Design optimization, measurement, and documentation"
         ]
       },
       {
-        "title": "Rendering & Output",
+        "title": "Learning Outcomes",
         "points": [
-          "Material and gemstone rendering setup",
-          "Photorealistic rendering techniques",
-          "Preparing files for 3D printing/casting",
-          "Portfolio presentation of jewelry designs"
+          "Create complex 3D models using NURBS curves and surfaces",
+          "Develop freeform and organic shapes for architecture, product, and jewelry design",
+          "Apply visualization techniques for rendering and client presentations",
+          "Produce construction drawings and professional skills for design studios and product development"
+        ]
+      }
+    ]
+  },
+  "rhino-3d-training-chennai": {
+    "overview": "Rhinoceros (Rhino CAD) is a powerful 3D computer-aided design (CAD) software used for modeling, designing, and prototyping in industries such as architecture, industrial design, jewelry design, automotive, marine, and product design. Rhino is renowned for its precision, flexibility, and ability to handle complex and freeform surfaces.\n\nUnlike traditional CAD software, Rhino specializes in NURBS-based modeling, which allows designers to create smooth, mathematically precise curves and surfaces. This makes it ideal for designing organic shapes, complex geometries, and detailed prototypes that are difficult to achieve with standard parametric CAD tools.",
+    "highlights": [
+      "NURBS 3D Modeling for Jewelry, Architecture & Product Design",
+      "Freeform Curves, Surfaces, Solids & Meshes",
+      "Import/Export with AutoCAD, Revit, SketchUp & SolidWorks",
+      "Grasshopper Plug-ins for Parametric Design",
+      "Fabrication-Ready Models for CNC & 3D Printing"
+    ],
+    "syllabus": []
+  },
+  "matrixgold": {
+    "overview": "Turn your creative jewelry ideas into precise, production-ready 3D designs with MatrixGold. MatrixGold is a professional 3D CAD software specifically developed for jewelry design, combining powerful modeling tools, parametric workflows, gemstone setting, rendering, and manufacturing preparation in one environment.\n\nYou can design engagement and wedding rings, diamond and gemstone jewelry, pendants and necklaces, earrings, bracelets and bangles, custom luxury jewelry, signet and designer rings, and artistic organic jewelry designs.\n\nThe complete jewelry workflow is: Creative Design → 3D CAD → Gem Setting → Realistic Rendering → Manufacturing. M-Tech Computers classroom training focuses on industry jewelry CAD tools so students can create custom jewelry and prepare models for 3D printing, casting, and production.",
+    "highlights": [
+      "Industry-Focused Jewelry CAD Tools",
+      "Precise 3D Jewelry Modeling & Ring Design",
+      "Gemstone Setting — Prong, Pavé & Channel",
+      "Parametric History for Fast Design Changes",
+      "Photorealistic Rendering & Production-Ready Output"
+    ],
+    "syllabus": [
+      {
+        "title": "Jewelry 3D Modeling",
+        "points": [
+          "Create accurate 3D jewelry models from basic concepts to complex professional designs",
+          "MatrixGold interface, jewelry templates, and modeling tools",
+          "Working with metals, gems, and jewelry-specific CAD workflows"
+        ]
+      },
+      {
+        "title": "Ring Design",
+        "points": [
+          "Engagement rings, wedding bands, and signet rings",
+          "Customized ring designs with accurate dimensions",
+          "Shank, gallery, and halo-style ring construction"
+        ]
+      },
+      {
+        "title": "Gemstone Setting",
+        "points": [
+          "Diamond and gemstone placement",
+          "Prong settings, pavé, and channel settings",
+          "Carat weight, metal weight, and jewelry-setting workflows"
+        ]
+      },
+      {
+        "title": "Parametric Design & Rendering",
+        "points": [
+          "Parametric history so design changes can be made without rebuilding the full model",
+          "Realistic presentations of gold, silver, platinum, and gemstone designs",
+          "Client approval and marketing-ready jewelry renders"
+        ]
+      },
+      {
+        "title": "Production-Ready Design",
+        "points": [
+          "Prepare jewelry models for 3D printing, casting, and manufacturing",
+          "Technical requirements such as dimensions and thickness",
+          "Production-oriented workflow for jewelry CAD careers"
+        ]
+      }
+    ]
+  },
+  "rhino-matrix": {
+    "overview": "Turn your creative jewelry ideas into precise, production-ready 3D designs with MatrixGold. MatrixGold is a professional 3D CAD software specifically developed for jewelry design, combining powerful modeling tools, parametric workflows, gemstone setting, rendering, and manufacturing preparation in one environment.",
+    "highlights": [
+      "Industry-Focused Jewelry CAD Tools",
+      "Precise 3D Jewelry Modeling & Ring Design",
+      "Gemstone Setting — Prong, Pavé & Channel",
+      "Parametric History for Fast Design Changes",
+      "Photorealistic Rendering & Production-Ready Output"
+    ],
+    "syllabus": []
+  },
+  "zbrush": {
+    "overview": "Transform your creative jewelry concepts into highly detailed 3D designs with ZBrush. ZBrush is a professional digital sculpting and 3D modeling software widely used for creating complex, artistic, and highly detailed 3D forms. For jewelry design, it can be used to create intricate patterns, ornamental details, custom rings, pendants, and other unique designs.\n\nWhat you can design: designer and custom rings, detailed gemstone jewelry, pendants and necklaces, earrings, bracelets and bangles, royal and ornamental jewelry, artistic and character jewelry, and intricate surface designs. M-Tech Computers classroom training focuses on jewelry sculpting so you can move from creative concept to production-ready models.",
+    "highlights": [
+      "Digital Jewelry Sculpting with Precise Shape Control",
+      "Organic Jewelry Design Difficult in Traditional CAD",
+      "High-Detail Patterns, Textures & Engravings",
+      "Custom Ring & Pendant Design",
+      "Production Prep for CAD/CAM, 3D Printing & Manufacturing"
+    ],
+    "syllabus": [
+      {
+        "title": "Digital Jewelry Sculpting",
+        "points": [
+          "Digitally sculpt unique jewelry forms with precise control over shape, surface, and detailing",
+          "ZBrush interface, brushes, and jewelry sculpting workflow",
+          "Blocking out rings, pendants, and ornamental forms"
+        ]
+      },
+      {
+        "title": "Organic Jewelry Design",
+        "points": [
+          "Create flowing, artistic, and organic designs that are difficult to achieve with traditional CAD modeling",
+          "Artistic and character jewelry forms",
+          "Royal and ornamental jewelry concepts"
+        ]
+      },
+      {
+        "title": "High-Detail Modeling",
+        "points": [
+          "Develop intricate patterns, textures, engravings, and ornamental details",
+          "Detailed gemstone jewelry and surface richness",
+          "Intricate surface designs for unique pieces"
+        ]
+      },
+      {
+        "title": "Custom Ring & Pendant Design",
+        "points": [
+          "Create customized rings, pendants, and other designer jewelry from creative concepts",
+          "Earrings, bracelets, and bangles",
+          "Designer and custom ring workflows"
+        ]
+      },
+      {
+        "title": "Surface Detailing",
+        "points": [
+          "Advanced detailing techniques for realistic and visually rich jewelry surfaces",
+          "High-frequency details and decorative elements",
+          "Surface finish for presentation and manufacturing"
+        ]
+      },
+      {
+        "title": "Production Preparation",
+        "points": [
+          "Prepare and optimize sculpted jewelry models for downstream CAD/CAM",
+          "3D printing and jewelry manufacturing workflows",
+          "Exporting models for casting and production"
+        ]
+      }
+    ]
+  },
+  "csi-safe-essential-training": {
+    "overview": "CSI SAFE has emerged as the best tool for designing concrete slabs and foundations. CSI SAFE (Slab Analysis by the Finite Element Method) enables structural engineers to draw, analyze, design, and detail slabs and foundations in one environment.\n\nThis course is designed for Civil Engineers, Structural Engineers, and Geo-Tech Engineers. It covers CSI SAFE foundation design, isolated footing, combined footing in detail, design and detailing with or without drop panels, pile cap design with pile spring constant calculations, raft/MAT foundation, slab deflection, and full building slab analysis. M-Tech Computers classroom training uses practical models so you can produce design-ready slab and foundation documentation.\n\nPrerequisites: no prior work experience is required. Basic computer knowledge, engineering fundamentals, and CSI SAFE installed on your system are recommended. After training you receive digital learning material, a course completion certificate, and placement assistance support.",
+    "highlights": [
+      "Isolated & Combined Footing Design in Detail",
+      "Raft / MAT Foundation Design",
+      "Pile Cap Design with Pile Spring Constants",
+      "Concrete Slab Short-Term & Long-Term Deflection",
+      "Full Building Slab Analysis & Detailing"
+    ],
+    "syllabus": [
+      {
+        "title": "Introduction to CSI SAFE",
+        "points": [
+          "SAFE interface, model explorer, and project setup",
+          "How to design foundations in CSI SAFE",
+          "Draw, analyze, design, and detailing workflow",
+          "Target audience: civil, structural, and geo-tech engineers"
+        ]
+      },
+      {
+        "title": "Footing Design",
+        "points": [
+          "Isolated footing design in detail",
+          "Combined footing design in detail",
+          "Design and detailing with or without drop panels",
+          "Foundation modeling, materials, and soil subgrade"
+        ]
+      },
+      {
+        "title": "Raft, Base Plate & Beams",
+        "points": [
+          "Raft / MAT foundation design",
+          "Base plate design (axial + bi-axial) with RAM Connection",
+          "Beam design and how to do it effectively",
+          "Load patterns, load cases, and load combinations"
+        ]
+      },
+      {
+        "title": "Slabs, Deflection & Pile Caps",
+        "points": [
+          "Concrete slab short-term and long-term deflection",
+          "Pile cap design in detail with pile spring constant calculations",
+          "Slab analysis, meshing, and result interpretation",
+          "Displacement contours and deformed shape review"
+        ]
+      },
+      {
+        "title": "Full Building Design & Outcomes",
+        "points": [
+          "Full building design with slab analysis and detailing",
+          "Detailing output and construction-ready reports",
+          "Course completion certificate from M-Tech Computers",
+          "Digital learning material and post-training support"
         ]
       }
     ]
@@ -1968,5 +2168,350 @@ export const courseDetailsOriginal: Record<string, Omit<CourseDetailEntry, 'syll
       "Complete Plant Project Workflows"
     ],
     "syllabus": []
+  },
+  "cyber-security": {
+    "overview": "Cyber Security is the practice of protecting computers, networks, applications, devices and data from unauthorized access, attacks and security threats.\n\nOur Cyber Security training focuses on practical concepts of network security, ethical hacking, vulnerability assessment, penetration testing, threat detection and incident response, helping students build job-oriented cybersecurity skills.\n\nThe learning journey covers: Networking → Linux → Security Fundamentals → Ethical Hacking → Vulnerability Assessment → Web Security → SIEM/SOC → Incident Response. M-Tech Computers classroom training includes lab-based exercises in controlled, authorized environments so students understand how attacks occur and how security teams detect and respond to them.\n\nSecure the Digital World. Build Your Cyber Security Career with practical, job-oriented training at M-Tech Computers.",
+    "highlights": [
+      "Network Security & Ethical Hacking Fundamentals",
+      "Vulnerability Assessment & Penetration Testing",
+      "Web Application Security & OWASP Concepts",
+      "SOC, SIEM & Security Monitoring",
+      "Hands-on Lab Practice with Industry Tools",
+      "Incident Response & Threat Detection",
+      "Career Paths: SOC Analyst, Pen Tester & Security Analyst"
+    ],
+    "syllabus": [
+      {
+        "title": "Cyber Security Fundamentals",
+        "points": [
+          "Information security fundamentals and common cyber threats",
+          "Attack methods, attack surfaces and security best practices",
+          "Security policies, risk concepts and defense-in-depth",
+          "Introduction to authorized security testing environments"
+        ]
+      },
+      {
+        "title": "Networking & Network Security",
+        "points": [
+          "TCP/IP, DNS, HTTP/HTTPS and network architecture",
+          "Firewalls, VPN and network monitoring concepts",
+          "Protecting networks against unauthorized access and attacks",
+          "Network traffic analysis and security controls"
+        ]
+      },
+      {
+        "title": "Ethical Hacking",
+        "points": [
+          "How ethical hackers identify security weaknesses in authorized environments",
+          "Reconnaissance and information gathering",
+          "Vulnerability identification and security testing",
+          "Security assessment methodology and reporting"
+        ]
+      },
+      {
+        "title": "Vulnerability Assessment & Penetration Testing",
+        "points": [
+          "Vulnerability Assessment → Analysis → Testing → Validation → Reporting",
+          "Identifying and validating vulnerabilities through controlled security testing",
+          "Security testing scope, rules of engagement and documentation",
+          "Reporting findings for remediation and risk management"
+        ]
+      },
+      {
+        "title": "Web Application Security",
+        "points": [
+          "Web security fundamentals, authentication and authorization",
+          "Session security and input validation",
+          "OWASP security concepts and common web application risks",
+          "Security testing in authorized test environments"
+        ]
+      },
+      {
+        "title": "SOC & Security Monitoring",
+        "points": [
+          "How Security Operations Center teams monitor systems and analyze alerts",
+          "Security alerts, log analysis and SIEM fundamentals",
+          "Threat detection, incident investigation and incident response",
+          "SOC dashboards combining authentication, endpoint, network and threat data"
+        ]
+      },
+      {
+        "title": "Practical Cyber Security Training",
+        "points": [
+          "Network Security Labs and vulnerability assessment exercises",
+          "Ethical hacking concepts and web security testing",
+          "Security monitoring, log analysis and SIEM fundamentals",
+          "Incident response, threat detection and security reporting"
+        ]
+      },
+      {
+        "title": "Cyber Security Tools & Technologies",
+        "points": [
+          "Exposure to Kali Linux, Wireshark, Burp Suite, Metasploit and Nmap",
+          "SIEM platforms and vulnerability scanners",
+          "Understanding tools and security methodology — not just commands",
+          "Building problem-solving skills and a cybersecurity portfolio"
+        ]
+      }
+    ]
+  },
+  "cloud-computing": {
+    "overview": "Cloud Computing is the delivery of computing resources such as servers, storage, databases, networking and applications over the internet.\n\nOur Cloud Computing training helps students understand modern cloud infrastructure and develop practical skills required to deploy, manage, secure and scale applications and IT resources in the cloud.\n\nThe learning journey covers: Networking → Linux → Cloud Fundamentals → AWS/Azure/GCP → Cloud Infrastructure → Security → Deployment. Learn the Cloud. Build the Future with M-Tech Computers.\n\nDevelop practical Cloud Computing skills and prepare for modern IT infrastructure and cloud-based careers.",
+    "highlights": [
+      "Cloud Fundamentals — IaaS, PaaS, SaaS & Deployment Models",
+      "AWS, Microsoft Azure & Google Cloud Introduction",
+      "Cloud Infrastructure, Storage & Virtual Machines",
+      "Linux & Cloud Server Management",
+      "Cloud Networking & Security Fundamentals",
+      "Hands-on Cloud Lab Exercises",
+      "Career Paths: Cloud Engineer, Cloud Admin & Cloud Operations"
+    ],
+    "syllabus": [
+      {
+        "title": "Cloud Computing Fundamentals",
+        "points": [
+          "Cloud concepts, architecture and service models (IaaS, PaaS, SaaS)",
+          "Deployment models: public, private and hybrid cloud",
+          "Virtualization, cloud storage and cloud networking basics",
+          "How organizations use cloud infrastructure in real-world IT"
+        ]
+      },
+      {
+        "title": "AWS / Microsoft Azure / Google Cloud",
+        "points": [
+          "Introduction to leading cloud platforms and their core services",
+          "AWS | Microsoft Azure | Google Cloud overview",
+          "Understanding how cloud services are used in real-world environments",
+          "Platform selection and multi-cloud concepts"
+        ]
+      },
+      {
+        "title": "Cloud Infrastructure",
+        "points": [
+          "Virtual machines, compute services and cloud storage",
+          "Cloud databases, networking and load balancing",
+          "Auto scaling and resource management",
+          "Designing and managing cloud infrastructure"
+        ]
+      },
+      {
+        "title": "Linux & Cloud Servers",
+        "points": [
+          "Linux fundamentals and server management for cloud environments",
+          "Users, permissions, file systems and networking",
+          "Remote server access and basic server security",
+          "Managing Linux cloud servers in practice"
+        ]
+      },
+      {
+        "title": "Cloud Networking",
+        "points": [
+          "Virtual networks, IP addressing and subnets",
+          "Routing, DNS, firewalls and security groups",
+          "Load balancers and cloud resource communication",
+          "Secure network design in cloud environments"
+        ]
+      },
+      {
+        "title": "Cloud Security",
+        "points": [
+          "Identity & Access Management → Authentication → Permissions",
+          "Network security and data protection in the cloud",
+          "Security best practices for cloud infrastructure and applications",
+          "Shared responsibility model and compliance basics"
+        ]
+      },
+      {
+        "title": "Practical Cloud Computing Training",
+        "points": [
+          "Create cloud virtual machines and configure cloud storage",
+          "Deploy applications and configure cloud networking",
+          "Manage Linux cloud servers and user permissions",
+          "Configure cloud security and monitor cloud resources"
+        ]
+      },
+      {
+        "title": "Cloud Technologies & Career Opportunities",
+        "points": [
+          "AWS, Azure, Google Cloud, Linux, Docker, Kubernetes, Git and CI/CD concepts",
+          "Cloud databases and cloud networking tools",
+          "Roles: Cloud Engineer, Cloud Support Engineer, Cloud Administrator",
+          "Cloud Infrastructure Engineer, Cloud Operations Engineer and System Administrator"
+        ]
+      }
+    ]
+  },
+  "aws-cloud-computing": {
+    "overview": "Amazon Web Services (AWS) is a leading cloud platform that provides on-demand computing, storage, databases, networking, security and many other cloud services.\n\nOur AWS training focuses on practical cloud infrastructure, application deployment, security, networking and AWS administration, helping students develop skills for modern cloud-based IT environments.\n\nThe learning journey: Cloud Fundamentals → AWS Core Services → EC2 → S3 → VPC → IAM → RDS → Deployment → Security → DevOps.\n\nLearn AWS. Build on the Cloud. Grow Your IT Career with hands-on training and real-world projects at M-Tech Computers.",
+    "highlights": [
+      "AWS Cloud Fundamentals & Global Infrastructure",
+      "Amazon EC2, S3, VPC & IAM Hands-on Practice",
+      "AWS Databases — RDS & DynamoDB Introduction",
+      "Cloud Networking, Security & Deployment",
+      "Practical AWS Projects — Website, 3-Tier App & CI/CD",
+      "Industry-Relevant Cloud Skills for IT Careers",
+      "Career Paths: AWS Cloud Engineer, Admin & Solutions Architect Pathway"
+    ],
+    "syllabus": [
+      {
+        "title": "AWS Cloud Fundamentals",
+        "points": [
+          "Cloud computing concepts and AWS global infrastructure",
+          "Regions, Availability Zones and AWS Management Console",
+          "AWS Shared Responsibility Model and cloud service models",
+          "Core AWS services overview and account setup"
+        ]
+      },
+      {
+        "title": "Amazon EC2 — Cloud Servers",
+        "points": [
+          "Launching EC2 instances, instance types and AMIs",
+          "Key pairs, security groups and Elastic IP",
+          "Storage configuration and basic server management",
+          "Scaling and managing compute resources on AWS"
+        ]
+      },
+      {
+        "title": "Amazon S3 — Cloud Storage",
+        "points": [
+          "Buckets, objects and storage classes",
+          "Bucket policies, access permissions and versioning",
+          "Lifecycle management and data organization",
+          "Secure file and data storage on AWS"
+        ]
+      },
+      {
+        "title": "AWS VPC & Networking",
+        "points": [
+          "VPC, subnets, route tables and internet gateway",
+          "NAT gateway, security groups and network ACLs",
+          "Load balancers and basic DNS concepts (Route 53 introduction)",
+          "Designing secure networks inside AWS"
+        ]
+      },
+      {
+        "title": "AWS IAM & Cloud Security",
+        "points": [
+          "IAM users, groups, roles and policies",
+          "Authentication, access control and permissions",
+          "Users → Groups → Roles → Policies → Permissions workflow",
+          "Security best practices for AWS resources"
+        ]
+      },
+      {
+        "title": "AWS Databases",
+        "points": [
+          "Amazon RDS — database deployment and management",
+          "Database security, backups and high availability",
+          "Introduction to DynamoDB for NoSQL workloads",
+          "Connecting applications to AWS-managed databases"
+        ]
+      },
+      {
+        "title": "AWS Application Deployment",
+        "points": [
+          "Deployment workflow: Application → Server → Database → Networking → Security",
+          "Deploying web applications on AWS cloud infrastructure",
+          "Configuring required AWS resources for production-style setups",
+          "Monitoring and maintaining deployed applications"
+        ]
+      },
+      {
+        "title": "Practical AWS Projects",
+        "points": [
+          "Project 1 — Host a Website on AWS cloud infrastructure",
+          "Project 2 — AWS 3-Tier Application (Web → Application → Database layers)",
+          "Project 3 — Secure Cloud Infrastructure with networking, IAM and security controls",
+          "Project 4 — Cloud Deployment with CI/CD workflow concepts"
+        ]
+      }
+    ]
+  },
+  "generative-ai-agentic-ai": {
+    "overview": "Generative AI enables computers to create new content such as text, images, code and other digital outputs, while Agentic AI focuses on AI systems that can plan, reason, use tools and execute multi-step tasks toward a defined goal.\n\nOur training introduces students to the technologies behind modern AI applications, including LLMs, Prompt Engineering, RAG, AI APIs, AI Agents, automation and AI-powered applications.\n\nThe learning journey: Python → AI Fundamentals → Prompt Engineering → LLMs → APIs → RAG → AI Agents → Tool Calling → Automation → AI Applications → Projects.\n\nLearn AI. Build Intelligent Applications. Create AI Agents with practical Generative AI & Agentic AI training at M-Tech Computers.",
+    "highlights": [
+      "Generative AI & Large Language Model Fundamentals",
+      "Prompt Engineering & Structured AI Workflows",
+      "RAG — Retrieval Augmented Generation Applications",
+      "Agentic AI — Tool Calling, Planning & Multi-Step Tasks",
+      "Build AI-Powered Applications with Python & APIs",
+      "Practical AI Projects — Chatbots, RAG Assistants & Automation Agents",
+      "Career Paths: AI Application Developer, LLM Developer & AI Engineer"
+    ],
+    "syllabus": [
+      {
+        "title": "Generative AI Fundamentals",
+        "points": [
+          "How modern Generative AI systems work and real-world applications",
+          "Large Language Models, AI model concepts, tokens and context",
+          "AI APIs and AI application architecture",
+          "Responsible AI concepts and ethical considerations"
+        ]
+      },
+      {
+        "title": "Prompt Engineering",
+        "points": [
+          "Prompt structure, role and context design",
+          "Few-shot prompting and structured outputs",
+          "Prompt optimization and reasoning-oriented workflows",
+          "AI task design for accurate and useful model responses"
+        ]
+      },
+      {
+        "title": "Large Language Models (LLMs)",
+        "points": [
+          "LLMs → APIs → Application → User → AI Response workflow",
+          "Integrating AI models into websites, applications and business workflows",
+          "Understanding model capabilities, limitations and context windows",
+          "Designing LLM-powered application features"
+        ]
+      },
+      {
+        "title": "RAG — Retrieval Augmented Generation",
+        "points": [
+          "Documents → Embeddings → Vector Database → Retrieval → LLM → Response",
+          "Connecting AI models with external knowledge sources",
+          "Use cases: AI knowledge assistants, document Q&A and support bots",
+          "Building RAG applications that work with your own data"
+        ]
+      },
+      {
+        "title": "Agentic AI",
+        "points": [
+          "AI agents that reason, plan and use tools for multi-step tasks",
+          "Tool calling, function calling and agent workflows",
+          "Memory, planning and multi-agent systems",
+          "User Request → AI Agent → Select Tool → Execute → Analyze → Respond"
+        ]
+      },
+      {
+        "title": "AI Agents & Automation",
+        "points": [
+          "Customer support automation and research assistants",
+          "Document processing and data analysis assistants",
+          "Email and workflow automation with AI agents",
+          "Coding assistants and knowledge management applications"
+        ]
+      },
+      {
+        "title": "Build AI-Powered Applications",
+        "points": [
+          "Python for AI applications and AI API integration",
+          "REST APIs, structured data and database integration",
+          "Authentication, application deployment and AI workflow integration",
+          "LangChain, LangGraph and modern AI development frameworks"
+        ]
+      },
+      {
+        "title": "Practical AI Projects",
+        "points": [
+          "Project 1 — AI Chatbot using an LLM API",
+          "Project 2 — Document AI Assistant with RAG",
+          "Project 3 — AI Research Assistant workflow",
+          "Project 4 — AI Customer Support Agent with predefined tools",
+          "Project 5 — AI Automation Agent with multi-step connected tasks"
+        ]
+      }
+    ]
   }
 };

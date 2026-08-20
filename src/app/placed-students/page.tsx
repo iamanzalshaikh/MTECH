@@ -7,13 +7,25 @@ import {
   companyLogos,
   placedStudentsByYear,
   placementTestimonial,
-  placementYears,
-  type PlacementYear,
   type PlacedStudent,
 } from '@/data/placedStudents';
 import styles from './placed-students.module.css';
 
 const INITIAL_VISIBLE = 27;
+
+const allPlacedStudents: PlacedStudent[] = (() => {
+  const seen = new Set<string>();
+  const list: PlacedStudent[] = [];
+  for (const batch of Object.values(placedStudentsByYear)) {
+    for (const student of batch) {
+      const key = student.name.trim().toLowerCase();
+      if (seen.has(key)) continue;
+      seen.add(key);
+      list.push(student);
+    }
+  }
+  return list;
+})();
 
 function avatarUrl(name: string) {
   const initials = name
@@ -59,7 +71,6 @@ function StudentCard({ student }: { student: PlacedStudent }) {
 }
 
 export default function PlacedStudentsPage() {
-  const [activeYear, setActiveYear] = useState<PlacementYear>('2025-2026');
   const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE);
 
   const [form, setForm] = useState({
@@ -72,16 +83,11 @@ export default function PlacedStudentsPage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formError, setFormError] = useState('');
 
-  const students = placedStudentsByYear[activeYear];
+  const students = allPlacedStudents;
   const visibleStudents = useMemo(
     () => students.slice(0, visibleCount),
     [students, visibleCount]
   );
-
-  const handleYearChange = (year: PlacementYear) => {
-    setActiveYear(year);
-    setVisibleCount(INITIAL_VISIBLE);
-  };
 
   const handleEnrollSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -168,25 +174,11 @@ export default function PlacedStudentsPage() {
               <h2>Meet Our Alumni</h2>
               <p>Meet our alumni placed at top companies.</p>
             </div>
-            <div className={styles.yearTabs} role="tablist" aria-label="Placement batch year">
-              {placementYears.map((year) => (
-                <button
-                  key={year}
-                  type="button"
-                  role="tab"
-                  aria-selected={activeYear === year}
-                  className={`${styles.yearTab} ${activeYear === year ? styles.yearTabActive : ''}`}
-                  onClick={() => handleYearChange(year)}
-                >
-                  {year}
-                </button>
-              ))}
-            </div>
           </div>
 
           <div className={styles.studentGrid}>
             {visibleStudents.map((student) => (
-              <StudentCard key={`${activeYear}-${student.name}`} student={student} />
+              <StudentCard key={student.name} student={student} />
             ))}
           </div>
 
@@ -343,7 +335,7 @@ export default function PlacedStudentsPage() {
               <div className={styles.placementPanelInner}>
                 <img src="/placement-badge.png" alt="100% Placement Assistance" className={styles.placementBadge} />
                 <p className={styles.guaranteeBig}>100%</p>
-                <p className={styles.guaranteeLabel}>Placement Guaranteed</p>
+                <p className={styles.guaranteeLabel}>Placement Assistance</p>
               </div>
             </div>
           </div>

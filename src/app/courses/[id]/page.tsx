@@ -122,7 +122,10 @@ export default function CourseDetailPage({ params }: { params: React.Usable<{ id
     notFound();
   }
 
-  const courseImg = course.image || '/images/caddeskindia_com_wp-content_uploads_2021_02_ACAD-CE-1.jpg';
+  const courseImg =
+    id === 'etap-electrical'
+      ? '/image.png'
+      : course.image || '/images/caddeskindia_com_wp-content_uploads_2021_02_ACAD-CE-1.jpg';
 
   // Priority: real caddeskindia.com scrape, then original hand-authored content
   // (for courses caddesk doesn't offer), then the legacy generic mapping/default.
@@ -162,7 +165,7 @@ export default function CourseDetailPage({ params }: { params: React.Usable<{ id
             <span className="course-header-category">{course.category}</span>
             <h1 className="course-header-title">{course.title}</h1>
             <p className="course-header-subtitle">
-              Learn professional software skills with M-Tech Computers. 100% Practical training, certified syllabus, and guaranteed placement assistance.
+              Learn professional software skills with M-Tech Computers. 100% Practical training, certified syllabus, and placement assistance.
             </p>
             <div className="course-header-breadcrumbs">
               <Link href="/">Home</Link> / <Link href="/courses">Courses</Link> / <span>{course.title}</span>
@@ -649,7 +652,7 @@ export default function CourseDetailPage({ params }: { params: React.Usable<{ id
         /* Main Body Layout */
         .main-body-layout {
           display: grid;
-          grid-template-columns: 1.3fr 0.7fr;
+          grid-template-columns: 1fr 1fr;
           gap: 50px;
         }
 

@@ -10,8 +10,8 @@ export default function Footer() {
         <div className="footer-widget-about">
           <h4 className="footer-widget-title">Address</h4>
 
-          <p style={{ fontWeight: 700, color: 'white', marginBottom: '4px', fontSize: '14px' }}>M-Tech Computers — CAD Desk Kalyan</p>
-          <p style={{ fontWeight: 600, color: '#f6b500', marginBottom: '4px', fontSize: '13px' }}>Mahesh Sir: 9049344991 / 8976178976</p>
+          <p style={{ fontWeight: 700, color: 'white', marginBottom: '4px', fontSize: '14px' }}>M-Tech Computers — Kalyan HO</p>
+          <p style={{ fontWeight: 600, color: '#f6b500', marginBottom: '4px', fontSize: '13px' }}>Kalyan HO: 9049344991 / 8976178976</p>
           <p style={{ marginBottom: '20px', fontSize: '13px', lineHeight: '1.7' }}>
             Chandulal J Joshi Plaza,<br />
             Opp. Kalyan Platform No. 1,<br />
@@ -100,6 +100,7 @@ export default function Footer() {
             <li className="footer-contact-item">
               <span className="footer-contact-icon">📞</span>
               <div className="footer-contact-text">
+                <strong style={{ display: 'block', color: '#f6b500', fontSize: 12, marginBottom: 2 }}>Kalyan HO</strong>
                 <a href="tel:9049344991" style={{ display: 'block', color: 'white' }}>9049344991</a>
                 <a href="tel:8976178976" style={{ display: 'block', color: 'white' }}>8976178976</a>
                 <a href="tel:7770048032" style={{ display: 'block', color: '#f6b500', fontSize: '12px' }}>7770048032 (Dombivli)</a>

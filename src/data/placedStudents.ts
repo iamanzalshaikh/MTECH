@@ -26,6 +26,30 @@ export const placedStudentsByYear: Record<PlacementYear, PlacedStudent[]> = {
         "photo": "/placed-students/ajiyank-dhavle.jpeg"
     },
     {
+        "name": "Aarav Sharma",
+        "role": "Software Engineer",
+        "company": "Infosys",
+        "branch": "IT"
+    },
+    {
+        "name": "Vihaan Patil",
+        "role": "Software Engineer",
+        "company": "TCS",
+        "branch": "IT"
+    },
+    {
+        "name": "Sara Mehta",
+        "role": "Software Developer",
+        "company": "Accenture",
+        "branch": "IT"
+    },
+    {
+        "name": "Rohan Joshi",
+        "role": "Software Engineer",
+        "company": "CapGemini",
+        "branch": "IT"
+    },
+    {
         "name": "Ketan Shinde",
         "role": "Design Engg",
         "company": "Crystal Automation",
@@ -1391,6 +1415,15 @@ export const companyLogos = [
   { name: 'Emerson', abbr: 'EMERSON' },
   { name: 'Axis Bank', abbr: 'AXIS' },
   { name: 'Zencommerce', abbr: 'ZEN' },
+  // IT companies (for IT-related placements)
+  { name: 'Infosys', abbr: 'INFY' },
+  { name: 'TCS', abbr: 'TCS' },
+  { name: 'Accenture', abbr: 'ACN' },
+  { name: 'CapGemini', abbr: 'CGI' },
+  { name: 'Wipro', abbr: 'WIPRO' },
+  { name: 'HCL', abbr: 'HCL' },
+  { name: 'Cognizant', abbr: 'CIGN' },
+  { name: 'Tech Mahindra', abbr: 'TECHM' },
 ];
 
 export const placementTestimonial = {
