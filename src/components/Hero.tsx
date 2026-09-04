@@ -228,7 +228,7 @@ export default function Hero() {
           >
             <motion.div className="hero-tag-badge" variants={itemVariants}>
               <span className="tag-pulse" />
-              India&apos;s No. 1 CAD, CAM &amp; IT Training Network
+              IT Training &amp; Placement
             </motion.div>
 
             <motion.h1 className="hero-main-title" variants={itemVariants}>
