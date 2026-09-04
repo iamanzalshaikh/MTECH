@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { SOCIAL_LINKS } from '@/config/site';
 
 export default function Footer() {
@@ -115,13 +116,37 @@ export default function Footer() {
             </li>
           </ul>
           <div style={{ marginTop: '24px' }}>
-            <p style={{ fontSize: '12px', fontWeight: 600, color: 'white', marginBottom: '8px', textTransform: 'uppercase' }}>
+            <p style={{ fontSize: '12px', fontWeight: 600, color: 'white', marginBottom: '12px', textTransform: 'uppercase' }}>
               Follow Us
             </p>
-            <div style={{ display: 'flex', gap: '12px' }}>
-              <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>Facebook</a>
-              <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>Instagram</a>
-              <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>LinkedIn</a>
+            <div className="footer-social-icons">
+              <a
+                href={SOCIAL_LINKS.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-social-icon"
+                aria-label="Facebook"
+              >
+                <FaFacebookF size={16} />
+              </a>
+              <a
+                href={SOCIAL_LINKS.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-social-icon"
+                aria-label="Instagram"
+              >
+                <FaInstagram size={16} />
+              </a>
+              <a
+                href={SOCIAL_LINKS.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-social-icon"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedinIn size={16} />
+              </a>
             </div>
           </div>
         </div>

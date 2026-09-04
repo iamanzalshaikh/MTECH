@@ -732,15 +732,25 @@ body.mobile-nav-open .navbar-section {
 .counter-content-wrap .row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 28px 20px;
+  align-items: stretch;
 }
 
 .single-counter-03 {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
 }
 
 .single-counter-03 .icon {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .single-counter-03 .icon img {
@@ -749,18 +759,35 @@ body.mobile-nav-open .navbar-section {
   object-fit: contain;
 }
 
-.single-counter-03 span {
-  display: block;
+.single-counter-03 .counter-value {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: nowrap;
+  white-space: nowrap;
   font-size: 32px;
   font-weight: 800;
+  line-height: 1.1;
   color: var(--clr-accent);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   font-family: var(--font-heading);
+  min-height: 36px;
+}
+
+.single-counter-03 .counter-value .counter {
+  display: inline;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  margin: 0;
 }
 
 .single-counter-03 p {
   font-size: 14px;
   color: #cccccc;
+  line-height: 1.35;
+  margin: 0;
+  max-width: 160px;
 }
 
 /* Replicating edubin-about-section-04 (Franchise Opportunities) */
@@ -1250,11 +1277,117 @@ body.mobile-nav-open .navbar-section {
   margin-bottom: 4px;
 }
 
+.footer-social-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.footer-social-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #07294d;
+  background: #ffffff;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.footer-social-icon:hover {
+  background: #f6b500;
+  color: #07294d;
+  transform: translateY(-2px);
+}
+
 .footer-copyright {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 24px 0;
   text-align: center;
   font-size: 13px;
+}
+
+/* Impact stats strip (below features) */
+.impact-stats-section {
+  background: #f3f5f8;
+  padding: 36px 0 48px;
+}
+
+.impact-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.impact-stat-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(7, 41, 77, 0.06);
+  padding: 22px 14px 18px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 160px;
+}
+
+.impact-stat-icon {
+  font-size: 28px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.impact-stat-card h3 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #07294d;
+  margin: 0 0 6px;
+  font-family: var(--font-heading);
+}
+
+.impact-stat-card p {
+  font-size: 13px;
+  color: #4b5563;
+  line-height: 1.35;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.impact-stat-socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  color: #07294d;
+}
+
+.impact-stat-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #eef2ff;
+  color: #07294d;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.impact-stat-socials a:hover {
+  background: #07294d;
+  color: #ffffff;
+}
+
+@media (max-width: 1100px) {
+  .impact-stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .impact-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Subpage Headers */
@@ -1897,8 +2030,8 @@ body.mobile-nav-open .navbar-section {
 
 .new-hero-grid {
   display: grid !important;
-  grid-template-columns: 1.15fr 0.85fr !important;
-  gap: 60px !important;
+  grid-template-columns: 1fr 1.1fr !important;
+  gap: 32px !important;
   align-items: center !important;
   position: relative !important;
   z-index: 3 !important;
@@ -2033,22 +2166,24 @@ body.mobile-nav-open .navbar-section {
 /* Right Column Visuals layout */
 .hero-right-visuals {
   display: flex !important;
-  justify-content: center !important;
+  justify-content: flex-end !important;
   align-items: center !important;
   position: relative !important;
+  width: 100% !important;
 }
 
 .visuals-wrapper {
   position: relative !important;
   width: 100% !important;
-  max-width: 600px !important;
-  min-height: 460px !important;
+  max-width: 760px !important;
+  min-height: 490px !important;
   height: auto !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   padding-bottom: 24px !important;
   overflow: visible !important;
+  margin-left: auto !important;
 }
 
 .floating-gear-svg {
@@ -2220,20 +2355,22 @@ body.mobile-nav-open .navbar-section {
 .hero-slide-img-wrap {
   position: relative !important;
   width: 100% !important;
-  aspect-ratio: 2070 / 1188 !important;
+  aspect-ratio: 16 / 10 !important;
+  min-height: 400px !important;
   height: auto !important;
   border-radius: 16px !important;
   overflow: hidden !important;
-  background: #f1f5f9 !important;
+  background: #0f172a !important;
 }
 
 .hero-slide-img {
   width: 100% !important;
   height: 100% !important;
-  object-fit: contain !important;
+  object-fit: cover !important;
   object-position: center !important;
   border-radius: 16px !important;
   display: block !important;
+  background: #0f172a !important;
 }
 
 .hero-slide-overlay {

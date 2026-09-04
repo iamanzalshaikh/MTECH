@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function AboutPage() {
   const stats = [
-    { value: '5000+', label: 'STUDENTS TRAINED' },
+    { value: '200k+', label: 'STUDENTS TRAINED' },
     { value: '11+', label: 'YEARS HERITAGE' },
     { value: '100%', label: 'PLACEMENT' },
     { value: '100%', label: 'PRACTICAL LABS' }
@@ -100,7 +100,7 @@ export default function AboutPage() {
               We Create <span className="about-text-gradient">Designs for the Future</span>
             </h2>
             <p style={{ fontSize: '16px', color: '#4b5563', lineHeight: '1.8', margin: 0 }}>
-              M-Tech Computers is a registered brand of corporate group M-Tech Computers INDIA. Founded in the year 2015, we offer high-quality professional software training courses across Civil, Architecture, Mechanical, Automobile, Electrical, Electronics, IT, and Data Analytic Course domains — with 5000+ students trained and placed.
+              M-Tech Computers is a registered brand of corporate group M-Tech Computers INDIA. Founded in the year 2015, we offer high-quality professional software training courses across Civil, Architecture, Mechanical, Automobile, Electrical, Electronics, IT, and Data Analytic Course domains — with 200k+ students trained and placed.
             </p>
           </div>
 

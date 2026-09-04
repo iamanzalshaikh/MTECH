@@ -724,7 +724,7 @@ export const coursesData: Course[] = [
     id: 'autocad-plant-3d',
     title: 'AutoCAD Plant 3D Training',
     category: 'Piping Course',
-    image: '/images/caddeskindia_com_wp-content_uploads_2021_03_civil-3d.jpg',
+    image: '/images/piping-course.jpg',
     description: 'Learn AutoCAD Plant 3D for P&ID schematics, 3D piping models, spec editor, isometric and orthographic views, report creator, and plant project workflows.',
     duration: '2 Months',
     url: 'https://mtechcomputers.in/courses/autocad-plant-3d/'

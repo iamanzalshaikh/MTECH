@@ -6,7 +6,8 @@ import { useInView } from 'framer-motion';
 import CourseRecommender from '@/components/CourseRecommender';
 import Hero from '@/components/Hero';
 import { placedStudentsByYear } from '@/data/placedStudents';
-import { GMB_LOCATIONS } from '@/config/site';
+import { GMB_LOCATIONS, STUDENTS_TRAINED, SOCIAL_LINKS } from '@/config/site';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 
 function CountUpNumber({ value, duration = 1.5 }: { value: number; duration?: number }) {
   const [count, setCount] = useState(0);
@@ -107,41 +108,46 @@ export default function HomePage() {
       {/* 1. New Animated Hero Section */}
       <Hero />
 
-      {/* 2. Top Stats Bar (Features) */}
-      <section className="edubin-features-section-02">
+
+      {/* Impact Stats — below features */}
+      <section className="impact-stats-section">
         <div className="container">
-          <div className="features-wrap">
-            <div className="row">
-              {/* Feature 1 */}
-              <div className="features-item-02">
-                <div className="features-img">
-                  <img src="/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_all-icon_feat-4.png" alt="Franchise Icon" />
-                </div>
-                <div className="features-content">
-                  <h3 className="title">Advanced Curriculum</h3>
-                  <p>Industry-aligned software training</p>
-                </div>
+          <div className="impact-stats-grid">
+            <div className="impact-stat-card">
+              <div className="impact-stat-icon impact-stat-icon--green" aria-hidden="true">🌐</div>
+              <h3>{STUDENTS_TRAINED}</h3>
+              <p>Students Empowered</p>
+            </div>
+            <div className="impact-stat-card">
+              <div className="impact-stat-icon impact-stat-icon--blue" aria-hidden="true">💻</div>
+              <h3>50+</h3>
+              <p>College / Corporate Training</p>
+              <div className="impact-stat-socials">
+                <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebookF size={14} /></a>
+                <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram size={14} /></a>
+                <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedinIn size={14} /></a>
+                <a href={SOCIAL_LINKS.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube"><FaYoutube size={14} /></a>
               </div>
-              {/* Feature 2 */}
-              <div className="features-item-02">
-                <div className="features-img">
-                  <img src="/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_all-icon_feat-5.png" alt="Students Icon" />
-                </div>
-                <div className="features-content">
-                  <h3 className="title">5000+ Students Trained</h3>
-                  <p>Certified learners placed successfully</p>
-                </div>
-              </div>
-              {/* Feature 3 */}
-              <div className="features-item-02">
-                <div className="features-img">
-                  <img src="/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_all-icon_feat-6.png" alt="Instructors Icon" />
-                </div>
-                <div className="features-content">
-                  <h3 className="title">Expert Faculty</h3>
-                  <p>Experienced IT professionals & Mentors</p>
-                </div>
-              </div>
+            </div>
+            <div className="impact-stat-card">
+              <div className="impact-stat-icon impact-stat-icon--red" aria-hidden="true">🎓</div>
+              <h3>11+</h3>
+              <p>Years of Education Excellence</p>
+            </div>
+            <div className="impact-stat-card">
+              <div className="impact-stat-icon impact-stat-icon--green" aria-hidden="true">🏛️</div>
+              <h3>2+</h3>
+              <p>Branches</p>
+            </div>
+            <div className="impact-stat-card">
+              <div className="impact-stat-icon impact-stat-icon--blue" aria-hidden="true">▶️</div>
+              <h3>IT</h3>
+              <p>Courses — Programming &amp; Cloud</p>
+            </div>
+            <div className="impact-stat-card">
+              <div className="impact-stat-icon impact-stat-icon--red" aria-hidden="true">🏆</div>
+              <h3>100%</h3>
+              <p>Placement Assistance</p>
             </div>
           </div>
         </div>
@@ -257,7 +263,7 @@ export default function HomePage() {
                 <div className="thum">
                   <div className="image">
                     <Link href="/courses?category=Jewellery Design">
-                      <img src="/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_category_ctg-3.jpg" alt="Jewellery Design" />
+                      <img src="/images/matrixgold.png" alt="Jewellery Design" />
                     </Link>
                   </div>
                 </div>
@@ -274,7 +280,7 @@ export default function HomePage() {
                 <div className="thum">
                   <div className="image">
                     <Link href="/courses?category=Piping">
-                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_03_civil-3d.jpg" alt="Piping" />
+                      <img src="/images/piping-course.jpg" alt="Piping" />
                     </Link>
                   </div>
                 </div>
@@ -333,7 +339,7 @@ export default function HomePage() {
 
           <div className="category-wrap-03">
             <div className="row d-flex align-items-stretch">
-              {/* Course 1 */}
+              {/* Course 1 — CAD */}
               <div className="single-course">
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
@@ -360,7 +366,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Course 2 */}
+              {/* Course 2 — CAD */}
               <div className="single-course">
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
@@ -387,7 +393,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Course 3 */}
+              {/* Course 3 — CAD */}
               <div className="single-course">
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
@@ -414,83 +420,83 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Course 4 */}
+              {/* Course 4 — IT */}
               <div className="single-course">
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
-                    <Link href="/courses?category=Mechanical">
-                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_02_Solidworks.jpg" alt="Solidworks" />
+                    <Link href="/courses?category=Information Technology">
+                      <img src="/images/it/fullstack.png" alt="Full Stack Web Development" />
                     </Link>
                   </div>
                 </div>
                 <div className="content" style={{ textAlign: 'left' }}>
-                  <Link href="/courses?category=Mechanical">
-                    <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>SolidWorks</h4>
+                  <Link href="/courses?category=Information Technology">
+                    <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>Full Stack Web Development</h4>
                   </Link>
                   <p style={{ fontSize: '13px', lineHeight: '1.5', color: '#666', marginBottom: '16px' }}>
-                    Popular in Product Industries (small and medium scale) due to user-friendly nature and easy working.
+                    Modern full stack training covering frontend, backend, databases, and deployment.
                   </p>
                 </div>
                 <div className="course-teacher">
                   <div className="course-lesson">
-                    <span>⚙️ Mechanical/Automobile</span>
+                    <span>💻 Information Technology</span>
                   </div>
                   <div className="view-details">
-                    <Link href="/courses?category=Mechanical" id="trending-det-solidworks">View Details</Link>
+                    <Link href="/courses?category=Information Technology" id="trending-det-fullstack">View Details</Link>
                   </div>
                 </div>
               </div>
 
-              {/* Course 5 */}
+              {/* Course 5 — IT */}
               <div className="single-course">
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
-                    <Link href="/courses?category=Mechanical">
-                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_02_CNC.jpg" alt="CNC Programming" />
+                    <Link href="/courses?category=Information Technology">
+                      <img src="/images/it/react-js.png" alt="React JS" />
                     </Link>
                   </div>
                 </div>
                 <div className="content" style={{ textAlign: 'left' }}>
-                  <Link href="/courses?category=Mechanical">
-                    <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>CNC Programming</h4>
+                  <Link href="/courses?category=Information Technology">
+                    <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>React JS</h4>
                   </Link>
                   <p style={{ fontSize: '13px', lineHeight: '1.5', color: '#666', marginBottom: '16px' }}>
-                    CNC Programming is the manual coding done by G-codes and M-codes for machining operations.
+                    Build fast, responsive UIs with React hooks, routing, and API integrations.
                   </p>
                 </div>
                 <div className="course-teacher">
                   <div className="course-lesson">
-                    <span>⚙️ Mechanical/Automobile</span>
+                    <span>💻 Information Technology</span>
                   </div>
                   <div className="view-details">
-                    <Link href="/courses?category=Mechanical" id="trending-det-cnc">View Details</Link>
+                    <Link href="/courses?category=Information Technology" id="trending-det-react">View Details</Link>
                   </div>
                 </div>
               </div>
 
-              {/* Course 6 */}
+              {/* Course 6 — IT */}
               <div className="single-course">
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
-                    <Link href="/courses?category=Mechanical">
-                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_02_CATIA.jpg" alt="CATIA" />
+                    <Link href="/courses?category=Information Technology">
+                      <img src="/images/it/data-analytics.png" alt="Data Analytics" />
                     </Link>
                   </div>
                 </div>
                 <div className="content" style={{ textAlign: 'left' }}>
-                  <Link href="/courses?category=Mechanical">
-                    <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>CATIA</h4>
+                  <Link href="/courses?category=Information Technology">
+                    <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>Data Analytics</h4>
                   </Link>
                   <p style={{ fontSize: '13px', lineHeight: '1.5', color: '#666', marginBottom: '16px' }}>
-                    Used by most of the Automobile and aerospace companies for high-end body surface design.
+                    Excel, SQL, Power BI, and Python basics for job-ready analytics roles.
                   </p>
                 </div>
                 <div className="course-teacher">
                   <div className="course-lesson">
-                    <span>⚙️ Mechanical/Automobile</span>
+                    <span>💻 Information Technology</span>
                   </div>
                   <div className="view-details">
-                    <Link href="/courses?category=Mechanical" id="trending-det-catia">View Details</Link>
+                    <Link href="/courses?category=Information Technology" id="trending-det-data">View Details</Link>
                   </div>
                 </div>
               </div>
@@ -604,22 +610,51 @@ export default function HomePage() {
                     <div className="icon">
                       <img src="/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_all-icon_counter-1.png" alt="Icon" />
                     </div>
-                    <span><span className="counter"><CountUpNumber value={5000} /></span>+</span>
+                    <div className="counter-value">
+                      <span className="counter"><CountUpNumber value={200} /></span>k+
+                    </div>
                     <p>Students Trained</p>
                   </div>
                   <div className="single-counter-03">
                     <div className="icon">
                       <img src="/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_all-icon_counter-2.png" alt="Icon" />
                     </div>
-                    <span><span className="counter"><CountUpNumber value={50} /></span>+</span>
+                    <div className="counter-value">
+                      <span className="counter"><CountUpNumber value={50} /></span>+
+                    </div>
                     <p>College/ Corporate Training</p>
                   </div>
                   <div className="single-counter-03">
                     <div className="icon">
                       <img src="/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_all-icon_counter-1.png" alt="Icon" />
                     </div>
-                    <span><span className="counter"><CountUpNumber value={32} /></span>+</span>
-                    <p>Training Centres</p>
+                    <div className="counter-value">
+                      <span className="counter"><CountUpNumber value={2} /></span>+
+                    </div>
+                    <p>Learning Centres</p>
+                  </div>
+                  <div className="single-counter-03">
+                    <div className="icon">
+                      <img src="/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_all-icon_counter-2.png" alt="Icon" />
+                    </div>
+                    <div className="counter-value">
+                      <span className="counter"><CountUpNumber value={11} /></span>+
+                    </div>
+                    <p>Years of Excellence</p>
+                  </div>
+                  <div className="single-counter-03">
+                    <div className="icon">
+                      <img src="/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_all-icon_counter-1.png" alt="Icon" />
+                    </div>
+                    <div className="counter-value">IT</div>
+                    <p>Programming &amp; Cloud Courses</p>
+                  </div>
+                  <div className="single-counter-03">
+                    <div className="icon">
+                      <img src="/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_all-icon_counter-2.png" alt="Icon" />
+                    </div>
+                    <div className="counter-value">100%</div>
+                    <p>Placement Assistance</p>
                   </div>
                 </div>
               </div>

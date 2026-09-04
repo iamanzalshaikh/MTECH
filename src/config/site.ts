@@ -17,4 +17,4 @@ export const GMB_LOCATIONS = {
 export const GOOGLE_REVIEW_URL =
   process.env.NEXT_PUBLIC_GOOGLE_REVIEW_URL || GMB_LOCATIONS.kalyan;
 
-export const STUDENTS_TRAINED = '5000+';
+export const STUDENTS_TRAINED = '200k+';
