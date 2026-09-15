@@ -106,27 +106,27 @@ export const coursesData: Course[] = [
   {
     id: '3dsmax-animation',
     title: '3D Modeling & Animation with 3ds Max',
-    category: 'Civil & Arch',
+    category: 'Interior Design',
     image: '/images/caddeskindia_com_wp-content_uploads_2021_03_3ds-max-int.jpg',
-    description: 'Master Autodesk 3ds Max software to create architectural structures walkthroughs, complex shapes, and render frames.',
+    description: 'Master Autodesk 3ds Max software to create interior spaces, architectural walkthroughs, complex shapes, and render frames.',
     duration: '8 Weeks',
     url: 'https://mtechcomputers.in/courses/master-3d-modeling-animation-with-3ds-max/'
   },
   {
     id: 'sketchup-modeling',
-    title: 'SketchUp Pro Training - 3D Modeling & Design',
-    category: 'Civil & Arch',
+    title: 'SketchUp Pro Training - 3D Interior & Architectural Design',
+    category: 'Interior Design',
     image: '/images/caddeskindia_com_wp-content_uploads_2021_02_Sketch-up.jpg',
-    description: 'Master Google SketchUp Pro to model custom interior designs, kitchen furniture, and build fast 3D blueprints.',
+    description: 'Master Google SketchUp Pro to model custom interior designs, modular kitchen furniture, 3D space layouts, and fast blueprints.',
     duration: '6 Weeks',
     url: 'https://mtechcomputers.in/courses/sketchup-pro-training-master-3d-modeling-design/'
   },
   {
     id: 'vray-rendering',
     title: 'V-Ray for Photorealistic Rendering',
-    category: 'Civil & Arch',
+    category: 'Interior Design',
     image: '/images/caddeskindia_com_wp-content_uploads_2021_03_V-ray.jpg',
-    description: 'Learn detailed textures mapping, global illumination settings, and light source parameters setup in V-Ray.',
+    description: 'Learn detailed textures mapping, interior lighting, global illumination settings, and light source parameters setup in V-Ray.',
     duration: '6 Weeks',
     url: 'https://mtechcomputers.in/courses/master-v-ray-for-photorealistic-rendering/'
   },
@@ -614,7 +614,7 @@ export const coursesData: Course[] = [
     id: 'matrixgold',
     title: 'Professional Jewelry CAD Design with MatrixGold',
     category: 'Jewellery Design',
-    image: '/images/matrixgold.png',
+    image: '/images/jewelry-cad.jpg',
     description: 'Turn jewelry ideas into production-ready 3D designs with MatrixGold — ring design, gemstone setting, parametric workflows, rendering, and manufacturing prep.',
     duration: '8 Weeks',
     url: 'https://mtechcomputers.in/courses/rhino-matrix-3d/',
@@ -735,20 +735,27 @@ const categoryParamMap: Record<string, string> = {
   'all': 'All',
   'information technology': 'IT Course',
   'it course': 'IT Course',
+  'itcourse': 'IT Course',
+  'it': 'IT Course',
   'cs/it': 'IT Course',
   'civil & architecture': 'Civil & Arch',
   'civil & arch': 'Civil & Arch',
   'civil/architecture': 'Civil & Arch',
+  'civil': 'Civil & Arch',
   'mechanical': 'Mechanical',
   'mechanical/automobile': 'Mechanical',
   'piping': 'Piping Course',
   'piping course': 'Piping Course',
   'electrical': 'Electrical',
   'electrical/electronics': 'Electrical',
+  'interior design': 'Interior Design',
+  'interior designer': 'Interior Design',
   'project planning': 'Project Planning & Management',
   'project planning & management': 'Project Planning & Management',
   'jewellery design': 'Jewellery Design',
   'jewellery design courses': 'Jewellery Design',
+  'jewlry design': 'Jewellery Design',
+  'jewelry design': 'Jewellery Design',
   'accounting': 'Accounting & Computer',
   'accounting & computer': 'Accounting & Computer',
   'accounting & computer courses': 'Accounting & Computer',
@@ -760,12 +767,13 @@ const categories = [
   'All',
   'Civil & Arch',
   'Mechanical',
+  'Electrical',
+  'Interior Design',
+  'Project Planning & Management',
+  'Jewellery Design',
   'Piping Course',
   'IT Course',
-  'Electrical',
-  'Project Planning & Management',
   'Accounting & Computer',
-  'Jewellery Design',
   'Digital Marketing'
 ];
 
@@ -778,9 +786,15 @@ function CoursesListContent() {
   useEffect(() => {
     const categoryParam = searchParams.get('category');
     if (categoryParam) {
-      const mapped = categoryParamMap[categoryParam.toLowerCase()];
+      const lower = categoryParam.toLowerCase().trim();
+      const mapped = categoryParamMap[lower];
       if (mapped) {
         setActiveFilter(mapped);
+      } else {
+        const found = categories.find(c => c.toLowerCase() === lower);
+        if (found) {
+          setActiveFilter(found);
+        }
       }
     }
   }, [searchParams]);
@@ -844,14 +858,16 @@ function CoursesListContent() {
               {filteredCourses.map((course) => (
                 <div className="course-card" key={course.id}>
                   {/* Category Image Header */}
-                  <div className="course-img-wrap-catalog" style={{ height: '200px', overflow: 'hidden', position: 'relative' }}>
-                    <img 
-                      src={imgErrors[course.id] ? '/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_category_ctg-1.jpg' : course.image} 
-                      alt={course.title}
-                      style={{ width: '100%', height: '100%', objectFit: course.id === 'zbrush' ? 'contain' : 'cover', background: course.id === 'zbrush' ? '#ffffff' : undefined, display: 'block', transition: 'transform 0.3s ease' }}
-                      id={`course-thumbnail-${course.id}`}
-                      onError={() => setImgErrors(prev => ({ ...prev, [course.id]: true }))}
-                    />
+                  <div className="course-img-wrap-catalog" style={{ height: '200px', overflow: 'hidden', position: 'relative', cursor: 'pointer' }}>
+                    <Link href={`/courses/${course.id}`} title={`Click to view details of ${course.title}`}>
+                      <img 
+                        src={imgErrors[course.id] ? '/images/caddeskindia_com_wp-content_themes_caddesk_official_new_assets_images_category_ctg-1.jpg' : course.image} 
+                        alt={course.title}
+                        style={{ width: '100%', height: '100%', objectFit: course.id === 'zbrush' ? 'contain' : 'cover', background: course.id === 'zbrush' ? '#ffffff' : undefined, display: 'block', transition: 'transform 0.3s ease' }}
+                        id={`course-thumbnail-${course.id}`}
+                        onError={() => setImgErrors(prev => ({ ...prev, [course.id]: true }))}
+                      />
+                    </Link>
                   </div>
                   
                   <div className="course-content">

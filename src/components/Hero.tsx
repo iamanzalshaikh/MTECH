@@ -16,116 +16,98 @@ type HeroSlide = {
   image: string;
 };
 
-/** One IT course image per slide — no collage */
+/** High quality slides pointing to specific category pages on /courses?category=... */
 const heroSlides: HeroSlide[] = [
   {
     id: 1,
-    label: 'Full Stack',
-    image: '/images/it/fullstack.png',
-    heading: 'Full Stack Web Development',
-    sub: 'Frontend · Backend · Database · Deployment',
-    link: '/courses?category=Information Technology',
-    color: '#8b5cf6',
+    label: 'Mechanical CAD',
+    image: '/images/caddeskindia_com_wp-content_uploads_2026_04_Mechanical.jpg',
+    heading: 'Mechanical CAD & Product Design',
+    sub: 'AutoCAD Mechanical · SolidWorks · CATIA · Creo · ANSYS',
+    link: '/courses?category=Mechanical',
+    color: '#00509d',
   },
   {
     id: 2,
-    label: 'React JS',
-    image: '/images/it/react-js.png',
-    heading: 'React JS — Modern Web Apps',
-    sub: 'Hooks · Routing · State · API Integrations',
-    link: '/courses?category=Information Technology',
-    color: '#06b6d4',
+    label: 'Civil & Arch CAD',
+    image: '/images/caddeskindia_com_wp-content_uploads_2026_04_Civil-arch.jpg',
+    heading: 'Civil & Architectural CAD',
+    sub: 'AutoCAD Civil · Revit Arch · STAAD.Pro · ETABS · 3ds Max',
+    link: '/courses?category=Civil%20%26%20Arch',
+    color: '#0284c7',
   },
   {
     id: 3,
-    label: 'JavaScript',
-    image: '/images/it/js-programming.png',
-    heading: 'JavaScript Programming',
-    sub: 'Basics to Advanced · DOM · Async · Modern JS',
-    link: '/courses?category=Information Technology',
+    label: 'Electrical CAD',
+    image: '/images/caddeskindia_com_wp-content_uploads_2026_04_ELECTRICAL.jpg',
+    heading: 'Electrical CAD & Automation',
+    sub: 'AutoCAD Electrical · EPLAN · PLC · SCADA · Circuit Design',
+    link: '/courses?category=Electrical',
     color: '#eab308',
   },
   {
     id: 4,
-    label: 'Node.js',
-    image: '/images/it/nodejs.png',
-    heading: 'Node.js Backend Development',
-    sub: 'Express · APIs · MongoDB · Scalable Servers',
-    link: '/courses?category=Information Technology',
-    color: '#22c55e',
-  },
-  {
-    id: 5,
-    label: 'Data Analytics',
-    image: '/images/it/data-analytics.png',
-    heading: 'Data Analytics',
-    sub: 'Excel · SQL · Power BI · Business Insights',
-    link: '/courses?category=Information Technology',
-    color: '#3b82f6',
-  },
-  {
-    id: 6,
-    label: 'Artificial Intelligence',
-    image: '/images/it/artificial-intelligence.png',
-    heading: 'Artificial Intelligence',
-    sub: 'Machine Learning · Neural Networks · Real-World AI',
-    link: '/courses?category=Information Technology',
-    color: '#a855f7',
-  },
-  {
-    id: 7,
-    label: 'MERN Stack',
-    image: '/images/it/mern-stack.png',
-    heading: 'MERN Stack Development',
-    sub: 'MongoDB · Express · React · Node.js',
-    link: '/courses?category=Information Technology',
-    color: '#10b981',
-  },
-  {
-    id: 8,
-    label: 'Cloud Computing',
-    image: '/images/it/cloud-computing.png',
-    heading: 'Cloud Computing',
-    sub: 'AWS · Azure · GCP · Cloud Security',
-    link: '/courses?category=Information Technology',
-    color: '#0ea5e9',
-  },
-  {
-    id: 9,
-    label: 'AWS Cloud',
-    image: '/images/it/aws-cloud.png',
-    heading: 'AWS Cloud Computing',
-    sub: 'EC2 · S3 · VPC · IAM · RDS',
-    link: '/courses?category=Information Technology',
-    color: '#f97316',
-  },
-  {
-    id: 10,
-    label: 'Generative AI',
-    image: '/images/it/gen-ai-agentic.png',
-    heading: 'Generative AI & Agentic AI',
-    sub: 'LLMs · Prompt Engineering · RAG · AI Agents',
-    link: '/courses?category=Information Technology',
+    label: 'Interior Design',
+    image: '/images/caddeskindia_com_wp-content_uploads_2021_02_3ds-1.jpg',
+    heading: 'Interior Design & 3D Visualization',
+    sub: '3ds Max · SketchUp Pro · V-Ray Rendering · Layout Drafting',
+    link: '/courses?category=Interior%20Design',
     color: '#ec4899',
   },
   {
-    id: 11,
-    label: 'Angular',
-    image: '/images/it/angular.png',
-    heading: 'Angular Development',
-    sub: 'Components · Routing · Services · Deployment',
-    link: '/courses?category=Information Technology',
-    color: '#ef4444',
+    id: 5,
+    label: 'Project Planning',
+    image: '/images/caddeskindia_com_wp-content_uploads_2021_02_Primavera.jpg',
+    heading: 'Project Planning & Management',
+    sub: 'Oracle Primavera P6 · MS Project · PMP · Gantt Charts',
+    link: '/courses?category=Project%20Planning',
+    color: '#10b981',
   },
   {
-    id: 12,
-    label: 'Golang',
-    image: '/images/it/golang.png',
-    heading: 'Golang Programming',
-    sub: 'Concurrency · Backend Systems · High Performance',
-    link: '/courses?category=Information Technology',
-    color: '#14b8a6',
+    id: 6,
+    label: 'Jewelry Design',
+    image: '/images/jewelry-cad.jpg',
+    heading: '3D Jewelry CAD Design',
+    sub: 'MatrixGold · Rhinoceros 3D · ZBrush Sculpting · Gemstone Mates',
+    link: '/courses?category=Jewellery%20Design',
+    color: '#f59e0b',
   },
+  {
+    id: 7,
+    label: 'Full Stack',
+    image: '/images/it/fullstack.png',
+    heading: 'Full Stack Web Development',
+    sub: 'Frontend · Backend · Database · Cloud Deployment',
+    link: '/courses?category=IT%20Course',
+    color: '#8b5cf6',
+  },
+  {
+    id: 8,
+    label: 'React JS',
+    image: '/images/it/react-js.png',
+    heading: 'React JS — Modern Web Apps',
+    sub: 'Hooks · Routing · State Management · APIs',
+    link: '/courses?category=IT%20Course',
+    color: '#06b6d4',
+  },
+  {
+    id: 9,
+    label: 'Data Analytics',
+    image: '/images/it/data-analytics.png',
+    heading: 'Data Analytics',
+    sub: 'Excel · SQL · Power BI · Python · Business Dashboards',
+    link: '/courses?category=IT%20Course',
+    color: '#3b82f6',
+  },
+  {
+    id: 10,
+    label: 'Artificial Intelligence',
+    image: '/images/it/artificial-intelligence.png',
+    heading: 'Artificial Intelligence & ML',
+    sub: 'Machine Learning · Neural Networks · GenAI · Python',
+    link: '/courses?category=IT%20Course',
+    color: '#a855f7',
+  }
 ];
 
 export default function Hero() {
@@ -139,7 +121,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       goToNext();
-    }, 4000);
+    }, 4500);
     return () => clearInterval(interval);
   }, [activeSlide]);
 
@@ -228,17 +210,25 @@ export default function Hero() {
           >
             <motion.div className="hero-tag-badge" variants={itemVariants}>
               <span className="tag-pulse" />
-              IT Training &amp; Placement
+              CAD &amp; IT Professional Training Institute
             </motion.div>
 
             <motion.h1 className="hero-main-title" variants={itemVariants}>
-              Shape Your Skills <br />
+              Master CAD &amp; Tech Skills <br />
               <span>To Build The Future</span>
             </motion.h1>
 
+            <motion.p 
+              className="hero-subtext" 
+              variants={itemVariants} 
+              style={{ color: '#64748b', fontSize: '15px', marginBottom: '20px', lineHeight: '1.6' }}
+            >
+              Industry-certified training in Mechanical CAD, Civil CAD, Electrical CAD, Interior Design, Project Planning, Jewelry Design &amp; IT.
+            </motion.p>
+
             <motion.div className="hero-cta-group" variants={itemVariants}>
-              <Link href="/courses?category=Information Technology" className="btn btn-primary hero-btn-main" id="hero-explore-btn">
-                Explore IT Courses <span>➔</span>
+              <Link href="/courses" className="btn btn-primary hero-btn-main" id="hero-explore-btn">
+                Explore All Courses <span>➔</span>
               </Link>
 
               <button
@@ -294,20 +284,25 @@ export default function Hero() {
                   className="hero-slide-img-wrap"
                   style={{ opacity: isTransitioning ? 0 : 1, transition: 'opacity 0.28s ease' }}
                 >
-                  <img
-                    src={slide.image}
-                    alt={slide.heading}
-                    className="hero-slide-img"
-                  />
-                  <div
-                    className="hero-slide-overlay"
-                    style={{ background: `linear-gradient(to top, ${slide.color}dd 0%, transparent 55%)` }}
-                  >
-                    <Link href={slide.link} className="hero-slide-content">
-                      <span className="hero-slide-label">{slide.heading}</span>
-                      <p className="hero-slide-sub">{slide.sub}</p>
-                    </Link>
-                  </div>
+                  <Link href={slide.link} style={{ display: 'block', width: '100%', height: '100%', cursor: 'pointer' }}>
+                    <img
+                      src={slide.image}
+                      alt={slide.heading}
+                      className="hero-slide-img"
+                    />
+                    <div
+                      className="hero-slide-overlay"
+                      style={{ background: `linear-gradient(to top, ${slide.color}dd 0%, transparent 55%)` }}
+                    >
+                      <div className="hero-slide-content">
+                        <span className="hero-slide-label">{slide.heading}</span>
+                        <p className="hero-slide-sub">{slide.sub}</p>
+                        <span className="hero-slide-click-hint" style={{ fontSize: '12px', opacity: 0.9, textDecoration: 'underline', marginTop: '4px', display: 'inline-block' }}>
+                          Click image to view course details ➔
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
                 </div>
 
                 <button
@@ -339,11 +334,13 @@ export default function Hero() {
               </motion.div>
 
               <div ref={card2Ref} className="floating-badge-card badge-right hero-placement-badge-wrap">
-                <img
-                  src="/placement-badge.png"
-                  alt="100% Placement Assistance"
-                  className="hero-placement-badge-img"
-                />
+                <Link href="/placed-students" title="Click to view 100% Placement Assistance details">
+                  <img
+                    src="/placement-badge.png"
+                    alt="WE PROVIDE 100% PLACEMENT ASSISTANCE"
+                    className="hero-placement-badge-img"
+                  />
+                </Link>
               </div>
             </div>
           </div>
@@ -352,3 +349,4 @@ export default function Hero() {
     </section>
   );
 }
+

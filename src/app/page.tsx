@@ -157,71 +157,71 @@ export default function HomePage() {
       <section className="edubin-category-section-06">
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title">Top Skill Courses<span></span></h2>
+            <h2 className="section-title">Top Skill Courses &amp; CAD Domains<span></span></h2>
           </div>
           
           <div className="category-wrap-03">
             <div className="row">
-              {/* Category 1 - Information Technology */}
+              {/* Category 1 - Mechanical CAD */}
               <div className="single-course">
                 <div className="thum">
                   <div className="image">
-                    <Link href="/courses?category=Information Technology">
-                      <img src="/images/caddeskindia_com_wp-content_uploads_2026_04_CS.jpg" alt="Information Technology" />
+                    <Link href="/courses?category=Mechanical" title="Click to filter Mechanical CAD Courses">
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2026_04_Mechanical.jpg" alt="Mechanical CAD" />
                     </Link>
                   </div>
                 </div>
                 <div className="content">
-                  <Link href="/courses?category=Information Technology">
-                    <h4 className="title">Information Technology</h4>
+                  <Link href="/courses?category=Mechanical">
+                    <h4 className="title">Mechanical CAD</h4>
                   </Link>
                 </div>
               </div>
 
-              {/* Category 2 - Civil/Architecture */}
+              {/* Category 2 - Civil & Arch CAD */}
               <div className="single-course">
                 <div className="thum">
                   <div className="image">
-                    <Link href="/courses?category=Civil/Architecture">
-                      <img src="/images/caddeskindia_com_wp-content_uploads_2026_04_Civil-arch.jpg" alt="Civil & Architecture" />
+                    <Link href="/courses?category=Civil%20%26%20Arch" title="Click to filter Civil & Architectural CAD Courses">
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2026_04_Civil-arch.jpg" alt="Civil & Architectural CAD" />
                     </Link>
                   </div>
                 </div>
                 <div className="content">
-                  <Link href="/courses?category=Civil/Architecture">
-                    <h4 className="title">Civil &amp; Architecture</h4>
+                  <Link href="/courses?category=Civil%20%26%20Arch">
+                    <h4 className="title">Civil &amp; Architectural CAD</h4>
                   </Link>
                 </div>
               </div>
 
-              {/* Category 3 - Electrical */}
+              {/* Category 3 - Electrical CAD */}
               <div className="single-course">
                 <div className="thum">
                   <div className="image">
-                    <Link href="/courses?category=Electrical/Electronics">
-                      <img src="/images/caddeskindia_com_wp-content_uploads_2026_04_ELECTRICAL.jpg" alt="Electrical" />
+                    <Link href="/courses?category=Electrical" title="Click to filter Electrical CAD Courses">
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2026_04_ELECTRICAL.jpg" alt="Electrical CAD" />
                     </Link>
                   </div>
                 </div>
                 <div className="content">
-                  <Link href="/courses?category=Electrical/Electronics">
-                    <h4 className="title">Electrical</h4>
+                  <Link href="/courses?category=Electrical">
+                    <h4 className="title">Electrical CAD</h4>
                   </Link>
                 </div>
               </div>
 
-              {/* Category 4 - Mechanical */}
+              {/* Category 4 - Interior Design */}
               <div className="single-course">
                 <div className="thum">
                   <div className="image">
-                    <Link href="/courses?category=Mechanical/Automobile">
-                      <img src="/images/caddeskindia_com_wp-content_uploads_2026_04_Mechanical.jpg" alt="Mechanical" />
+                    <Link href="/courses?category=Interior%20Design" title="Click to filter Interior Design Courses">
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_02_3ds-1.jpg" alt="Interior Design" />
                     </Link>
                   </div>
                 </div>
                 <div className="content">
-                  <Link href="/courses?category=Mechanical/Automobile">
-                    <h4 className="title">Mechanical</h4>
+                  <Link href="/courses?category=Interior%20Design">
+                    <h4 className="title">Interior Design</h4>
                   </Link>
                 </div>
               </div>
@@ -230,95 +230,62 @@ export default function HomePage() {
               <div className="single-course">
                 <div className="thum">
                   <div className="image">
-                    <Link href="/courses?category=Project Planning">
+                    <Link href="/courses?category=Project%20Planning" title="Click to filter Project Planning Courses">
                       <img src="/images/caddeskindia_com_wp-content_uploads_2021_02_Primavera.jpg" alt="Project Planning & Management" />
                     </Link>
                   </div>
                 </div>
                 <div className="content">
-                  <Link href="/courses?category=Project Planning">
+                  <Link href="/courses?category=Project%20Planning">
                     <h4 className="title">Project Planning &amp; Management</h4>
                   </Link>
                 </div>
               </div>
 
-              {/* Category 6 - Interior Design */}
+              {/* Category 6 - Jewelry Design */}
               <div className="single-course">
                 <div className="thum">
                   <div className="image">
-                    <Link href="/courses?category=Interior Design">
-                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_02_Sketch-up.jpg" alt="Interior Design" />
+                    <Link href="/courses?category=Jewellery%20Design" title="Click to filter Jewelry Design Courses">
+                      <img src="/images/jewelry-cad.jpg" alt="Jewelry Design" style={{ objectFit: 'cover' }} />
                     </Link>
                   </div>
                 </div>
                 <div className="content">
-                  <Link href="/courses?category=Interior Design">
-                    <h4 className="title">Interior Designer</h4>
+                  <Link href="/courses?category=Jewellery%20Design">
+                    <h4 className="title">Jewelry Design</h4>
                   </Link>
                 </div>
               </div>
 
-              {/* Category 7 - Jewellery Design */}
+              {/* Category 7 - Information Technology */}
               <div className="single-course">
                 <div className="thum">
                   <div className="image">
-                    <Link href="/courses?category=Jewellery Design">
-                      <img src="/images/matrixgold.png" alt="Jewellery Design" />
+                    <Link href="/courses?category=IT%20Course" title="Click to filter IT Courses">
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2026_04_CS.jpg" alt="Information Technology" />
                     </Link>
                   </div>
                 </div>
                 <div className="content">
-                  <Link href="/courses?category=Jewellery Design">
-                    <h4 className="title">Jewellery Design</h4>
+                  <Link href="/courses?category=IT%20Course">
+                    <h4 className="title">Information Technology</h4>
                   </Link>
                 </div>
               </div>
 
-
-              {/* Category 9 - Piping */}
+              {/* Category 8 - Piping */}
               <div className="single-course">
                 <div className="thum">
                   <div className="image">
-                    <Link href="/courses?category=Piping">
+                    <Link href="/courses?category=Piping%20Course" title="Click to filter Piping Courses">
                       <img src="/images/piping-course.jpg" alt="Piping" />
                     </Link>
                   </div>
                 </div>
                 <div className="content">
-                  <Link href="/courses?category=Piping">
-                    <h4 className="title">Piping</h4>
-                  </Link>
-                </div>
-              </div>
-
-              {/* Category 10 - Accounting & Computer */}
-              <div className="single-course">
-                <div className="thum">
-                  <div className="image">
-                    <Link href="/courses?category=Accounting">
-                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_03_Tally.jpg" alt="Accounting & Computer" />
-                    </Link>
-                  </div>
-                </div>
-                <div className="content">
-                  <Link href="/courses?category=Accounting">
-                    <h4 className="title">Accounting &amp; Computer</h4>
-                  </Link>
-                </div>
-              </div>
-
-              {/* Category 11 - Digital Marketing */}
-              <div className="single-course">
-                <div className="thum">
-                  <div className="image">
-                    <Link href="/courses?category=Digital Marketing">
-                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_03_Digital_Marketting.jpg" alt="Digital Marketing" />
-                    </Link>
-                  </div>
-                </div>
-                <div className="content">
-                  <Link href="/courses?category=Digital Marketing">
-                    <h4 className="title">Digital Marketing</h4>
+                  <Link href="/courses?category=Piping%20Course">
+                    <h4 className="title">Piping &amp; Plant Design</h4>
                   </Link>
                 </div>
               </div>
@@ -331,7 +298,7 @@ export default function HomePage() {
       <section className="section-padding bg-alt">
         <div className="container">
           <div className="section-title-container">
-            <h2 className="title">Trending Courses<span></span></h2>
+            <h2 className="title">Trending CAD &amp; Tech Courses<span></span></h2>
             <Link href="/courses" className="btn btn-black" id="trending-view-all-btn">
               View All Courses
             </Link>
@@ -339,164 +306,164 @@ export default function HomePage() {
 
           <div className="category-wrap-03">
             <div className="row d-flex align-items-stretch">
-              {/* Course 1 — CAD */}
+              {/* Course 1 — Mechanical CAD */}
               <div className="single-course">
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
-                    <Link href="/courses?category=Mechanical">
-                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_02_ACAD-ME-1.jpg" alt="AutoCAD Mechanical" />
+                    <Link href="/courses/autocad-mechanical" title="Click to view Mechanical CAD Course">
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_02_ACAD-ME-1.jpg" alt="Mechanical CAD" />
                     </Link>
                   </div>
                 </div>
                 <div className="content" style={{ textAlign: 'left' }}>
-                  <Link href="/courses?category=Mechanical">
-                    <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>AutoCAD Mechanical</h4>
+                  <Link href="/courses/autocad-mechanical">
+                    <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>Mechanical CAD</h4>
                   </Link>
                   <p style={{ fontSize: '13px', lineHeight: '1.5', color: '#666', marginBottom: '16px' }}>
-                    A powerful drafting software used to create precise 2D Drawings and 3D Models.
+                    Drafting, SolidWorks 3D, CATIA, Creo &amp; ANSYS engineering assemblies.
                   </p>
                 </div>
                 <div className="course-teacher">
                   <div className="course-lesson">
-                    <span>⚙️ Mechanical/Automobile</span>
+                    <span>⚙️ Mechanical CAD</span>
                   </div>
                   <div className="view-details">
-                    <Link href="/courses?category=Mechanical" id="trending-det-acad-mech">View Details</Link>
+                    <Link href="/courses/autocad-mechanical" id="trending-det-acad-mech">View Details</Link>
                   </div>
                 </div>
               </div>
 
-              {/* Course 2 — CAD */}
+              {/* Course 2 — Civil & Architectural CAD */}
               <div className="single-course">
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
-                    <Link href="/courses?category=Civil/Architecture">
-                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_02_ACAD-CE-1.jpg" alt="AutoCAD Civil/Arch." />
+                    <Link href="/courses/autocad-civil-designer" title="Click to view Civil/Architectural CAD Course">
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_02_ACAD-CE-1.jpg" alt="Civil & Architectural CAD" />
                     </Link>
                   </div>
                 </div>
                 <div className="content" style={{ textAlign: 'left' }}>
-                  <Link href="/courses?category=Civil/Architecture">
-                    <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>AutoCAD Civil/Arch.</h4>
+                  <Link href="/courses/autocad-civil-designer">
+                    <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>Civil / Architectural CAD</h4>
                   </Link>
                   <p style={{ fontSize: '13px', lineHeight: '1.5', color: '#666', marginBottom: '16px' }}>
-                    AutoCAD is a powerful drafting software used to create precise 2D Drawings and 3D Models.
+                    Blueprint drafting, Revit BIM modeling, STAAD.Pro structural analysis &amp; 3D renders.
                   </p>
                 </div>
                 <div className="course-teacher">
                   <div className="course-lesson">
-                    <span>🏢 Civil/Architecture</span>
+                    <span>🏢 Civil &amp; Arch CAD</span>
                   </div>
                   <div className="view-details">
-                    <Link href="/courses?category=Civil/Architecture" id="trending-det-acad-civil">View Details</Link>
+                    <Link href="/courses/autocad-civil-designer" id="trending-det-acad-civil">View Details</Link>
                   </div>
                 </div>
               </div>
 
-              {/* Course 3 — CAD */}
+              {/* Course 3 — Electrical CAD */}
               <div className="single-course">
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
-                    <Link href="/courses?category=Electrical">
-                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_02_ACAD-EE-1.jpg" alt="AutoCAD Electrical" />
+                    <Link href="/courses/autocad-electrical" title="Click to view Electrical CAD Course">
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_02_ACAD-EE-1.jpg" alt="Electrical CAD" />
                     </Link>
                   </div>
                 </div>
                 <div className="content" style={{ textAlign: 'left' }}>
-                  <Link href="/courses?category=Electrical">
-                    <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>AutoCAD Electrical</h4>
+                  <Link href="/courses/autocad-electrical">
+                    <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>Electrical CAD</h4>
                   </Link>
                   <p style={{ fontSize: '13px', lineHeight: '1.5', color: '#666', marginBottom: '16px' }}>
-                    Most powerful programs have commands like wiring, circuiting, PLC modules, panels, and more.
+                    Schematics, panel wiring diagrams, EPLAN, PLC ladder logic &amp; SCADA automation.
                   </p>
                 </div>
                 <div className="course-teacher">
                   <div className="course-lesson">
-                    <span>⚡ Electrical/Electronics</span>
+                    <span>⚡ Electrical CAD</span>
                   </div>
                   <div className="view-details">
-                    <Link href="/courses?category=Electrical" id="trending-det-acad-elec">View Details</Link>
+                    <Link href="/courses/autocad-electrical" id="trending-det-acad-elec">View Details</Link>
                   </div>
                 </div>
               </div>
 
-              {/* Course 4 — IT */}
+              {/* Course 4 — Interior Design */}
               <div className="single-course">
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
-                    <Link href="/courses?category=Information Technology">
-                      <img src="/images/it/fullstack.png" alt="Full Stack Web Development" />
+                    <Link href="/courses/3dsmax-animation" title="Click to view Interior Design Course">
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_02_3ds-1.jpg" alt="Interior Design" />
                     </Link>
                   </div>
                 </div>
                 <div className="content" style={{ textAlign: 'left' }}>
-                  <Link href="/courses?category=Information Technology">
-                    <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>Full Stack Web Development</h4>
+                  <Link href="/courses/3dsmax-animation">
+                    <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>Interior Design</h4>
                   </Link>
                   <p style={{ fontSize: '13px', lineHeight: '1.5', color: '#666', marginBottom: '16px' }}>
-                    Modern full stack training covering frontend, backend, databases, and deployment.
+                    3ds Max interior modeling, SketchUp Pro furniture layouts &amp; photorealistic V-Ray render.
                   </p>
                 </div>
                 <div className="course-teacher">
                   <div className="course-lesson">
-                    <span>💻 Information Technology</span>
+                    <span>🛋️ Interior Design</span>
                   </div>
                   <div className="view-details">
-                    <Link href="/courses?category=Information Technology" id="trending-det-fullstack">View Details</Link>
+                    <Link href="/courses/3dsmax-animation" id="trending-det-interior">View Details</Link>
                   </div>
                 </div>
               </div>
 
-              {/* Course 5 — IT */}
+              {/* Course 5 — Project Planning */}
               <div className="single-course">
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
-                    <Link href="/courses?category=Information Technology">
-                      <img src="/images/it/react-js.png" alt="React JS" />
+                    <Link href="/courses/primavera-p6" title="Click to view Project Planning Course">
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_02_Primavera.jpg" alt="Project Planning" />
                     </Link>
                   </div>
                 </div>
                 <div className="content" style={{ textAlign: 'left' }}>
-                  <Link href="/courses?category=Information Technology">
-                    <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>React JS</h4>
+                  <Link href="/courses/primavera-p6">
+                    <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>Project Planning</h4>
                   </Link>
                   <p style={{ fontSize: '13px', lineHeight: '1.5', color: '#666', marginBottom: '16px' }}>
-                    Build fast, responsive UIs with React hooks, routing, and API integrations.
+                    Oracle Primavera P6, MS Project scheduling, WBS structures &amp; critical path management.
                   </p>
                 </div>
                 <div className="course-teacher">
                   <div className="course-lesson">
-                    <span>💻 Information Technology</span>
+                    <span>📊 Project Planning</span>
                   </div>
                   <div className="view-details">
-                    <Link href="/courses?category=Information Technology" id="trending-det-react">View Details</Link>
+                    <Link href="/courses/primavera-p6" id="trending-det-primavera">View Details</Link>
                   </div>
                 </div>
               </div>
 
-              {/* Course 6 — IT */}
+              {/* Course 6 — Jewelry Design */}
               <div className="single-course">
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
-                    <Link href="/courses?category=Information Technology">
-                      <img src="/images/it/data-analytics.png" alt="Data Analytics" />
+                    <Link href="/courses/matrixgold" title="Click to view Jewelry Design Course">
+                      <img src="/images/jewelry-cad.jpg" alt="Jewelry Design" style={{ objectFit: 'cover' }} />
                     </Link>
                   </div>
                 </div>
                 <div className="content" style={{ textAlign: 'left' }}>
-                  <Link href="/courses?category=Information Technology">
-                    <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>Data Analytics</h4>
+                  <Link href="/courses/matrixgold">
+                    <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>Jewelry Design</h4>
                   </Link>
                   <p style={{ fontSize: '13px', lineHeight: '1.5', color: '#666', marginBottom: '16px' }}>
-                    Excel, SQL, Power BI, and Python basics for job-ready analytics roles.
+                    MatrixGold CAD, Rhino 3D NURBS modeling &amp; ZBrush 3D jewelry ring sculpting.
                   </p>
                 </div>
                 <div className="course-teacher">
                   <div className="course-lesson">
-                    <span>💻 Information Technology</span>
+                    <span>💎 Jewelry Design</span>
                   </div>
                   <div className="view-details">
-                    <Link href="/courses?category=Information Technology" id="trending-det-data">View Details</Link>
+                    <Link href="/courses/matrixgold" id="trending-det-jewelry">View Details</Link>
                   </div>
                 </div>
               </div>

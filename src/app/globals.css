@@ -2244,18 +2244,23 @@ body.mobile-nav-open .navbar-section {
   box-shadow: none !important;
   backdrop-filter: none !important;
   padding: 0 !important;
-  bottom: 20px !important;
-  right: -40px !important;
+  bottom: -15px !important;
+  right: -115px !important;
   overflow: visible !important;
 }
 
 .hero-placement-badge-img {
-  width: 240px;
+  width: 250px;
   height: auto;
   display: block;
   background: transparent !important;
   mix-blend-mode: normal;
   filter: drop-shadow(0 14px 28px rgba(7, 41, 77, 0.28));
+  transition: transform 0.3s ease;
+}
+
+.hero-placement-badge-wrap:hover .hero-placement-badge-img {
+  transform: scale(1.05);
 }
 
 .badge-icon {
