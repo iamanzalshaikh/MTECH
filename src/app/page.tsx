@@ -387,8 +387,89 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Course 4 — Interior Design */}
+                            {/* Course 10 — Full Stack Web Development */}
+                            <div className="single-course">
+                <div className="thum" style={{ height: '180px' }}>
+                  <div className="image">
+                    <Link href="/courses/full-stack-web" title="Click to view Full Stack Web Development Course">
+                      <img src="/images/it/fullstack.png" alt="Full Stack Web Development" />
+                    </Link>
+                  </div>
+                </div>
+                <div className="content" style={{ textAlign: 'left' }}>
+                  <Link href="/courses/full-stack-web">
+                    <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>Full Stack Web Development</h4>
+                  </Link>
+                  <p style={{ fontSize: '13px', lineHeight: '1.5', color: '#666', marginBottom: '16px' }}>
+                    Frontend, backend, databases &amp; deployment for modern web applications.
+                  </p>
+                </div>
+                <div className="course-teacher">
+                  <div className="course-lesson">
+                    <span>💻 Tech</span>
+                  </div>
+                  <div className="view-details">
+                    <Link href="/courses/full-stack-web" id="trending-det-fullstack">View Details</Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Course 11 — Artificial Intelligence */}
               <div className="single-course">
+                <div className="thum" style={{ height: '180px' }}>
+                  <div className="image">
+                    <Link href="/courses/mastering-artificial-intelligence" title="Click to view Artificial Intelligence Course">
+                      <img src="/images/it/artificial-intelligence.png" alt="Artificial Intelligence" />
+                    </Link>
+                  </div>
+                </div>
+                <div className="content" style={{ textAlign: 'left' }}>
+                  <Link href="/courses/mastering-artificial-intelligence">
+                    <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>Artificial Intelligence</h4>
+                  </Link>
+                  <p style={{ fontSize: '13px', lineHeight: '1.5', color: '#666', marginBottom: '16px' }}>
+                    Machine learning, neural networks &amp; real-world AI applications from the basics.
+                  </p>
+                </div>
+                <div className="course-teacher">
+                  <div className="course-lesson">
+                    <span>🤖 Tech</span>
+                  </div>
+                  <div className="view-details">
+                    <Link href="/courses/mastering-artificial-intelligence" id="trending-det-ai">View Details</Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Course 12 — Data Science */}
+              <div className="single-course">
+                <div className="thum" style={{ height: '180px' }}>
+                  <div className="image">
+                    <Link href="/courses/data-science" title="Click to view Data Science Course">
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_03_DS-with-Python.jpg" alt="Data Science" />
+                    </Link>
+                  </div>
+                </div>
+                <div className="content" style={{ textAlign: 'left' }}>
+                  <Link href="/courses/data-science">
+                    <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>Data Science</h4>
+                  </Link>
+                  <p style={{ fontSize: '13px', lineHeight: '1.5', color: '#666', marginBottom: '16px' }}>
+                    Python, Pandas, NumPy, visualization &amp; statistical analysis for data roles.
+                  </p>
+                </div>
+                <div className="course-teacher">
+                  <div className="course-lesson">
+                    <span>📈 Tech</span>
+                  </div>
+                  <div className="view-details">
+                    <Link href="/courses/data-science" id="trending-det-data-science">View Details</Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Course 4 — Interior Design */}
+              {/* <div className="single-course">
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
                     <Link href="/courses/3dsmax-animation" title="Click to view Interior Design Course">
@@ -412,10 +493,10 @@ export default function HomePage() {
                     <Link href="/courses/3dsmax-animation" id="trending-det-interior">View Details</Link>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Course 5 — Project Planning */}
-              <div className="single-course">
+              {/* <div className="single-course">
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
                     <Link href="/courses/primavera-p6" title="Click to view Project Planning Course">
@@ -439,10 +520,10 @@ export default function HomePage() {
                     <Link href="/courses/primavera-p6" id="trending-det-primavera">View Details</Link>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Course 6 — Jewelry Design */}
-              <div className="single-course">
+              {/* <div className="single-course">
                 <div className="thum" style={{ height: '180px' }}>
                   <div className="image">
                     <Link href="/courses/matrixgold" title="Click to view Jewelry Design Course">
@@ -466,7 +547,90 @@ export default function HomePage() {
                     <Link href="/courses/matrixgold" id="trending-det-jewelry">View Details</Link>
                   </div>
                 </div>
+              </div> */}
+
+              {/* Course 7 — SolidWorks CAD */}
+              <div className="single-course">
+                <div className="thum" style={{ height: '180px' }}>
+                  <div className="image">
+                    <Link href="/courses/solidworks-mechanical" title="Click to view SolidWorks Course">
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_02_Solidworks.jpg" alt="SolidWorks" />
+                    </Link>
+                  </div>
+                </div>
+                <div className="content" style={{ textAlign: 'left' }}>
+                  <Link href="/courses/solidworks-mechanical">
+                    <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>SolidWorks</h4>
+                  </Link>
+                  <p style={{ fontSize: '13px', lineHeight: '1.5', color: '#666', marginBottom: '16px' }}>
+                    3D product modeling, mechanical assemblies, sheet metal design &amp; engineering drawings.
+                  </p>
+                </div>
+                <div className="course-teacher">
+                  <div className="course-lesson">
+                    <span>⚙️ CAD</span>
+                  </div>
+                  <div className="view-details">
+                    <Link href="/courses/solidworks-mechanical" id="trending-det-solidworks">View Details</Link>
+                  </div>
+                </div>
               </div>
+
+              {/* Course 8 — CATIA CAD */}
+              <div className="single-course">
+                <div className="thum" style={{ height: '180px' }}>
+                  <div className="image">
+                    <Link href="/courses/catia" title="Click to view CATIA Course">
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_03_catia-in.jpg" alt="CATIA" />
+                    </Link>
+                  </div>
+                </div>
+                <div className="content" style={{ textAlign: 'left' }}>
+                  <Link href="/courses/catia">
+                    <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>CATIA</h4>
+                  </Link>
+                  <p style={{ fontSize: '13px', lineHeight: '1.5', color: '#666', marginBottom: '16px' }}>
+                    Surface modeling, part design, assemblies &amp; sheet metal for automotive and aerospace work.
+                  </p>
+                </div>
+                <div className="course-teacher">
+                  <div className="course-lesson">
+                    <span>⚙️ CAD</span>
+                  </div>
+                  <div className="view-details">
+                    <Link href="/courses/catia" id="trending-det-catia">View Details</Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Course 9 — Revit Architecture CAD */}
+              <div className="single-course">
+                <div className="thum" style={{ height: '180px' }}>
+                  <div className="image">
+                    <Link href="/courses/revit-architecture" title="Click to view Revit Architecture Course">
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_03_Revit-ar-in.jpg" alt="Revit Architecture" />
+                    </Link>
+                  </div>
+                </div>
+                <div className="content" style={{ textAlign: 'left' }}>
+                  <Link href="/courses/revit-architecture">
+                    <h4 className="title" style={{ fontSize: '19px', marginBottom: '8px' }}>Revit Architecture</h4>
+                  </Link>
+                  <p style={{ fontSize: '13px', lineHeight: '1.5', color: '#666', marginBottom: '16px' }}>
+                    BIM building models, floor plans, elevations &amp; construction documentation.
+                  </p>
+                </div>
+                <div className="course-teacher">
+                  <div className="course-lesson">
+                    <span>🏢 CAD</span>
+                  </div>
+                  <div className="view-details">
+                    <Link href="/courses/revit-architecture" id="trending-det-revit-arch">View Details</Link>
+                  </div>
+                </div>
+              </div>
+
+
             </div>
           </div>
         </div>
@@ -555,6 +719,81 @@ export default function HomePage() {
                   <span style={{ color: 'var(--clr-accent)', fontWeight: 600 }}>Mechanical/Automobile</span>
                   <div className="view-details">
                     <Link href="/courses?category=Mechanical" style={{ color: 'var(--clr-crimson)' }} id="modular-det-catia">View Details</Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Course 4 */}
+              <div className="single-course">
+                <div className="thum" style={{ height: '180px' }}>
+                  <div className="image">
+                    <Link href="/courses/cyber-security">
+                      <img src="/images/caddeskindia_com_wp-content_uploads_2021_03_Cyber-Security.jpg" alt="Cyber Security" />
+                    </Link>
+                  </div>
+                </div>
+                <div className="content" style={{ textAlign: 'left' }}>
+                  <Link href="/courses/cyber-security">
+                    <h4 className="title" style={{ fontSize: '18px', marginBottom: '8px' }}>Cyber Security</h4>
+                  </Link>
+                  <p style={{ fontSize: '13px', lineHeight: '1.5', color: '#666', marginBottom: '16px' }}>
+                    Network security, ethical hacking, penetration testing &amp; SOC incident response.
+                  </p>
+                </div>
+                <div className="course-teacher">
+                  <span style={{ color: 'var(--clr-accent)', fontWeight: 600 }}>IT Course</span>
+                  <div className="view-details">
+                    <Link href="/courses/cyber-security" style={{ color: 'var(--clr-crimson)' }} id="modular-det-cyber-security">View Details</Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Course 5 */}
+              <div className="single-course">
+                <div className="thum" style={{ height: '180px' }}>
+                  <div className="image">
+                    <Link href="/courses/aws-cloud-computing">
+                      <img src="/images/it/aws-cloud.png" alt="AWS Cloud Computing" />
+                    </Link>
+                  </div>
+                </div>
+                <div className="content" style={{ textAlign: 'left' }}>
+                  <Link href="/courses/aws-cloud-computing">
+                    <h4 className="title" style={{ fontSize: '18px', marginBottom: '8px' }}>AWS Cloud Computing</h4>
+                  </Link>
+                  <p style={{ fontSize: '13px', lineHeight: '1.5', color: '#666', marginBottom: '16px' }}>
+                    Hands-on EC2, S3, VPC, IAM &amp; RDS for deploying and managing cloud applications.
+                  </p>
+                </div>
+                <div className="course-teacher">
+                  <span style={{ color: 'var(--clr-accent)', fontWeight: 600 }}>IT Course</span>
+                  <div className="view-details">
+                    <Link href="/courses/aws-cloud-computing" style={{ color: 'var(--clr-crimson)' }} id="modular-det-aws">View Details</Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Course 6 */}
+              <div className="single-course">
+                <div className="thum" style={{ height: '180px' }}>
+                  <div className="image">
+                    <Link href="/courses/generative-ai-agentic-ai">
+                      <img src="/images/it/gen-ai-agentic.png" alt="Generative AI & Agentic AI" />
+                    </Link>
+                  </div>
+                </div>
+                <div className="content" style={{ textAlign: 'left' }}>
+                  <Link href="/courses/generative-ai-agentic-ai">
+                    <h4 className="title" style={{ fontSize: '18px', marginBottom: '8px' }}>Generative AI &amp; Agentic AI</h4>
+                  </Link>
+                  <p style={{ fontSize: '13px', lineHeight: '1.5', color: '#666', marginBottom: '16px' }}>
+                    LLMs, prompt engineering, RAG &amp; autonomous AI agent workflows with real projects.
+                  </p>
+                </div>
+                <div className="course-teacher">
+                  <span style={{ color: 'var(--clr-accent)', fontWeight: 600 }}>IT Course</span>
+                  <div className="view-details">
+                    <Link href="/courses/generative-ai-agentic-ai" style={{ color: 'var(--clr-crimson)' }} id="modular-det-gen-ai">View Details</Link>
                   </div>
                 </div>
               </div>
